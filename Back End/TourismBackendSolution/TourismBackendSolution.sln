@@ -5,6 +5,12 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourismBackend", "TourismBackend\TourismBackend.csproj", "{88C086DD-4A81-4B0A-ADED-2D683FFF85C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationAPI", "LocationAPI\LocationAPI.csproj", "{409AA83E-6B0F-4BB7-9679-259C671C437D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPackagesAPI", "TourPackagesAPI\TourPackagesAPI.csproj", "{649D3311-7D98-458E-8EDC-6109B5F87977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotels&RoomsAPI", "Hotels&RoomsAPI\Hotels&RoomsAPI.csproj", "{EC1D9107-22DC-4358-A806-A21006954C25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{88C086DD-4A81-4B0A-ADED-2D683FFF85C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C086DD-4A81-4B0A-ADED-2D683FFF85C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88C086DD-4A81-4B0A-ADED-2D683FFF85C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409AA83E-6B0F-4BB7-9679-259C671C437D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409AA83E-6B0F-4BB7-9679-259C671C437D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409AA83E-6B0F-4BB7-9679-259C671C437D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409AA83E-6B0F-4BB7-9679-259C671C437D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649D3311-7D98-458E-8EDC-6109B5F87977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649D3311-7D98-458E-8EDC-6109B5F87977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649D3311-7D98-458E-8EDC-6109B5F87977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649D3311-7D98-458E-8EDC-6109B5F87977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC1D9107-22DC-4358-A806-A21006954C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC1D9107-22DC-4358-A806-A21006954C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC1D9107-22DC-4358-A806-A21006954C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC1D9107-22DC-4358-A806-A21006954C25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

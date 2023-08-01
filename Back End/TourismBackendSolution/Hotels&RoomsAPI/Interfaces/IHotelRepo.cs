@@ -1,0 +1,12 @@
+﻿namespace Hotels_RoomsAPI.Interfaces
+{
+    public interface IHotelRepo<T,K>
+    {
+        public Task<T> Add(T item);
+        public Task<T> Update(T item);
+        public Task<T> Delete(K id);  
+        public T Get(K id);
+        public Task<ICollection<T>> GetAll(); 
+
+    }
+}
