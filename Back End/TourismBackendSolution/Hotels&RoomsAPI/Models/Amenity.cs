@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Hotels_RoomsAPI.Models
 {
@@ -8,7 +9,8 @@ namespace Hotels_RoomsAPI.Models
         public int AmenityId { get; set; }
         public string AmenityName { get; set; }
 
-        public ICollection<HotelAmenity> HotelAmenity { get; set; }
+        [JsonIgnore]
+        public ICollection<HotelAmenity>? HotelAmenity { get; set; }
 
     }
 }

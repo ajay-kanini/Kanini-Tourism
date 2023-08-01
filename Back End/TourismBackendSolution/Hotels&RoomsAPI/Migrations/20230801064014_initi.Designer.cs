@@ -3,6 +3,7 @@ using Hotels_RoomsAPI.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotels_RoomsAPI.Migrations
 {
     [DbContext(typeof(HotelsContext))]
-    partial class HotelsContextModelSnapshot : ModelSnapshot
+    [Migration("20230801064014_initi")]
+    partial class initi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,22 +48,15 @@ namespace Hotels_RoomsAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HotelId"), 1L, 1);
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<double>("ContactNumber")
                         .HasColumnType("float");
 
                     b.Property<string>("HotelDescription")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HotelName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HotelId");
@@ -100,8 +95,9 @@ namespace Hotels_RoomsAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoomId"), 1L, 1);
 
-                    b.Property<bool>("ACAvailability")
-                        .HasColumnType("bit");
+                    b.Property<string>("ACAvailability")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("HotelId")
                         .HasColumnType("int");

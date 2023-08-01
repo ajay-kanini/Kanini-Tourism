@@ -1,4 +1,7 @@
 using Hotels_RoomsAPI.Context;
+using Hotels_RoomsAPI.Interfaces;
+using Hotels_RoomsAPI.Models;
+using Hotels_RoomsAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +16,10 @@ builder.Services.AddDbContext<HotelsContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
 });
+builder.Services.AddScoped<IHotelRepo<Hotel, int>, HotelRepo > ();
+builder.Services.AddScoped<IRoomRepo<Room, int>, RoomRepo>();
+builder.Services.AddScoped<IHotelAmenityRepo<HotelAmenity>, HotelAmenitiesRepo>();
+builder.Services.AddScoped<IAmenityRepo<Amenity, int>, AmenityRepo>();
 
 var app = builder.Build();
 
