@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationAPI", "LocationAPI\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotels&RoomsAPI", "Hotels&RoomsAPI\Hotels&RoomsAPI.csproj", "{EC1D9107-22DC-4358-A806-A21006954C25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login&RegistrationAPI", "Login&RegistrationAPI\Login&RegistrationAPI.csproj", "{E3090DF5-AB5C-4E8A-A778-EFACC1D791F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EC1D9107-22DC-4358-A806-A21006954C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC1D9107-22DC-4358-A806-A21006954C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC1D9107-22DC-4358-A806-A21006954C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3090DF5-AB5C-4E8A-A778-EFACC1D791F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3090DF5-AB5C-4E8A-A778-EFACC1D791F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3090DF5-AB5C-4E8A-A778-EFACC1D791F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3090DF5-AB5C-4E8A-A778-EFACC1D791F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

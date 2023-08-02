@@ -4,7 +4,7 @@
 
 namespace Hotels_RoomsAPI.Migrations
 {
-    public partial class init : Migration
+    public partial class initialise : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,8 +27,12 @@ namespace Hotels_RoomsAPI.Migrations
                 {
                     HotelId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    HotelName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    HotelDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    HotelName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HotelDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    State = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ContactNumber = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,7 +46,8 @@ namespace Hotels_RoomsAPI.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     HotelId = table.Column<int>(type: "int", nullable: false),
-                    AmenityId = table.Column<int>(type: "int", nullable: false)
+                    AmenityName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AmenityId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,8 +56,7 @@ namespace Hotels_RoomsAPI.Migrations
                         name: "FK_HotelsAmenities_Amenities_AmenityId",
                         column: x => x.AmenityId,
                         principalTable: "Amenities",
-                        principalColumn: "AmenityId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "AmenityId");
                     table.ForeignKey(
                         name: "FK_HotelsAmenities_Hotels_HotelId",
                         column: x => x.HotelId,
@@ -68,7 +72,8 @@ namespace Hotels_RoomsAPI.Migrations
                     RoomId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoomPrice = table.Column<double>(type: "float", nullable: false),
-                    ACAvailability = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ACAvailability = table.Column<bool>(type: "bit", nullable: false),
+                    NumberOfPersons = table.Column<int>(type: "int", nullable: false),
                     HotelId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

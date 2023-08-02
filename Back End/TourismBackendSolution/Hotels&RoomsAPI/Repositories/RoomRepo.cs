@@ -56,9 +56,11 @@ namespace Hotels_RoomsAPI.Repositories
 
         public async Task<Room> Update(Room item)
         {
-            var room = await GetByRoomId(item.HotelId);
+            var room = await GetByRoomId(item.RoomId);
             room.RoomPrice = item.RoomPrice;
             room.ACAvailability = item.ACAvailability;
+            room.NumberOfPersons = item.NumberOfPersons;    
+            room.HotelId = item.HotelId;    
            _context.SaveChanges();
             return room;
         }

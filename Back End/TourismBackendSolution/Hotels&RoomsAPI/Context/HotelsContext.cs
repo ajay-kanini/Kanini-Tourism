@@ -9,7 +9,6 @@ namespace Hotels_RoomsAPI.Context
         {
             
         }
-
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Room> Rooms { get; set; }  
         public DbSet<Amenity> Amenities { get; set; }   
