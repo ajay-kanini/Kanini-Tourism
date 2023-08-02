@@ -8,8 +8,11 @@ namespace Hotels_RoomsAPI.Models
     {
         [Key]
         public int RoomId { get; set; }
+
+        public int RoomNumber { get; set; }
         public double RoomPrice { get; set; }
         public bool ACAvailability { get; set; }
+        public bool RoomAvailability { get; set; }
 
         [Range(minimum: 1, maximum: 5)]
         public int NumberOfPersons { get; set; }

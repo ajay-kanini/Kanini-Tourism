@@ -4,6 +4,7 @@ using HospitalManagement.Models.DTO;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -196,6 +197,32 @@ namespace HospitalManagement.Service
                 // Handle the exception or log the error
                 Debug.WriteLine($"Get agent failed: {ex.Message}");
                 throw new Exception("Get agent failed");
+            }
+        }
+
+        public async Task<User> ForgetPassword(UserDTO userDTO)
+        {
+            try
+            {
+                var hmac = new HMACSHA512();
+                var user = await _userRepo.Get(userDTO.Id);
+                if (userDTO.Password != null && user != null)
+                {
+                    user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDTO.Password));
+                    user.PasswordKey = hmac.Key;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+                var checkUser = await _userRepo.Update(user);
+                return checkUser ?? throw new Exception("Failed to update agent");
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception or log the error
+                Debug.WriteLine($"Update agent failed: {ex.Message}");
+                throw new Exception("Failed to update agent");
             }
         }
     }

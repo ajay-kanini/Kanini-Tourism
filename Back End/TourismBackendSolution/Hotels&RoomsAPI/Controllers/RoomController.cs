@@ -9,9 +9,9 @@ namespace Hotels_RoomsAPI.Controllers
     [ApiController]
     public class RoomController : ControllerBase
     {
-        private readonly IRoomRepo<Room, int> _roomServie;
+        private readonly IRoomService<Room, int> _roomServie;
 
-        public RoomController(IRoomRepo<Room, int> roomService)
+        public RoomController(IRoomService<Room, int> roomService)
         {
             _roomServie = roomService;
         }

@@ -1,4 +1,5 @@
-﻿using LocationAPI.Interfaces;
+﻿#nullable disable
+using LocationAPI.Interfaces;
 using LocationAPI.Models;
 using LocationAPI.Models.DTO;
 using Microsoft.EntityFrameworkCore;

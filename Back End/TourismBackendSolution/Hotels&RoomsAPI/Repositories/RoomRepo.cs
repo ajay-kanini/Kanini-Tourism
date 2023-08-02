@@ -58,7 +58,7 @@ namespace Hotels_RoomsAPI.Repositories
         {
             var room = await GetByRoomId(item.RoomId);
             room.RoomPrice = item.RoomPrice;
-            room.ACAvailability = item.ACAvailability;
+            room.ACAvailability = item.ACAvailability ;
             room.NumberOfPersons = item.NumberOfPersons;    
             room.HotelId = item.HotelId;    
            _context.SaveChanges();

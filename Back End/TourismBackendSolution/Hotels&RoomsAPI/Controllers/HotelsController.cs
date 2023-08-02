@@ -9,16 +9,16 @@ namespace Hotels_RoomsAPI.Controllers
     [ApiController]
     public class HotelsController : ControllerBase
     {
-        private readonly IHotelRepo<Hotel, int> _hotelRepo;
-        public HotelsController(IHotelRepo<Hotel, int> hotelRepo)
+        private readonly IHotelService<Hotel, int> _hotelService;
+        public HotelsController(IHotelService<Hotel, int> hotelService)
         {
-            _hotelRepo = hotelRepo;
+            _hotelService = hotelService;
         }
 
         [HttpPost]
         public async Task<ActionResult<Hotel>> AddHotel(Hotel hotel) 
         {
-            var hotels = await _hotelRepo.Add(hotel);
+            var hotels = await _hotelService.Add(hotel);
             if(hotel != null) 
             {
                 return Ok(hotels);
@@ -30,7 +30,7 @@ namespace Hotels_RoomsAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<Hotel>> GetHotelById(int id)
         {
-            var hotel= await _hotelRepo.Get(id);
+            var hotel= await _hotelService.Get(id);
             if (hotel != null)
             {
                 return Ok(hotel);
@@ -42,7 +42,7 @@ namespace Hotels_RoomsAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<ICollection<Hotel>>> GetAllHotels()
         {
-            var hotels = await _hotelRepo.GetAll();
+            var hotels = await _hotelService.GetAll();
             if (hotels != null)
             {
                 return Ok(hotels);
@@ -54,7 +54,7 @@ namespace Hotels_RoomsAPI.Controllers
         [HttpDelete]
         public async Task<ActionResult<Hotel>> DeleteHotels(int id)
         {
-            var hotel = await _hotelRepo.Delete(id);
+            var hotel = await _hotelService.Delete(id);
             if (hotel != null)
             {
                 return Ok(hotel);
@@ -66,7 +66,7 @@ namespace Hotels_RoomsAPI.Controllers
         [HttpPut]
         public async Task<ActionResult<Hotel>> UpdateHotel(Hotel hotel)
         {
-            var hotels = await _hotelRepo.Update(hotel);
+            var hotels = await _hotelService.Update(hotel);
             if (hotel != null)
             {
                 return Ok(hotels);

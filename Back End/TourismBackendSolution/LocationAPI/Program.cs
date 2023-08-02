@@ -4,6 +4,7 @@ using LocationAPI.Repositories;
 using LocationAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +50,10 @@ builder.Services.AddScoped<ILocationRepo<State, int, string>, StateRepo>();
 builder.Services.AddScoped<ILocationService<State, int, string>, StateService>();
 builder.Services.AddScoped<ILocationRepo<City, int, string>, CityRepo>();
 builder.Services.AddScoped<ILocationService<City, int, string>, CityService>();
+
+
+Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 

@@ -51,9 +51,8 @@ namespace Hotels_RoomsAPI.Repositories
         {
             var hotel = await Get(item.HotelId);
             hotel.HotelName = item.HotelName;
-            hotel.HotelAmenities = item.HotelAmenities;
-            hotel.HotelDescription = item.HotelDescription; 
-            hotel.ContactNumber = item.ContactNumber; 
+            hotel.HotelDescription = item.HotelDescription;
+            hotel.ContactNumber = item.ContactNumber;
             hotel.Address = item.Address;
             hotel.City = item.City;
             hotel.State = item.State;   

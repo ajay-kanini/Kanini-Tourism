@@ -1,4 +1,5 @@
-﻿using Hotels_RoomsAPI.Models;
+﻿#nullable disable
+using Hotels_RoomsAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hotels_RoomsAPI.Context
@@ -11,8 +12,6 @@ namespace Hotels_RoomsAPI.Context
         }
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Room> Rooms { get; set; }  
-        public DbSet<Amenity> Amenities { get; set; }   
-        public DbSet<HotelAmenity> HotelsAmenities { get; set; }
         
     }
 }
