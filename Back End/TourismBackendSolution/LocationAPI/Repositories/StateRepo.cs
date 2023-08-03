@@ -37,7 +37,7 @@ namespace LocationAPI.Repositories
 
         public async Task<ICollection<LocationDTO>> GetAll()
         {
-            var state = await _context.States.Where(state=> state.CountryName.ToLower().Trim()=="india").Select(city => new LocationDTO { Id = city.Id, Name = city.Name }).ToListAsync(); ;
+            var state = await _context.States.Where(state => state.CountryName.ToLower().Trim() == "india").Select(city => new LocationDTO { Id = city.Id, Name = city.Name }).ToListAsync(); ;
             return state;
         }
 

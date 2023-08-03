@@ -148,5 +148,26 @@ namespace HospitalManagement.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Clients), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<HotelAgent>> GetOneClient(int key)
+        {
+            try
+            {
+                var client = await _service.GetClient(key);
+                if (client != null)
+                    return Ok(client);
+                else
+                    return BadRequest("Unable to fetch");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or perform any other necessary actions
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
+            }
+        }
     }
 }

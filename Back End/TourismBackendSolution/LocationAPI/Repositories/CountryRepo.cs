@@ -21,8 +21,8 @@ namespace LocationAPI.Repositories
                 _context.Countries.Add(item);
                 await _context.SaveChangesAsync();
                 return item;
-            } 
-            catch (Exception ex) 
+            }
+            catch (Exception ex)
             {
                 throw new Exception("Message", ex);
             }
@@ -38,7 +38,7 @@ namespace LocationAPI.Repositories
 
         public async Task<Country> GetById(int id)
         {
-            var country = await _context.Countries.FirstOrDefaultAsync(u=>u.Id == id);
+            var country = await _context.Countries.FirstOrDefaultAsync(u => u.Id == id);
             return country;
         }
 

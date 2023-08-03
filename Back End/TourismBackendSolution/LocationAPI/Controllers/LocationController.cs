@@ -1,6 +1,7 @@
 ﻿using LocationAPI.Interfaces;
 using LocationAPI.Models;
 using LocationAPI.Models.DTO;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace LocationAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [EnableCors("MyCors")]
     public class LocationController : ControllerBase
     {
         private readonly ILocationService<Country, int, string> _countryService;

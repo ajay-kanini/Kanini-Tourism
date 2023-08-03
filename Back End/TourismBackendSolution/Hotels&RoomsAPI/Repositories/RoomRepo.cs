@@ -17,6 +17,7 @@ namespace Hotels_RoomsAPI.Repositories
         {
             try
             {
+                item.RoomAvailability = false;
                 _context.Rooms.Add(item);
                 await _context.SaveChangesAsync();
                 return item;
@@ -57,10 +58,11 @@ namespace Hotels_RoomsAPI.Repositories
         public async Task<Room> Update(Room item)
         {
             var room = await GetByRoomId(item.RoomId);
-            room.RoomPrice = item.RoomPrice;
+            room.RoomPricePerDay = item.RoomPricePerDay;
             room.ACAvailability = item.ACAvailability ;
             room.NumberOfPersons = item.NumberOfPersons;    
-            room.HotelId = item.HotelId;    
+            room.HotelId = item.HotelId;
+            room.RoomNumber = item.RoomNumber; 
            _context.SaveChanges();
             return room;
         }

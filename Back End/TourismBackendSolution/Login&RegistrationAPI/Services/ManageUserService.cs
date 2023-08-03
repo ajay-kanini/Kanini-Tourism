@@ -44,7 +44,7 @@ namespace HospitalManagement.Service
 
                 var userResult = await _userRepo.Add(agentDTO.Users) ?? throw new Exception("Failed to add user");
                 agentDTO.Id = userResult.Id;
-                var doctorResult = await _agentRepo.Add(agentDTO) ?? throw new Exception("Failed to add agent");
+                var agentResult = await _agentRepo.Add(agentDTO) ?? throw new Exception("Failed to add agent");
                 UserDTO user = new()
                 {
                     Id = userResult.Id,
@@ -59,8 +59,6 @@ namespace HospitalManagement.Service
                 Debug.WriteLine($"Agent registration failed: {ex.Message}");
                 throw new Exception("Agent registration failed");
             }
-
-          
         }
 
         public async Task<UserDTO> ClientRegistration(ClientDTO clientDTO)
@@ -188,8 +186,8 @@ namespace HospitalManagement.Service
         {
             try
             {
-                var doctor = await _agentRepo.Get(key);
-                return doctor ?? throw new Exception("Failed to retrieve agents");
+                var agent = await _agentRepo.Get(key);
+                return agent ?? throw new Exception("Failed to retrieve agents");
             }
 
             catch (Exception ex)
@@ -223,6 +221,22 @@ namespace HospitalManagement.Service
                 // Handle the exception or log the error
                 Debug.WriteLine($"Update agent failed: {ex.Message}");
                 throw new Exception("Failed to update agent");
+            }
+        }
+
+        public async Task<Clients> GetClient(int key)
+        {
+            try
+            {
+                var client = await _clientRepo.Get(key);
+                return client ?? throw new Exception("Failed to retrieve agents");
+            }
+
+            catch (Exception ex)
+            {
+                // Handle the exception or log the error
+                Debug.WriteLine($"Get agent failed: {ex.Message}");
+                throw new Exception("Get agent failed");
             }
         }
     }

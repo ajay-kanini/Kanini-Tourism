@@ -40,12 +40,84 @@ namespace Hotels_RoomsAPI.Services
             return await _repo.Update(item);
         }
 
-        public async Task<Room> RoomStatus(int id)
+        public async Task<Room> BookOrCancelRoom(int id)
         {
             var room = await _repo.GetByRoomId(id);
             room.RoomAvailability = room.RoomAvailability == false ? true : false;
             await _repo.Update(room);   
             return room;
+        }
+
+        public async Task<ICollection<Room>> BookOrCancelMultipleRooms(int[] id)
+        {
+            var rooms = new List<Room>(); 
+            foreach (var item in id)
+            {
+                var room = await BookOrCancelRoom(item);
+                if (room != null)
+                {
+                    rooms.Add(room);
+                }
+            }
+            return rooms;
+        }
+        public async Task<double> PriceCalculation(int numberOfDays, int[] roomId)
+        {
+            double totalRoomPrice = 0;
+
+            foreach (var room in roomId)
+            {
+                var foundRoom = await _repo.GetByRoomId(room);
+
+                if (foundRoom != null)
+                {
+                    double roomPrice = foundRoom.RoomPricePerDay * numberOfDays;
+                    totalRoomPrice += roomPrice;
+                }
+            }
+
+            double cgst = totalRoomPrice * 0.09;
+            double sgst = totalRoomPrice * 0.09;
+
+            double totalPrice = totalRoomPrice + cgst + sgst;
+            return totalPrice;
+        }
+
+        public async Task<ICollection<Room>> GetMultipleRooms(int[] id)
+        {
+            var rooms = new List<Room>();
+            foreach (var item in id)
+            {
+                var room = await _repo.GetByRoomId(item);
+                if (room != null)
+                {
+                    rooms.Add(room);
+                }
+            }
+            return rooms;
+        }
+
+        public async Task<ICollection<Room>> AutoEndRoomTime(int[] roomId, DateTime dt)
+        {
+            DateTime endDate = DateTime.Now ; 
+            var rooms = new List<Room>();
+            foreach (var item in roomId)
+            {
+                var room = await _repo.GetByRoomId(item);
+                if (room != null)
+                {
+                    rooms.Add(room);
+                }
+            }
+            foreach (var room in rooms) 
+            {
+                if(room.RoomAvailability == false && dt == endDate)
+                {
+                    room.RoomAvailability = true;
+                }
+                await _repo.Update(room);
+            }
+            return rooms;
         }
     }
 }

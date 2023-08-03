@@ -81,5 +81,38 @@ namespace Hotels_RoomsAPI.Controllers
             return BadRequest();
         }
 
+        [HttpPut]
+        public async Task<ActionResult<Room>> UpdateRoomStatus(int id)
+        {
+            var room = await _roomServie.BookOrCancelRoom(id);
+            if(room != null)
+            {
+                return Ok(room);
+            }
+            return BadRequest();
+        }
+        
+        [HttpPost]
+        public async Task<ActionResult<ICollection<Room>>> MultipleRoomsBooking(int[] id)
+        {
+            var rooms = await _roomServie.BookOrCancelMultipleRooms(id);
+            if (rooms != null)
+            {
+                return Ok(rooms);
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Double>> TotalPriceCalculation(int numberOfDays,int[] id)
+        {
+            var rooms = await _roomServie.PriceCalculation(numberOfDays, id);
+            if (rooms != 0)
+            {
+                return Ok(rooms);
+            }
+            return BadRequest();
+        }
+
     }
 }

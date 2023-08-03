@@ -13,44 +13,29 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => {
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        Name = "Authorization",
-        Type = SecuritySchemeType.Http,
-        Scheme = "Bearer",
-        BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Description = "JWT Authorization header using the Bearer scheme."
-    });
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                 {
-                     {
-                           new OpenApiSecurityScheme
-                             {
-                                 Reference = new OpenApiReference
-                                 {
-                                     Type = ReferenceType.SecurityScheme,
-                                     Id = "Bearer"
-                                 }
-                             },
-                             new string[] {}
-
-                     }
-                 });
-});
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<TourLocationContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
 });
-builder.Services.AddScoped<ILocationRepo<Country,int ,string> ,CountryRepo>();
+
+builder.Services.AddScoped<ILocationRepo<Country, int, string>, CountryRepo>();
 builder.Services.AddScoped<ILocationService<Country, int, string>, CountryService>();
 builder.Services.AddScoped<ILocationRepo<State, int, string>, StateRepo>();
 builder.Services.AddScoped<ILocationService<State, int, string>, StateService>();
 builder.Services.AddScoped<ILocationRepo<City, int, string>, CityRepo>();
 builder.Services.AddScoped<ILocationService<City, int, string>, CityService>();
 
+builder.Services.AddCors(opts =>
+{
+    opts.AddPolicy("MyCors", policy =>
+    {
+        policy.AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowAnyOrigin();
+    });
+});
 
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
 builder.Host.UseSerilog();
@@ -64,6 +49,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();

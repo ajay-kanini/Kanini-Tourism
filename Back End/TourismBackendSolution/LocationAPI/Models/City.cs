@@ -16,7 +16,5 @@ namespace LocationAPI.Models
         public double? Latitude { get; set; }
         public double? Longitude { get; set; }
         public decimal? WikiDataId { get; set; }
-
-        public virtual State State { get; set; } = null!;
     }
 }

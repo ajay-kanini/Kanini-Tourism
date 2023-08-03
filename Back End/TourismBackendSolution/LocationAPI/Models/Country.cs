@@ -5,11 +5,6 @@ namespace LocationAPI.Models
 {
     public partial class Country
     {
-        public Country()
-        {
-            States = new HashSet<State>();
-        }
-
         public int Id { get; set; }
         public string Name { get; set; } = null!;
         public string Iso3 { get; set; } = null!;
@@ -29,7 +24,5 @@ namespace LocationAPI.Models
         public double Longitude { get; set; }
         public string Emoji { get; set; } = null!;
         public string EmojiU { get; set; } = null!;
-
-        public virtual ICollection<State> States { get; set; }
     }
 }

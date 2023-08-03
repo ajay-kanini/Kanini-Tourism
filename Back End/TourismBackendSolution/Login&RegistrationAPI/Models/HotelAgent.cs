@@ -29,6 +29,9 @@ namespace HospitalManagement.Models
         public string? Address { get; set; }
         public string? AadharId { get; set; }
         public string? Status { get; set; }
+        
+        [ForeignKey("UserId")]
+        public int UserId { get; set; }
         public User? Users { get; set; }
     }
 }

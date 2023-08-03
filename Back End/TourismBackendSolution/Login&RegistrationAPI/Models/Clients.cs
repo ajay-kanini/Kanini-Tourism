@@ -6,7 +6,7 @@ namespace HospitalManagement.Models
 {
     public class Clients
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
@@ -28,9 +28,13 @@ namespace HospitalManagement.Models
                 return year;
             }
         }
+        public string? Gender { get; set; }
 
         [Required(ErrorMessage = "Address is required")]
         public string? Address { get; set; }
+
+        [ForeignKey("UserId")]
+        public int UserId { get; set; }
         public User? Users { get; set; }
     }
 }

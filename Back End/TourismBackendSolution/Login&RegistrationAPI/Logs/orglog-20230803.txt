@@ -1,0 +1,638 @@
+2023-08-03 12:19:54.368 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:19:54.802 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:19:54.810 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:19:54.813 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:19:54.815 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:19:56.317 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:19:57.732 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:19:57.747 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:19:57.753 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 18.6161ms
+2023-08-03 12:19:57.779 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1485.2591ms
+2023-08-03 12:19:57.868 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 120.3489ms
+2023-08-03 12:19:57.965 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 12:19:58.255 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 290.2374ms
+2023-08-03 12:21:51.891 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 252
+2023-08-03 12:21:51.916 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:21:52.109 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:21:52.180 +05:30 [INF] Route matched with {action = "RegisterHotelAgent", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] RegisterHotelAgent(HospitalManagement.Models.DTO.HotelAgentDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:21:54.304 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:22:05.021 +05:30 [ERR] An error occurred using the connection to database 'TourRegister' on server 'AJ\SQLEXPRESS'.
+2023-08-03 12:22:05.365 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-08-03 12:22:05.382 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI) in 13186.7309ms
+2023-08-03 12:22:05.394 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:22:05.422 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 252 - 500 - text/plain;+charset=utf-8 13532.4668ms
+2023-08-03 12:24:43.537 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:24:52.523 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:24:54.113 +05:30 [INF] Executed DbCommand (402ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TourRegister];
+2023-08-03 12:24:54.199 +05:30 [INF] Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TourRegister] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-08-03 12:24:54.226 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:24:54.362 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-08-03 12:24:54.364 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:24:54.390 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 12:24:54.413 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-03 12:24:54.437 +05:30 [INF] Applying migration '20230803065443_AJ'.
+2023-08-03 12:24:54.494 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Mail] nvarchar(450) NOT NULL,
+    [Role] nvarchar(max) NULL,
+    [PasswordHash] varbinary(max) NULL,
+    [PasswordKey] varbinary(max) NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2023-08-03 12:24:54.499 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NOT NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-08-03 12:24:54.503 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [HotelAgents] (
+    [Id] int NOT NULL,
+    [Name] nvarchar(max) NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Gender] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [AadharId] nvarchar(max) NULL,
+    [Status] nvarchar(max) NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_HotelAgents] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_HotelAgents_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-08-03 12:24:54.509 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Clients_UserId] ON [Clients] ([UserId]);
+2023-08-03 12:24:54.511 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_HotelAgents_UserId] ON [HotelAgents] ([UserId]);
+2023-08-03 12:24:54.512 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Mail] ON [Users] ([Mail]);
+2023-08-03 12:24:54.520 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230803065443_AJ', N'6.0.20');
+2023-08-03 12:25:06.288 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:25:06.624 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:25:06.632 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:25:06.634 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:25:06.636 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:25:07.438 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:25:08.373 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:25:08.388 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:25:08.396 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 20.6521ms
+2023-08-03 12:25:08.432 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1001.2013ms
+2023-08-03 12:25:08.463 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 75.4005ms
+2023-08-03 12:25:08.545 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 12:25:08.820 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 275.2929ms
+2023-08-03 12:25:15.981 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 252
+2023-08-03 12:25:15.995 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:25:16.152 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:25:16.208 +05:30 [INF] Route matched with {action = "RegisterHotelAgent", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] RegisterHotelAgent(HospitalManagement.Models.DTO.HotelAgentDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:25:18.016 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:25:19.711 +05:30 [INF] Executed DbCommand (127ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Mail], [PasswordHash], [PasswordKey], [Role])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-08-03 12:25:20.177 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:25:20.205 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI) in 3986.1406ms
+2023-08-03 12:25:20.210 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:25:20.226 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 252 - 201 - application/json;+charset=utf-8 4244.9484ms
+2023-08-03 12:26:57.718 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:26:58.005 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:26:58.012 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:26:58.015 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:26:58.017 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:26:59.126 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:26:59.951 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:26:59.951 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:26:59.963 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 9.4244ms
+2023-08-03 12:27:00.024 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 909.1220ms
+2023-08-03 12:27:00.067 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 116.1531ms
+2023-08-03 12:27:00.145 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 12:27:00.427 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 282.2764ms
+2023-08-03 12:28:36.579 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 261
+2023-08-03 12:28:36.609 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:28:36.820 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:28:36.904 +05:30 [INF] Route matched with {action = "RegisterHotelAgent", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] RegisterHotelAgent(HospitalManagement.Models.DTO.HotelAgentDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:28:38.908 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:28:40.307 +05:30 [INF] Executed DbCommand (132ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Mail], [PasswordHash], [PasswordKey], [Role])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-08-03 12:28:40.579 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [HotelAgents] ([Id], [AadharId], [Address], [DateOfBirth], [Gender], [Name], [PhoneNumber], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2023-08-03 12:28:40.883 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:28:40.910 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI) in 3995.5135ms
+2023-08-03 12:28:40.916 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:28:40.933 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 261 - 201 - application/json;+charset=utf-8 4353.7283ms
+2023-08-03 12:30:36.797 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/RegisterClient application/json 208
+2023-08-03 12:30:36.815 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:30:36.818 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.RegisterClient (Login&RegistrationAPI)'
+2023-08-03 12:30:36.827 +05:30 [INF] Route matched with {action = "RegisterClient", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] RegisterClient(HospitalManagement.Models.DTO.ClientDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:30:36.889 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:30:36.911 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Mail], [PasswordHash], [PasswordKey], [Role])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-08-03 12:30:36.980 +05:30 [ERR] Failed executing DbCommand (31ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Clients] ([Id], [Address], [DateOfBirth], [Name], [PhoneNumber], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-08-03 12:30:37.121 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'HospitalManagement.Context.RegistrationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Clients' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:44402eb1-f253-45ba-9895-41aa920f4c07
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Clients' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:44402eb1-f253-45ba-9895-41aa920f4c07
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-08-03 12:30:37.391 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-08-03 12:30:37.394 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.RegisterClient (Login&RegistrationAPI) in 562.7675ms
+2023-08-03 12:30:37.396 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.RegisterClient (Login&RegistrationAPI)'
+2023-08-03 12:30:37.407 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/RegisterClient application/json 208 - 500 - text/plain;+charset=utf-8 609.9522ms
+2023-08-03 12:34:17.559 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:34:23.800 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:34:39.487 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:34:39.899 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:34:39.939 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 12:34:39.943 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:34:39.945 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 12:34:39.972 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-03 12:34:39.993 +05:30 [INF] Applying migration '20230803070424_AJA'.
+2023-08-03 12:36:17.057 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:36:25.873 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:36:26.635 +05:30 [INF] Executed DbCommand (245ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TourRegister];
+2023-08-03 12:36:26.717 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TourRegister] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-08-03 12:36:26.746 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:36:26.894 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-08-03 12:36:26.896 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:36:26.930 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 12:36:26.948 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-03 12:36:26.975 +05:30 [INF] Applying migration '20230803070617_AJAY'.
+2023-08-03 12:36:27.027 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Mail] nvarchar(450) NOT NULL,
+    [Role] nvarchar(max) NULL,
+    [PasswordHash] varbinary(max) NULL,
+    [PasswordKey] varbinary(max) NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2023-08-03 12:36:27.031 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] int NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NOT NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-08-03 12:36:27.036 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [HotelAgents] (
+    [Id] int NOT NULL,
+    [Name] nvarchar(max) NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Gender] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [AadharId] nvarchar(max) NULL,
+    [Status] nvarchar(max) NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_HotelAgents] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_HotelAgents_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-08-03 12:36:27.037 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Clients_UserId] ON [Clients] ([UserId]);
+2023-08-03 12:36:27.039 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_HotelAgents_UserId] ON [HotelAgents] ([UserId]);
+2023-08-03 12:36:27.041 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Mail] ON [Users] ([Mail]);
+2023-08-03 12:36:27.048 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230803070617_AJAY', N'6.0.20');
+2023-08-03 12:37:24.657 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:37:24.978 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:37:24.985 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:37:24.987 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:37:24.989 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:37:25.889 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:37:26.732 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:37:26.732 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:37:26.741 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 9.2985ms
+2023-08-03 12:37:26.741 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 856.8206ms
+2023-08-03 12:37:26.810 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 78.3572ms
+2023-08-03 12:37:26.905 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 12:37:27.216 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 310.9034ms
+2023-08-03 12:37:42.317 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 252
+2023-08-03 12:37:42.341 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:37:42.533 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:37:42.593 +05:30 [INF] Route matched with {action = "RegisterHotelAgent", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] RegisterHotelAgent(HospitalManagement.Models.DTO.HotelAgentDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:37:44.450 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:37:45.695 +05:30 [INF] Executed DbCommand (110ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Mail], [PasswordHash], [PasswordKey], [Role])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-08-03 12:37:46.138 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:37:46.170 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI) in 3563.8252ms
+2023-08-03 12:37:46.178 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:37:46.210 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 252 - 201 - application/json;+charset=utf-8 3892.8228ms
+2023-08-03 12:38:13.122 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:38:13.438 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:38:13.446 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:38:13.449 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:38:13.450 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:38:14.429 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:38:15.289 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:38:15.300 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:38:15.311 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 20.0275ms
+2023-08-03 12:38:15.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 926.5417ms
+2023-08-03 12:38:15.372 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.1780ms
+2023-08-03 12:38:15.506 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 12:38:15.823 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 316.3293ms
+2023-08-03 12:39:26.827 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 259
+2023-08-03 12:39:26.856 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:39:26.997 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:39:27.057 +05:30 [INF] Route matched with {action = "RegisterHotelAgent", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] RegisterHotelAgent(HospitalManagement.Models.DTO.HotelAgentDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:39:28.851 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:39:30.072 +05:30 [INF] Executed DbCommand (112ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Mail], [PasswordHash], [PasswordKey], [Role])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-08-03 12:39:30.309 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [HotelAgents] ([Id], [AadharId], [Address], [DateOfBirth], [Gender], [Name], [PhoneNumber], [Status], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2023-08-03 12:39:30.584 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:39:30.612 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI) in 3540.7808ms
+2023-08-03 12:39:30.616 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.RegisterHotelAgent (Login&RegistrationAPI)'
+2023-08-03 12:39:30.635 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/RegisterHotelAgent application/json 259 - 201 - application/json;+charset=utf-8 3813.6962ms
+2023-08-03 12:39:44.041 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/RegisterClient application/json 208
+2023-08-03 12:39:44.047 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:39:44.057 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.RegisterClient (Login&RegistrationAPI)'
+2023-08-03 12:39:44.070 +05:30 [INF] Route matched with {action = "RegisterClient", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] RegisterClient(HospitalManagement.Models.DTO.ClientDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:39:44.097 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:39:44.123 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 8000) (DbType = Binary), @p2='?' (Size = 8000) (DbType = Binary), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Mail], [PasswordHash], [PasswordKey], [Role])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-08-03 12:39:44.154 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Clients] ([Id], [Address], [DateOfBirth], [Name], [PhoneNumber], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-08-03 12:39:44.162 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:39:44.165 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.RegisterClient (Login&RegistrationAPI) in 89.7947ms
+2023-08-03 12:39:44.168 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.RegisterClient (Login&RegistrationAPI)'
+2023-08-03 12:39:44.170 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/RegisterClient application/json 208 - 201 - application/json;+charset=utf-8 128.9438ms
+2023-08-03 12:40:29.372 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 54
+2023-08-03 12:40:29.390 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:40:29.395 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:40:29.401 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:40:29.447 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-03 12:40:29.480 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 74.4534ms
+2023-08-03 12:40:29.492 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:40:29.495 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 54 - 400 - application/problem+json;+charset=utf-8 124.8703ms
+2023-08-03 12:40:39.112 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 55
+2023-08-03 12:40:39.114 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:40:39.115 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:40:39.119 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:40:39.221 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:40:39.682 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-03 12:40:40.051 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-03 12:40:40.058 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:40:40.060 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 937.995ms
+2023-08-03 12:40:40.064 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:40:40.066 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 55 - 201 - application/json;+charset=utf-8 954.2103ms
+2023-08-03 12:40:54.191 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 59
+2023-08-03 12:40:54.194 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:40:54.196 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:40:54.199 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:40:54.204 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:40:54.218 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-03 12:40:54.238 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-03 12:40:54.244 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:40:54.248 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 44.8452ms
+2023-08-03 12:40:54.251 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:40:54.254 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 59 - 201 - application/json;+charset=utf-8 62.9594ms
+2023-08-03 12:41:10.369 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 59
+2023-08-03 12:41:10.371 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:41:10.373 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:41:10.375 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:41:10.381 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:41:10.394 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-03 12:41:10.418 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-03 12:41:10.425 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-03 12:41:10.429 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 49.3136ms
+2023-08-03 12:41:10.433 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-03 12:41:10.435 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 59 - 201 - application/json;+charset=utf-8 65.8310ms
+2023-08-03 12:42:01.429 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-03 12:42:01.437 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-03 12:42:01.443 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:42:01.452 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:42:01.476 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-03 12:42:01.485 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 12:42:01.502 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 54.7978ms
+2023-08-03 12:42:01.505 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-03 12:42:01.508 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 80.6788ms
+2023-08-03 12:42:18.526 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetOneAgent?key=2 - -
+2023-08-03 12:42:18.528 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetOneAgent (Login&RegistrationAPI)'
+2023-08-03 12:42:18.543 +05:30 [INF] Route matched with {action = "GetOneAgent", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetOneAgent(Int32) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:42:18.564 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:42:18.585 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+WHERE [h].[Id] = @__key_0
+2023-08-03 12:42:18.590 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.HotelAgent'.
+2023-08-03 12:42:18.593 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetOneAgent (Login&RegistrationAPI) in 46.4133ms
+2023-08-03 12:42:18.596 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetOneAgent (Login&RegistrationAPI)'
+2023-08-03 12:42:18.598 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetOneAgent?key=2 - - - 200 - application/json;+charset=utf-8 72.2124ms
+2023-08-03 12:46:26.457 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:46:36.671 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:46:37.115 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:46:37.162 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 12:46:37.168 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:46:37.169 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 12:46:37.204 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-03 12:46:37.229 +05:30 [INF] Applying migration '20230803071626_AJAYG'.
+2023-08-03 12:46:37.308 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Clients] ADD [Gender] nvarchar(max) NULL;
+2023-08-03 12:46:37.318 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230803071626_AJAYG', N'6.0.20');
+2023-08-03 12:48:25.709 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:48:26.119 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:48:26.127 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:48:26.138 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:48:26.140 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:48:27.180 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:48:28.051 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:48:28.056 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:48:28.064 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 11.0918ms
+2023-08-03 12:48:28.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1030.7921ms
+2023-08-03 12:48:28.233 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 177.2617ms
+2023-08-03 12:48:28.323 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 12:48:28.620 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 296.5893ms
+2023-08-03 12:48:40.109 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetOneClient?key=3 - -
+2023-08-03 12:48:40.293 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetOneClient (Login&RegistrationAPI)'
+2023-08-03 12:48:40.366 +05:30 [INF] Route matched with {action = "GetOneClient", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetOneClient(Int32) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:48:42.313 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:48:44.020 +05:30 [INF] Executed DbCommand (146ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[DateOfBirth], [c].[Gender], [c].[Name], [c].[PhoneNumber], [c].[UserId]
+FROM [Clients] AS [c]
+WHERE [c].[Id] = @__key_0
+2023-08-03 12:48:44.231 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.Clients'.
+2023-08-03 12:48:44.285 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetOneClient (Login&RegistrationAPI) in 3905.488ms
+2023-08-03 12:48:44.290 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetOneClient (Login&RegistrationAPI)'
+2023-08-03 12:48:44.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetOneClient?key=3 - - - 200 - application/json;+charset=utf-8 4199.9682ms
+2023-08-03 12:49:56.876 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5294/api/Register/UpdateAgentStatus application/json 13
+2023-08-03 12:49:56.900 +05:30 [INF] CORS policy execution successful.
+2023-08-03 12:49:56.906 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.UpdateAgentStatus (Login&RegistrationAPI)'
+2023-08-03 12:49:56.925 +05:30 [INF] Route matched with {action = "UpdateAgentStatus", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] UpdateAgentStatus(HospitalManagement.Models.HotelAgent) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-03 12:49:57.037 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:49:58.646 +05:30 [INF] Executed DbCommand (1,586ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+WHERE [h].[Id] = @__key_0
+2023-08-03 12:49:58.888 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [HotelAgents] SET [Status] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2023-08-03 12:49:58.960 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.HotelAgent'.
+2023-08-03 12:49:58.967 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.UpdateAgentStatus (Login&RegistrationAPI) in 2037.9316ms
+2023-08-03 12:49:58.970 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.UpdateAgentStatus (Login&RegistrationAPI)'
+2023-08-03 12:49:58.973 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5294/api/Register/UpdateAgentStatus application/json 13 - 201 - application/json;+charset=utf-8 2096.8074ms
+2023-08-03 12:57:37.772 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:57:38.277 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:57:38.287 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:57:38.290 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:57:38.292 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:57:39.409 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:57:40.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:57:40.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:57:40.540 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 21.5973ms
+2023-08-03 12:57:40.577 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1178.1456ms
+2023-08-03 12:57:40.632 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 97.6243ms
+2023-08-03 12:57:40.814 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 12:57:41.142 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 328.7200ms
+2023-08-03 12:59:33.486 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 12:59:33.840 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 12:59:33.849 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:59:33.852 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:59:33.855 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 12:59:35.502 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 12:59:36.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 12:59:36.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:59:36.890 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 13.8634ms
+2023-08-03 12:59:36.926 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1454.0122ms
+2023-08-03 13:00:31.680 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-03 13:00:31.993 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-03 13:00:32.003 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:00:32.006 +05:30 [INF] Hosting environment: Development
+2023-08-03 13:00:32.008 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-03 13:00:34.328 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-03 13:00:36.005 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 13:00:36.012 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-03 13:00:36.024 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 15.7279ms
+2023-08-03 13:00:36.030 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1745.5901ms
+2023-08-03 13:00:36.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 184.9091ms
+2023-08-03 13:00:36.304 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-03 13:00:36.720 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 416.6343ms
+2023-08-03 13:24:32.028 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 13:24:45.363 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 13:24:46.236 +05:30 [INF] Executed DbCommand (205ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TourRegister];
+2023-08-03 13:24:46.315 +05:30 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TourRegister] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-08-03 13:24:46.422 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 13:24:46.551 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-08-03 13:24:46.554 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 13:24:46.591 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 13:24:46.609 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-03 13:24:46.633 +05:30 [INF] Applying migration '20230803075432_S'.
+2023-08-03 13:24:46.696 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Mail] nvarchar(450) NOT NULL,
+    [Role] nvarchar(max) NULL,
+    [PasswordHash] varbinary(max) NULL,
+    [PasswordKey] varbinary(max) NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2023-08-03 13:24:46.702 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] int NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NOT NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Gender] nvarchar(max) NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-08-03 13:24:46.707 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [HotelAgents] (
+    [Id] int NOT NULL,
+    [Name] nvarchar(max) NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Gender] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [AadharId] nvarchar(max) NULL,
+    [Status] nvarchar(max) NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_HotelAgents] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_HotelAgents_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-08-03 13:24:46.712 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Clients_UserId] ON [Clients] ([UserId]);
+2023-08-03 13:24:46.714 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_HotelAgents_UserId] ON [HotelAgents] ([UserId]);
+2023-08-03 13:24:46.715 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Mail] ON [Users] ([Mail]);
+2023-08-03 13:24:46.727 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230803075432_S', N'6.0.20');

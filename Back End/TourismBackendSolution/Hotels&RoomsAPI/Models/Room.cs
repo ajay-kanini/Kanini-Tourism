@@ -8,9 +8,8 @@ namespace Hotels_RoomsAPI.Models
     {
         [Key]
         public int RoomId { get; set; }
-
         public int RoomNumber { get; set; }
-        public double RoomPrice { get; set; }
+        public double RoomPricePerDay { get; set; }
         public bool ACAvailability { get; set; }
         public bool RoomAvailability { get; set; }
 
@@ -18,7 +17,7 @@ namespace Hotels_RoomsAPI.Models
         public int NumberOfPersons { get; set; }
         
         [ForeignKey("Hotel")]
-        public int HotelId { get; set; }
+        public int? HotelId { get; set; }
         public Hotel Hotel { get; set; }
         
     }

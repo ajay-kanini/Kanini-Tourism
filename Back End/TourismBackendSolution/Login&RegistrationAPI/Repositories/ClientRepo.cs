@@ -13,9 +13,9 @@ namespace HospitalManagement.Service
     {
         private readonly RegistrationContext _context;
 
-        public ClientRepo(RegistrationContext hospitalContext)
+        public ClientRepo(RegistrationContext registerContext)
         {
-            _context = hospitalContext;
+            _context = registerContext;
         }
 
         public async Task<Clients?> Add(Clients item)
@@ -50,8 +50,8 @@ namespace HospitalManagement.Service
             }
             try
             {
-                var patient = await Get(item.Id);
-                if (patient != null)
+                var client = await Get(item.Id);
+                if (client != null)
                 {
                     _context.Clients.Remove(item);
                     await _context.SaveChangesAsync();
@@ -76,8 +76,8 @@ namespace HospitalManagement.Service
             }
             try
             {
-                var patient = await _context.Clients.FirstOrDefaultAsync(u => u.Id == key);
-                return patient;
+                var client = await _context.Clients.FirstOrDefaultAsync(u => u.Id == key);
+                return client;
             }
             catch (Exception ex)
             {
@@ -95,8 +95,8 @@ namespace HospitalManagement.Service
             }
             try
             {
-                var patients = await _context.Clients.ToListAsync();
-                return patients;
+                var clients = await _context.Clients.ToListAsync();
+                return clients;
             }
             catch (Exception ex)
             {
@@ -114,8 +114,8 @@ namespace HospitalManagement.Service
             }
             try
             {
-                var patient = await Get(item.Id);
-                if (patient != null)
+                var client = await Get(item.Id);
+                if (client != null)
                 {
                     _context.Clients.Update(item);
                     await _context.SaveChangesAsync();

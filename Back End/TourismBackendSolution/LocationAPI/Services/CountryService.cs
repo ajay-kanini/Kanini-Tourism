@@ -29,7 +29,7 @@ namespace LocationAPI.Services
 
         public async Task<Country> GetLocationById(int id)
         {
-            return await _repo.GetById(id); 
+            return await _repo.GetById(id);
         }
 
         public async Task<Country> GetLocationByName(string name)

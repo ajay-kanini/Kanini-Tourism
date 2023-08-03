@@ -6,9 +6,12 @@
         public Task<T> Update(T item);
         public Task<T> Delete(K id);
         public Task<ICollection<T>> GetByHotelId(K id);
-        public Task<T> GetByRoomId(K id);    
+        public Task<T> GetByRoomId(K id);
         public Task<ICollection<T>> GetAll();
-        public Task<T> RoomStatus(K id);
-        public Task<ICollection<T>> BookMultipleRooms(int[] id);
+        public Task<T> BookOrCancelRoom(K id);
+        public Task<ICollection<T>> BookOrCancelMultipleRooms(int[] id);
+        public Task<ICollection<T>> GetMultipleRooms(int[] id);
+        public Task<Double> PriceCalculation(int NumberOfDays, int[] roomId);
+        public Task<ICollection<T>> AutoEndRoomTime(int[] roomId, DateTime dt);
     }
 }

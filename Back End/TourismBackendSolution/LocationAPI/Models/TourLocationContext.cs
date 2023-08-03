@@ -45,9 +45,7 @@ namespace LocationAPI.Models
 
                 entity.Property(e => e.CountryId).HasColumnName("country_id");
 
-                entity.Property(e => e.CountryName)
-                    .HasMaxLength(50)
-                    .HasColumnName("country_name");
+                entity.Property(e => e.CountryName).HasColumnName("country_name");
 
                 entity.Property(e => e.Latitude).HasColumnName("latitude");
 
@@ -66,12 +64,6 @@ namespace LocationAPI.Models
                 entity.Property(e => e.WikiDataId)
                     .HasColumnType("money")
                     .HasColumnName("wikiDataId");
-
-                entity.HasOne(d => d.State)
-                    .WithMany(p => p.Cities)
-                    .HasForeignKey(d => d.StateId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_cities_States");
             });
 
             modelBuilder.Entity<Country>(entity =>
@@ -161,9 +153,7 @@ namespace LocationAPI.Models
 
                 entity.Property(e => e.CountryId).HasColumnName("country_id");
 
-                entity.Property(e => e.CountryName)
-                    .HasMaxLength(50)
-                    .HasColumnName("country_name");
+                entity.Property(e => e.CountryName).HasColumnName("country_name");
 
                 entity.Property(e => e.Latitude).HasColumnName("latitude");
 
@@ -178,12 +168,6 @@ namespace LocationAPI.Models
                 entity.Property(e => e.Type)
                     .HasMaxLength(50)
                     .HasColumnName("type");
-
-                entity.HasOne(d => d.Country)
-                    .WithMany(p => p.States)
-                    .HasForeignKey(d => d.CountryId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_States_Countries");
             });
 
             OnModelCreatingPartial(modelBuilder);

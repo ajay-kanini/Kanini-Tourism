@@ -1,0 +1,197 @@
+2023-08-03 12:57:04.088 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:57:13.820 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 12:57:14.541 +05:30 [INF] Executed DbCommand (186ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TourLocation];
+2023-08-03 12:57:14.609 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TourLocation] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-08-03 12:57:14.631 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:57:14.789 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-08-03 12:57:14.791 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-03 12:57:14.820 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-03 12:57:14.837 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-03 12:57:14.863 +05:30 [INF] Applying migration '20230803072704_AJAYGO'.
+2023-08-03 12:57:14.920 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Country] (
+    [id] int NOT NULL,
+    [name] nvarchar(50) NOT NULL,
+    [iso3] nvarchar(50) NOT NULL,
+    [iso2] nvarchar(50) NOT NULL,
+    [numeric_code] int NOT NULL,
+    [phone_code] nvarchar(50) NOT NULL,
+    [capital] nvarchar(50) NULL,
+    [currency] nvarchar(50) NOT NULL,
+    [currency_name] nvarchar(50) NOT NULL,
+    [currency_symbol] nvarchar(50) NOT NULL,
+    [tld] nvarchar(50) NOT NULL,
+    [native] nvarchar(100) NULL,
+    [region] nvarchar(50) NULL,
+    [subregion] nvarchar(50) NULL,
+    [timezones] nvarchar(max) NOT NULL,
+    [latitude] float NOT NULL,
+    [longitude] float NOT NULL,
+    [emoji] nvarchar(50) NOT NULL,
+    [emojiU] nvarchar(50) NOT NULL,
+    CONSTRAINT [PK_Country] PRIMARY KEY ([id])
+);
+2023-08-03 12:57:14.923 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [State] (
+    [id] int NOT NULL,
+    [name] nvarchar(max) NOT NULL,
+    [country_id] int NOT NULL,
+    [country_code] nvarchar(50) NOT NULL,
+    [country_name] nvarchar(50) NOT NULL,
+    [state_code] nvarchar(50) NOT NULL,
+    [type] nvarchar(50) NULL,
+    [latitude] float NULL,
+    [longitude] float NULL,
+    CONSTRAINT [PK_State] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_States_Countries] FOREIGN KEY ([country_id]) REFERENCES [Country] ([id])
+);
+2023-08-03 12:57:14.927 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [City] (
+    [id] int NOT NULL,
+    [name] nvarchar(max) NOT NULL,
+    [state_id] int NOT NULL,
+    [state_code] nvarchar(50) NOT NULL,
+    [state_name] nvarchar(max) NOT NULL,
+    [country_id] int NOT NULL,
+    [country_code] nvarchar(50) NOT NULL,
+    [country_name] nvarchar(50) NOT NULL,
+    [latitude] float NULL,
+    [longitude] float NULL,
+    [wikiDataId] money NULL,
+    CONSTRAINT [PK_City] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_cities_States] FOREIGN KEY ([state_id]) REFERENCES [State] ([id])
+);
+2023-08-03 12:57:14.929 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_City_state_id] ON [City] ([state_id]);
+2023-08-03 12:57:14.930 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_State_country_id] ON [State] ([country_id]);
+2023-08-03 12:57:14.936 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230803072704_AJAYGO', N'6.0.20');
+2023-08-03 12:57:38.626 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-03 12:57:38.712 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:57:38.717 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:57:38.719 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-03 12:57:39.775 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-03 12:57:40.702 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 12:57:40.710 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-03 12:57:40.716 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 12.4997ms
+2023-08-03 12:57:40.751 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 991.1821ms
+2023-08-03 12:57:40.797 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.1097ms
+2023-08-03 12:57:40.901 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-03 12:57:41.207 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 306.7248ms
+2023-08-03 12:58:01.937 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - -
+2023-08-03 12:58:01.979 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI) contains CORS metadata, but a middleware was not found that supports CORS.
+Configure your application startup by adding app.UseCors() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseCors() must go between them.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingCorsMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-03 12:58:02.079 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - - - 500 - text/plain;+charset=utf-8 143.1407ms
+2023-08-03 12:59:34.364 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-03 12:59:34.538 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 12:59:34.541 +05:30 [INF] Hosting environment: Development
+2023-08-03 12:59:34.543 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-03 12:59:36.211 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-03 13:00:35.882 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-03 13:00:35.992 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:00:35.996 +05:30 [INF] Hosting environment: Development
+2023-08-03 13:00:35.998 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-03 13:00:36.842 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-03 13:00:37.476 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 13:00:37.487 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-03 13:00:37.498 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 18.8877ms
+2023-08-03 13:00:37.528 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 699.1396ms
+2023-08-03 13:00:37.571 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 84.3109ms
+2023-08-03 13:00:37.644 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-03 13:00:37.811 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 166.6753ms
+2023-08-03 13:00:47.646 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - -
+2023-08-03 13:00:47.664 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-03 13:00:47.715 +05:30 [INF] Route matched with {action = "GetAllStates", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllStates() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-03 13:00:49.505 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 13:00:51.215 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[id] AS [Id], [s].[name] AS [Name]
+FROM [State] AS [s]
+WHERE LTRIM(RTRIM(LOWER([s].[country_name]))) = N'india'
+2023-08-03 13:00:51.308 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LocationAPI.Models.DTO.LocationDTO, LocationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:00:51.335 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI) in 3608.7257ms
+2023-08-03 13:00:51.341 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-03 13:00:51.357 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - - - 200 - application/json;+charset=utf-8 3711.0174ms
+2023-08-03 13:29:54.387 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-03 13:29:54.472 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:29:54.475 +05:30 [INF] Hosting environment: Development
+2023-08-03 13:29:54.477 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-03 13:29:55.462 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-03 13:29:56.458 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 13:29:56.513 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-03 13:29:56.524 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 64.0025ms
+2023-08-03 13:29:56.536 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1083.6275ms
+2023-08-03 13:29:56.584 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.4116ms
+2023-08-03 13:29:56.649 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-03 13:29:56.953 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 303.9254ms
+2023-08-03 13:30:06.440 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - -
+2023-08-03 13:30:06.464 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-03 13:30:06.527 +05:30 [INF] Route matched with {action = "GetAllStates", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllStates() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-03 13:30:06.550 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI) in 10.6125ms
+2023-08-03 13:30:06.563 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-03 13:30:06.572 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'LocationAPI.Interfaces.ILocationService`3[LocationAPI.Models.Country,System.Int32,System.String]' while attempting to activate 'LocationAPI.Controllers.LocationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-03 13:30:06.693 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - - - 500 - text/plain;+charset=utf-8 253.6526ms
+2023-08-03 13:30:50.813 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-03 13:30:50.895 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-03 13:30:50.898 +05:30 [INF] Hosting environment: Development
+2023-08-03 13:30:50.899 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-03 13:30:51.880 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-03 13:30:52.822 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-03 13:30:52.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-03 13:30:52.838 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 13.6492ms
+2023-08-03 13:30:52.923 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1053.9936ms
+2023-08-03 13:30:52.960 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 131.1796ms
+2023-08-03 13:30:53.047 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-03 13:30:53.418 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 371.0317ms
+2023-08-03 13:30:59.075 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - -
+2023-08-03 13:30:59.094 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-03 13:30:59.146 +05:30 [INF] Route matched with {action = "GetAllStates", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllStates() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-03 13:31:00.608 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-03 13:31:02.447 +05:30 [INF] Executed DbCommand (153ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[id] AS [Id], [s].[name] AS [Name]
+FROM [State] AS [s]
+WHERE LTRIM(RTRIM(LOWER([s].[country_name]))) = N'india'
+2023-08-03 13:31:02.569 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LocationAPI.Models.DTO.LocationDTO, LocationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-03 13:31:02.603 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI) in 3442.1945ms
+2023-08-03 13:31:02.613 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-03 13:31:02.629 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - - - 200 - application/json;+charset=utf-8 3554.4609ms
