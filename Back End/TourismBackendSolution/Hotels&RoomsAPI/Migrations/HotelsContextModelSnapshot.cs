@@ -73,8 +73,8 @@ namespace Hotels_RoomsAPI.Migrations
                     b.Property<bool>("RoomAvailability")
                         .HasColumnType("bit");
 
-                    b.Property<int>("RoomNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("RoomNumber")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("RoomPricePerDay")
                         .HasColumnType("float");

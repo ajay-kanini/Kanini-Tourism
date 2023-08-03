@@ -1,33 +1,72 @@
-﻿using BookingAPI.Interfaces;
+﻿using BookingAPI.Context;
+using BookingAPI.Interfaces;
 using BookingAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookingAPI.Repositories
 {
-    public class BookingRepo : IBoolkingRepo<Booking, int>
+    public class BookingRepo : IBookingRepo<Booking, int>
     {
-        public Task<Booking> Add(Booking item)
+        private readonly IBookingService _context;
+        public BookingRepo(IBookingService context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task<Booking> Add(Booking item)
+        {
+            try
+            {
+                _context.Bookings.Add(item);
+                await _context.SaveChangesAsync();
+                return item;
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception("Message", ex);
+            }
         }
 
-        public Task<Booking> Delete(int id)
+        public async Task<Booking> Delete(int id)
         {
-            throw new NotImplementedException();
+            var booking = await Get(id);
+            if (booking != null) 
+            {
+                _context.Remove(booking);
+                await _context.SaveChangesAsync();  
+                return booking; 
+            }
+            return null;
         }
 
-        public Task<Booking> Get(int id)
+        public async Task<Booking> Get(int id)
         {
-            throw new NotImplementedException();
+            var booking = await _context.Bookings.FirstOrDefaultAsync(u=>u.BookingId == id);
+            return booking;
         }
 
-        public Task<ICollection<Booking>> GetBookingByHotelId(int id)
+        public async Task<ICollection<Booking>> GetBookingByHotelId(int id)
         {
-            throw new NotImplementedException();
+            var bookings = await _context.Bookings.ToListAsync();
+            var hotelBookings = bookings.Where(u=>u.HotelId == id).ToList();
+            return hotelBookings;
         }
 
-        public Task<Booking> Update(Booking item)
+        public async Task<Booking> GetByUserId(int id)
         {
-            throw new NotImplementedException();
+            var bookings = await _context.Bookings.OrderByDescending(b => b.EndDate).ToListAsync();
+            var userBooking = bookings.FirstOrDefault(u => u.UserId == id); 
+            return userBooking;
+        }
+
+        public async Task<Booking> Update(Booking item)
+        {
+            var booking = await Get(item.BookingId);
+            booking.StartDate = item.StartDate;
+            booking.EndDate = item.EndDate; 
+            booking.UserName = item.UserName;
+            booking.HotelName = item.HotelName; 
+            await _context.SaveChangesAsync();  
+            return booking;
         }
     }
 }

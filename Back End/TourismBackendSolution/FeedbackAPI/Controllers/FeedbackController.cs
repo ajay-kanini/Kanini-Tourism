@@ -93,15 +93,27 @@ namespace FeedbackAPI.Controllers
             return BadRequest();
         }
 
-        [HttpPost]
-        public async Task<ActionResult<bool>> UserExistence(FeedBack feedBack)
+        [HttpGet]
+        public async Task<ActionResult<bool>> UserExistence(int id)
         {
-            var feedbacks = await _service.CheckUserExistence(feedBack); 
+            var feedbacks = await _service.CheckUserExistence(id); 
             if (feedbacks != null)
             {
                 return Ok(feedbacks);
             }
             return BadRequest();
         }
+
+        [HttpGet]
+        public async Task<ActionResult<double>> RatingCalculation(int id)
+        {
+            var feedbacks = await _service.CalculatePoints(id);
+            if (feedbacks != null)
+            {
+                return Ok(feedbacks);
+            }
+            return BadRequest();
+        }
+
     }
 }

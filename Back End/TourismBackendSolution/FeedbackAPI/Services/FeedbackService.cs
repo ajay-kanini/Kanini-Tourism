@@ -16,10 +16,32 @@ namespace FeedbackAPI.Services
            return await _repo.Add(item);
         }
 
-        public async Task<bool> CheckUserExistence(FeedBack feedBack)
+        public async Task<double> CalculatePoints(int id)
+        {
+            var feedbacks = await _repo.GetByHotelId(id);
+            var count = feedbacks.Count();
+
+            if (count == 0)
+            {
+                return 0; 
+            }
+
+            double totalPoints = 0;
+
+            foreach (var feedback in feedbacks)
+            {
+                totalPoints += feedback.Points; 
+            }
+
+            double averageRating = (double)totalPoints / count;
+
+            return averageRating;
+        }
+
+        public async Task<bool> CheckUserExistence(int id)
         {
             var users = await _repo.GetAll();
-            var checkUser =  users.FirstOrDefault(u=> u.UserId == feedBack.UserId);
+            var checkUser =  users.FirstOrDefault(u=> u.UserId == id);
             var result = checkUser != null ?  true :  false;
             return result;
         }

@@ -1,6 +1,6 @@
-﻿#nullable disable
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Hotels_RoomsAPI.Models
 {
@@ -8,17 +8,19 @@ namespace Hotels_RoomsAPI.Models
     {
         [Key]
         public int RoomId { get; set; }
-        public int RoomNumber { get; set; }
+        public string? RoomNumber { get; set; }
         public double RoomPricePerDay { get; set; }
         public bool ACAvailability { get; set; }
         public bool RoomAvailability { get; set; }
 
         [Range(minimum: 1, maximum: 5)]
         public int NumberOfPersons { get; set; }
-        
-        [ForeignKey("Hotel")]
         public int? HotelId { get; set; }
-        public Hotel Hotel { get; set; }
+
+        [ForeignKey("HotelId")]
+
+        [JsonIgnore]
+        public Hotel? Hotel { get; set; }
         
     }
 }

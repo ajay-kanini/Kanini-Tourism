@@ -2,6 +2,7 @@
 using Hotels_RoomsAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace Hotels_RoomsAPI.Controllers
 {
@@ -104,12 +105,23 @@ namespace Hotels_RoomsAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Double>> TotalPriceCalculation(int numberOfDays,int[] id)
+        public async Task<ActionResult<double>> TotalPriceCalculation(int numberOfDays,int[] id)
         {
             var rooms = await _roomServie.PriceCalculation(numberOfDays, id);
             if (rooms != 0)
             {
                 return Ok(rooms);
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<ICollection<Room>>> AutoEndDate(int[] id, DateTime endDate)
+        {
+            var rooms = await _roomServie.AutoEndRoomTime(id, endDate);
+            if(rooms != null)
+            {
+                return Ok(rooms.ToList());
             }
             return BadRequest();
         }

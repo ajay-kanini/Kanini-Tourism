@@ -17,7 +17,7 @@ namespace Hotels_RoomsAPI.Repositories
         {
             try
             {
-                item.RoomAvailability = false;
+                item.RoomAvailability = true;
                 _context.Rooms.Add(item);
                 await _context.SaveChangesAsync();
                 return item;

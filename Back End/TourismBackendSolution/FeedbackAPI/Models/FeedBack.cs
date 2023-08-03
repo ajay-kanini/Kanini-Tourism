@@ -10,6 +10,6 @@ namespace FeedbackAPI.Models
         public string? FeedbackDescription { get; set;}
         
         [Range(minimum:1, maximum:5)]
-        public int Points { get; set; }
+        public double Points { get; set; }
     }
 }

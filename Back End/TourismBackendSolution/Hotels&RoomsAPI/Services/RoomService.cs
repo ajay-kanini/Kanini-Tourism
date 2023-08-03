@@ -43,7 +43,7 @@ namespace Hotels_RoomsAPI.Services
         public async Task<Room> BookOrCancelRoom(int id)
         {
             var room = await _repo.GetByRoomId(id);
-            room.RoomAvailability = room.RoomAvailability == false ? true : false;
+            room.RoomAvailability = room.RoomAvailability == true ? false : true;
             await _repo.Update(room);   
             return room;
         }
@@ -97,9 +97,9 @@ namespace Hotels_RoomsAPI.Services
             return rooms;
         }
 
-        public async Task<ICollection<Room>> AutoEndRoomTime(int[] roomId, DateTime dt)
+        public async Task<ICollection<Room>> AutoEndRoomTime(int[] roomId, DateTime endDate)
         {
-            DateTime endDate = DateTime.Now ; 
+            DateTime dt = DateTime.Now;
             var rooms = new List<Room>();
             foreach (var item in roomId)
             {
@@ -111,7 +111,7 @@ namespace Hotels_RoomsAPI.Services
             }
             foreach (var room in rooms) 
             {
-                if(room.RoomAvailability == false && dt == endDate)
+                if(room.RoomAvailability == false && dt >= endDate)
                 {
                     room.RoomAvailability = true;
                 }

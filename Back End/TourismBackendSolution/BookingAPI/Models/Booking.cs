@@ -8,21 +8,20 @@ namespace BookingAPI.Models
     {
         [Key]
         public int BookingId { get; set; }
+        public int UserId { get; set; }
         public string  UserName { get; set; }
+        public int HotelId { get; set; }
         public string  HotelName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public int NumberOfDays
+        public int? NumberOfDays
         {
             get
             {
                 TimeSpan duration = EndDate - StartDate;
                 return duration.Days + 1; // Adding 1 to include both start and end dates
             }
-            private set { }
         }
-        public Double TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
     }
 }
