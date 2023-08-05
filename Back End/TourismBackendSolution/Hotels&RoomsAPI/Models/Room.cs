@@ -9,7 +9,7 @@ namespace Hotels_RoomsAPI.Models
         [Key]
         public int RoomId { get; set; }
         public string? RoomNumber { get; set; }
-        public double RoomPricePerDay { get; set; }
+        public float RoomPricePerDay { get; set; }
         public bool ACAvailability { get; set; }
         public bool RoomAvailability { get; set; }
 

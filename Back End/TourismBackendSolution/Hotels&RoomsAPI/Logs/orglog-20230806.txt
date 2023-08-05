@@ -1,0 +1,255 @@
+2023-08-06 00:35:39.910 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-06 00:35:40.018 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 00:35:40.022 +05:30 [INF] Hosting environment: Development
+2023-08-06 00:35:40.024 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-06 00:35:43.389 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-06 00:35:45.659 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 00:35:45.692 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 2318.8976ms
+2023-08-06 00:35:45.857 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 197.4744ms
+2023-08-06 00:35:45.975 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-06 00:35:46.096 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 121.0958ms
+2023-08-06 00:35:46.375 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-06 00:35:47.086 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 711.1600ms
+2023-08-06 00:36:39.833 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 00:36:39.872 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:36:39.941 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 00:36:41.580 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 00:36:42.972 +05:30 [INF] Executed DbCommand (197ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 00:36:43.204 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 00:36:43.237 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 3287.844ms
+2023-08-06 00:36:43.263 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:36:43.293 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 3460.2753ms
+2023-08-06 00:43:24.427 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent - -
+2023-08-06 00:43:24.483 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:43:24.490 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 00:43:24.576 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 00:43:24.627 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 00:43:24.639 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 00:43:24.652 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 157.7368ms
+2023-08-06 00:43:24.655 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:43:24.658 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent - - - 200 - application/json;+charset=utf-8 234.9408ms
+2023-08-06 00:44:10.970 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 00:44:10.982 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:44:10.984 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 00:44:11.044 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 00:44:11.061 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 00:44:11.075 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 00:44:11.077 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 89.5187ms
+2023-08-06 00:44:11.079 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:44:11.081 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 112.9113ms
+2023-08-06 00:44:18.098 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent - -
+2023-08-06 00:44:18.099 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:44:18.102 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 00:44:18.105 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 00:44:18.111 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 00:44:18.118 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 00:44:18.120 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 16.0225ms
+2023-08-06 00:44:18.122 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:44:18.123 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent - - - 200 - application/json;+charset=utf-8 25.7940ms
+2023-08-06 00:49:39.906 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 00:49:39.914 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:49:39.915 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 00:49:39.920 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 00:49:39.967 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 00:49:39.973 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 00:49:39.976 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 58.3725ms
+2023-08-06 00:49:39.978 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 00:49:39.980 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 73.9866ms
+2023-08-06 01:03:23.771 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:03:23.892 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:03:23.910 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:23.915 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:03:23.955 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:03:24.035 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:03:24.050 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:03:24.062 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 143.2034ms
+2023-08-06 01:03:24.065 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:24.067 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 301.8355ms
+2023-08-06 01:03:28.604 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:03:28.612 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:03:28.615 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:28.618 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:03:28.652 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:03:28.678 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:03:28.683 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:03:28.688 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 40.2098ms
+2023-08-06 01:03:28.691 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:28.694 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 89.3829ms
+2023-08-06 01:03:42.733 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId={2} - -
+2023-08-06 01:03:42.734 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:03:42.736 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:42.737 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:03:42.831 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-06 01:03:42.900 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 159.7881ms
+2023-08-06 01:03:42.903 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:42.904 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId={2} - - - 400 - application/problem+json;+charset=utf-8 171.6078ms
+2023-08-06 01:03:45.206 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:03:45.210 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:03:45.211 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:45.214 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:03:45.225 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:03:45.246 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:03:45.251 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:03:45.257 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 38.309ms
+2023-08-06 01:03:45.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:03:45.261 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:45.262 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:03:45.265 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 58.6422ms
+2023-08-06 01:03:45.267 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:45.271 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:03:45.275 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:03:45.289 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:03:45.294 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:03:45.297 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 22.3071ms
+2023-08-06 01:03:45.300 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:45.303 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 42.6682ms
+2023-08-06 01:03:55.741 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:03:55.743 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:03:55.744 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:55.746 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:03:55.752 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:03:55.768 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:03:55.772 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:03:55.775 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 25.1511ms
+2023-08-06 01:03:55.778 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:03:55.780 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 39.3200ms
+2023-08-06 01:07:31.784 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:07:31.803 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:07:31.809 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:31.818 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:07:31.881 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:07:32.048 +05:30 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:07:32.062 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:07:32.065 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 244.6211ms
+2023-08-06 01:07:32.066 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:32.069 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 289.4451ms
+2023-08-06 01:07:36.749 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:07:36.751 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:07:36.752 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:36.755 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:07:36.760 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:07:36.777 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:07:36.781 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:07:36.783 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 24.9634ms
+2023-08-06 01:07:36.785 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:36.787 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 38.0909ms
+2023-08-06 01:07:38.749 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:07:38.751 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:07:38.752 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:38.754 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:07:38.761 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:07:38.770 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:07:38.774 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:07:38.777 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 19.6521ms
+2023-08-06 01:07:38.779 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:38.781 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 31.4265ms
+2023-08-06 01:07:49.749 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:07:49.751 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:07:49.752 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:49.754 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:07:49.757 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:07:49.773 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:07:49.776 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:07:49.780 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 23.6277ms
+2023-08-06 01:07:49.782 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:49.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 34.7450ms
+2023-08-06 01:07:54.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:07:54.118 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:07:54.122 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:54.125 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:07:54.132 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:07:54.150 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:07:54.157 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:07:54.161 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 32.4656ms
+2023-08-06 01:07:54.165 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:54.166 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:07:54.167 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 54.1741ms
+2023-08-06 01:07:54.169 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:07:54.172 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:54.174 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:07:54.178 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:07:54.191 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:07:54.196 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:07:54.199 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 21.8807ms
+2023-08-06 01:07:54.201 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:07:54.204 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 38.5459ms
+2023-08-06 01:08:06.767 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:08:06.769 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:08:06.772 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:08:06.774 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:08:06.780 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:08:06.802 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:08:06.808 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:08:06.811 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 32.8746ms
+2023-08-06 01:08:06.813 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:08:06.816 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 48.2452ms
+2023-08-06 01:08:21.742 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:08:21.744 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:08:21.746 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:08:21.748 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:08:21.754 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:08:21.773 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:08:21.778 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:08:21.782 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 30.4771ms
+2023-08-06 01:08:21.785 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:08:21.788 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 46.3336ms
+2023-08-06 01:10:19.744 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:10:19.746 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:10:19.747 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:10:19.748 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:10:19.752 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:10:19.777 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:10:19.782 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:10:19.784 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 33.5663ms
+2023-08-06 01:10:19.786 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:10:19.788 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 43.7003ms
+2023-08-06 01:23:27.014 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-06 01:23:27.176 +05:30 [INF] CORS policy execution successful.
+2023-08-06 01:23:27.211 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:23:27.259 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-06 01:23:27.451 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 01:23:27.692 +05:30 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-06 01:23:27.745 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 01:23:27.774 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 504.6687ms
+2023-08-06 01:23:27.777 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-06 01:23:27.780 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 811.9699ms

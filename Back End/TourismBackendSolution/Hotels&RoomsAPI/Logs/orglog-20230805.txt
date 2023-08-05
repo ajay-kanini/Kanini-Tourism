@@ -1,0 +1,826 @@
+2023-08-05 15:58:48.213 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 15:58:48.752 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 15:58:48.757 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 15:58:48.760 +05:30 [INF] Hosting environment: Development
+2023-08-05 15:58:48.762 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 15:58:50.227 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 15:58:51.124 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 15:58:51.137 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 9.8984ms
+2023-08-05 15:58:51.138 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 920.5008ms
+2023-08-05 15:58:51.201 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 15:58:51.445 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 244.0600ms
+2023-08-05 15:58:51.528 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 15:58:51.751 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 223.8231ms
+2023-08-05 16:07:55.751 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 16:07:56.331 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 16:07:56.340 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 16:07:56.342 +05:30 [INF] Hosting environment: Development
+2023-08-05 16:07:56.344 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 16:07:57.333 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 16:07:57.999 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 16:07:57.999 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 16:07:58.027 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 13.0129ms
+2023-08-05 16:07:58.050 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 724.6422ms
+2023-08-05 16:07:58.077 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 78.1188ms
+2023-08-05 16:07:58.155 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 16:07:58.420 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 265.7074ms
+2023-08-05 16:08:14.547 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotels/GetAllHotels - -
+2023-08-05 16:08:14.569 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelsController.GetAllHotels (Hotels&RoomsAPI)'
+2023-08-05 16:08:14.628 +05:30 [INF] Route matched with {action = "GetAllHotels", controller = "Hotels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetAllHotels() on controller Hotels_RoomsAPI.Controllers.HotelsController (Hotels&RoomsAPI).
+2023-08-05 16:08:16.501 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 16:08:17.943 +05:30 [INF] Executed DbCommand (105ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-05 16:08:18.209 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-05 16:08:18.255 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelsController.GetAllHotels (Hotels&RoomsAPI) in 3616.0037ms
+2023-08-05 16:08:18.261 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelsController.GetAllHotels (Hotels&RoomsAPI)'
+2023-08-05 16:08:18.283 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotels/GetAllHotels - - - 200 - application/json;+charset=utf-8 3736.1419ms
+2023-08-05 16:21:22.464 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Hotels/AddHotel application/json 0
+2023-08-05 16:21:22.476 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelsController.AddHotel (Hotels&RoomsAPI)'
+2023-08-05 16:21:22.526 +05:30 [INF] Route matched with {action = "AddHotel", controller = "Hotels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Hotel]] AddHotel(Hotels_RoomsAPI.Models.Hotel) on controller Hotels_RoomsAPI.Controllers.HotelsController (Hotels&RoomsAPI).
+2023-08-05 16:21:22.598 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-05 16:21:22.629 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelsController.AddHotel (Hotels&RoomsAPI) in 97.2471ms
+2023-08-05 16:21:22.633 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelsController.AddHotel (Hotels&RoomsAPI)'
+2023-08-05 16:21:22.636 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Hotels/AddHotel application/json 0 - 400 - application/problem+json;+charset=utf-8 171.8481ms
+2023-08-05 16:26:24.965 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 16:26:37.697 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 16:26:38.520 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-05 16:26:38.573 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-05 16:26:38.578 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-05 16:26:38.579 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-05 16:26:38.635 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-05 16:26:38.654 +05:30 [INF] Applying migration '20230805105625_M'.
+2023-08-05 16:26:38.940 +05:30 [INF] Executed DbCommand (204ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Hotels]') AND [c].[name] = N'ContactNumber');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Hotels] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Hotels] ALTER COLUMN [ContactNumber] nvarchar(max) NULL;
+2023-08-05 16:26:38.959 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Hotels] ADD [AgentId] int NOT NULL DEFAULT 0;
+2023-08-05 16:26:38.968 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230805105625_M', N'6.0.20');
+2023-08-05 17:10:13.506 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 17:10:13.945 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 17:10:13.951 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 17:10:13.953 +05:30 [INF] Hosting environment: Development
+2023-08-05 17:10:13.955 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 17:10:14.710 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 17:10:15.550 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 17:10:15.562 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 9.7277ms
+2023-08-05 17:10:15.563 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 861.1318ms
+2023-08-05 17:10:15.586 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 17:10:15.675 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.6000ms
+2023-08-05 17:10:15.901 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 17:10:16.584 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Hotels/StateHotels" for actions - Hotels_RoomsAPI.Controllers.HotelsController.StateHotels (Hotels&RoomsAPI),Hotels_RoomsAPI.Controllers.HotelsController.StateHotels (Hotels&RoomsAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-05 17:10:16.687 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 786.3695ms
+2023-08-05 17:11:11.386 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 17:11:11.694 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 17:11:11.703 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 17:11:11.706 +05:30 [INF] Hosting environment: Development
+2023-08-05 17:11:11.708 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 17:11:12.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 17:11:13.499 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 17:11:13.501 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 17:11:13.512 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 9.8705ms
+2023-08-05 17:11:13.531 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 711.8683ms
+2023-08-05 17:11:13.559 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.0005ms
+2023-08-05 17:11:13.625 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 17:11:13.771 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 146.7752ms
+2023-08-05 17:12:03.354 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 17:12:03.620 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 17:12:03.626 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 17:12:03.628 +05:30 [INF] Hosting environment: Development
+2023-08-05 17:12:03.629 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 17:12:04.467 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 17:12:05.367 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 17:12:05.367 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 17:12:05.382 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 10.4885ms
+2023-08-05 17:12:05.430 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 975.3958ms
+2023-08-05 17:12:05.474 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 106.7490ms
+2023-08-05 17:12:05.555 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 17:12:05.685 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Hotels/StateHotels" for actions - Hotels_RoomsAPI.Controllers.HotelsController.StateHotels (Hotels&RoomsAPI),Hotels_RoomsAPI.Controllers.HotelsController.StateHotels (Hotels&RoomsAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-05 17:12:05.880 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 325.3241ms
+2023-08-05 18:16:41.758 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 18:16:42.117 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 18:16:42.124 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 18:16:42.127 +05:30 [INF] Hosting environment: Development
+2023-08-05 18:16:42.129 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 18:16:43.481 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 18:16:44.280 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 18:16:44.280 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 18:16:44.291 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 8.7204ms
+2023-08-05 18:16:44.320 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 854.4641ms
+2023-08-05 18:16:44.349 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.9104ms
+2023-08-05 18:16:44.421 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 18:16:44.612 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.9421ms
+2023-08-05 18:18:03.213 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 18:18:03.501 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 18:18:03.506 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 18:18:03.507 +05:30 [INF] Hosting environment: Development
+2023-08-05 18:18:03.509 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 18:18:04.506 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 18:18:05.651 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 18:18:05.651 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 18:18:05.697 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 9.2396ms
+2023-08-05 18:18:05.727 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 1227.6632ms
+2023-08-05 18:18:05.759 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 108.4256ms
+2023-08-05 18:18:05.844 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 18:18:06.123 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 278.6690ms
+2023-08-05 18:20:49.726 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 18:20:50.049 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 18:20:50.054 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 18:20:50.056 +05:30 [INF] Hosting environment: Development
+2023-08-05 18:20:50.058 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 18:20:51.090 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 18:20:51.713 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 18:20:51.717 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 18:20:51.731 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 15.2659ms
+2023-08-05 18:20:51.753 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 671.7783ms
+2023-08-05 18:20:51.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 67.9869ms
+2023-08-05 18:20:51.886 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 18:20:52.083 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 197.0847ms
+2023-08-05 18:21:04.693 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=1 - -
+2023-08-05 18:21:04.730 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) contains CORS metadata, but a middleware was not found that supports CORS.
+Configure your application startup by adding app.UseCors() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseCors() must go between them.
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingCorsMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-05 18:21:04.881 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=1 - - - 500 - text/plain;+charset=utf-8 188.0969ms
+2023-08-05 18:22:09.478 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-05 18:22:09.951 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 18:22:09.959 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 18:22:09.961 +05:30 [INF] Hosting environment: Development
+2023-08-05 18:22:09.963 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 18:22:11.150 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 18:22:11.944 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 18:22:11.956 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 8.7170ms
+2023-08-05 18:22:11.956 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 815.6958ms
+2023-08-05 18:22:11.980 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 18:22:12.064 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.9716ms
+2023-08-05 18:22:12.186 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 18:22:12.426 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 240.2218ms
+2023-08-05 18:22:27.301 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=1 - -
+2023-08-05 18:23:25.466 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 18:23:25.605 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 18:23:25.608 +05:30 [INF] Hosting environment: Development
+2023-08-05 18:23:25.610 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 18:23:27.014 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 18:23:28.096 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 1089.0756ms
+2023-08-05 18:23:28.301 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 18:23:28.551 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 18:23:28.560 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 8.3603ms
+2023-08-05 18:23:28.595 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 294.1633ms
+2023-08-05 18:23:28.707 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 18:23:28.939 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 231.9283ms
+2023-08-05 18:23:40.772 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=1 - -
+2023-08-05 18:23:40.818 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-05 18:23:40.913 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-05 18:23:42.926 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 18:23:44.548 +05:30 [INF] Executed DbCommand (204ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-05 18:23:44.811 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-05 18:23:44.844 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 3916.4765ms
+2023-08-05 18:23:44.850 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-05 18:23:44.872 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=1 - - - 200 - application/json;+charset=utf-8 4099.9877ms
+2023-08-05 18:24:14.956 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-05 18:24:14.968 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-05 18:24:15.003 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-05 18:24:15.030 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 18:24:15.086 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-05 18:24:15.092 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-05 18:24:15.099 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 87.4501ms
+2023-08-05 18:24:15.102 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-05 18:24:15.106 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 150.6149ms
+2023-08-05 18:25:35.307 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 18:25:35.414 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 18:25:35.438 +05:30 [INF] Hosting environment: Development
+2023-08-05 18:25:35.463 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 18:25:36.455 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 18:25:37.102 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 18:25:37.107 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 18:25:37.116 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 11.9006ms
+2023-08-05 18:25:37.150 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 711.6883ms
+2023-08-05 18:25:37.189 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 81.2538ms
+2023-08-05 18:25:37.252 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 18:25:37.458 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 205.3157ms
+2023-08-05 18:25:50.908 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - -
+2023-08-05 18:25:50.934 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-05 18:25:51.002 +05:30 [INF] Route matched with {action = "GetByAgent", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[Hotels_RoomsAPI.Models.Hotel]]] GetByAgent(Int32) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-05 18:25:52.861 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 18:25:54.075 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[HotelId], [h].[Address], [h].[AgentId], [h].[City], [h].[ContactNumber], [h].[HotelDescription], [h].[HotelName], [h].[State]
+FROM [Hotels] AS [h]
+2023-08-05 18:25:54.306 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Hotels_RoomsAPI.Models.Hotel, Hotels&RoomsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-05 18:25:54.348 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI) in 3331.302ms
+2023-08-05 18:25:54.355 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.GetByAgent (Hotels&RoomsAPI)'
+2023-08-05 18:25:54.374 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/api/Hotel/GetByAgent?agentId=2 - - - 200 - application/json;+charset=utf-8 3465.9444ms
+2023-08-05 18:30:20.884 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Hotel/AddHotel application/json 0
+2023-08-05 18:30:20.942 +05:30 [INF] CORS policy execution successful.
+2023-08-05 18:30:20.959 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.AddHotel (Hotels&RoomsAPI)'
+2023-08-05 18:30:20.992 +05:30 [INF] Route matched with {action = "AddHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Hotel]] AddHotel(Hotels_RoomsAPI.Models.Hotel) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-05 18:30:21.051 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-05 18:30:21.096 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.AddHotel (Hotels&RoomsAPI) in 98.1238ms
+2023-08-05 18:30:21.103 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.AddHotel (Hotels&RoomsAPI)'
+2023-08-05 18:30:21.105 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Hotel/AddHotel application/json 0 - 400 - application/problem+json;+charset=utf-8 225.0510ms
+2023-08-05 18:30:47.073 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5007/api/Hotel/AddHotel - -
+2023-08-05 18:30:47.079 +05:30 [INF] CORS policy execution successful.
+2023-08-05 18:30:47.090 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5007/api/Hotel/AddHotel - - - 204 - - 16.7009ms
+2023-08-05 18:30:47.104 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Hotel/AddHotel application/json 257
+2023-08-05 18:30:47.106 +05:30 [INF] CORS policy execution successful.
+2023-08-05 18:30:47.113 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.HotelController.AddHotel (Hotels&RoomsAPI)'
+2023-08-05 18:30:47.115 +05:30 [INF] Route matched with {action = "AddHotel", controller = "Hotel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Hotel]] AddHotel(Hotels_RoomsAPI.Models.Hotel) on controller Hotels_RoomsAPI.Controllers.HotelController (Hotels&RoomsAPI).
+2023-08-05 18:30:47.335 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 18:30:47.968 +05:30 [INF] Executed DbCommand (217ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Hotels] ([Address], [AgentId], [City], [ContactNumber], [HotelDescription], [HotelName], [State])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [HotelId]
+FROM [Hotels]
+WHERE @@ROWCOUNT = 1 AND [HotelId] = scope_identity();
+2023-08-05 18:30:48.092 +05:30 [INF] Executing OkObjectResult, writing value of type 'Hotels_RoomsAPI.Models.Hotel'.
+2023-08-05 18:30:48.101 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.HotelController.AddHotel (Hotels&RoomsAPI) in 980.5293ms
+2023-08-05 18:30:48.104 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.HotelController.AddHotel (Hotels&RoomsAPI)'
+2023-08-05 18:30:48.107 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Hotel/AddHotel application/json 257 - 200 - application/json;+charset=utf-8 1003.1733ms
+2023-08-05 18:45:28.953 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 18:45:29.437 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 18:45:29.452 +05:30 [INF] Hosting environment: Development
+2023-08-05 18:45:29.455 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 18:45:30.458 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 18:45:31.975 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 18:45:31.986 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 8.1244ms
+2023-08-05 18:45:31.987 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 1544.0345ms
+2023-08-05 18:45:32.011 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 18:45:32.069 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.0142ms
+2023-08-05 18:45:32.218 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 18:45:32.443 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 224.4836ms
+2023-08-05 18:46:50.953 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 0
+2023-08-05 18:46:50.992 +05:30 [INF] CORS policy execution successful.
+2023-08-05 18:46:51.012 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 18:46:51.095 +05:30 [INF] Route matched with {action = "AddRoom", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Room]] AddRoom(Hotels_RoomsAPI.Models.Room) on controller Hotels_RoomsAPI.Controllers.RoomController (Hotels&RoomsAPI).
+2023-08-05 18:46:51.585 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-05 18:46:51.634 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI) in 526.2821ms
+2023-08-05 18:46:51.643 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 18:46:51.650 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 0 - 400 - application/problem+json;+charset=utf-8 696.9385ms
+2023-08-05 22:26:56.639 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 22:26:56.712 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 22:26:56.715 +05:30 [INF] Hosting environment: Development
+2023-08-05 22:26:56.716 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 22:26:58.132 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 22:26:58.867 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 22:26:58.868 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 22:26:58.889 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 16.9807ms
+2023-08-05 22:26:58.918 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 790.7801ms
+2023-08-05 22:26:58.980 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 113.5511ms
+2023-08-05 22:26:59.088 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 22:26:59.320 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 231.4831ms
+2023-08-05 22:48:12.766 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 22:48:12.766 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 22:48:12.793 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 29.9532ms
+2023-08-05 22:48:12.843 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 81.0659ms
+2023-08-05 22:48:12.929 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 22:48:12.986 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 56.8961ms
+2023-08-05 23:40:34.600 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 23:40:34.701 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 23:40:34.705 +05:30 [INF] Hosting environment: Development
+2023-08-05 23:40:34.706 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 23:40:37.518 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 23:40:38.981 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 23:40:38.998 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 11.5626ms
+2023-08-05 23:40:39.001 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 1498.1552ms
+2023-08-05 23:40:39.083 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 23:40:39.209 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 125.4624ms
+2023-08-05 23:40:39.621 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 23:40:39.957 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 336.4053ms
+2023-08-05 23:43:27.451 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - -
+2023-08-05 23:43:27.481 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:43:27.486 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - - - 204 - - 35.3028ms
+2023-08-05 23:43:27.498 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143
+2023-08-05 23:43:27.500 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:43:27.513 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:43:27.587 +05:30 [INF] Route matched with {action = "AddRoom", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Room]] AddRoom(Hotels_RoomsAPI.Models.Room) on controller Hotels_RoomsAPI.Controllers.RoomController (Hotels&RoomsAPI).
+2023-08-05 23:43:29.355 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 23:43:30.861 +05:30 [ERR] Failed executing DbCommand (280ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Rooms] ([ACAvailability], [HotelId], [NumberOfPersons], [RoomAvailability], [RoomNumber], [RoomPricePerDay])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [RoomId]
+FROM [Rooms]
+WHERE @@ROWCOUNT = 1 AND [RoomId] = scope_identity();
+2023-08-05 23:43:31.038 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Hotels_RoomsAPI.Context.HotelsContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:20898c74-a968-4be3-aee2-7a85b04bf754
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:20898c74-a968-4be3-aee2-7a85b04bf754
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-08-05 23:43:31.462 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI) in 3861.8875ms
+2023-08-05 23:43:31.470 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:43:31.478 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Message
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:20898c74-a968-4be3-aee2-7a85b04bf754
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Hotels_RoomsAPI.Repositories.RoomRepo.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Repositories\RoomRepo.cs:line 22
+   --- End of inner exception stack trace ---
+   at Hotels_RoomsAPI.Repositories.RoomRepo.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Repositories\RoomRepo.cs:line 27
+   at Hotels_RoomsAPI.Services.RoomService.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Services\RoomService.cs:line 16
+   at Hotels_RoomsAPI.Controllers.RoomController.AddRoom(Room room) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Controllers\RoomController.cs:line 24
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-05 23:43:31.554 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143 - 500 - text/plain;+charset=utf-8 4055.9830ms
+2023-08-05 23:44:03.331 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - -
+2023-08-05 23:44:03.344 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:44:03.346 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - - - 204 - - 16.6302ms
+2023-08-05 23:44:03.350 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143
+2023-08-05 23:44:03.358 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:44:03.360 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:44:03.362 +05:30 [INF] Route matched with {action = "AddRoom", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Room]] AddRoom(Hotels_RoomsAPI.Models.Room) on controller Hotels_RoomsAPI.Controllers.RoomController (Hotels&RoomsAPI).
+2023-08-05 23:44:03.428 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 23:44:03.458 +05:30 [ERR] Failed executing DbCommand (20ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Rooms] ([ACAvailability], [HotelId], [NumberOfPersons], [RoomAvailability], [RoomNumber], [RoomPricePerDay])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [RoomId]
+FROM [Rooms]
+WHERE @@ROWCOUNT = 1 AND [RoomId] = scope_identity();
+2023-08-05 23:44:03.468 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Hotels_RoomsAPI.Context.HotelsContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:20898c74-a968-4be3-aee2-7a85b04bf754
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:20898c74-a968-4be3-aee2-7a85b04bf754
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-08-05 23:44:03.817 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI) in 451.618ms
+2023-08-05 23:44:03.820 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:44:03.823 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Message
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:20898c74-a968-4be3-aee2-7a85b04bf754
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Hotels_RoomsAPI.Repositories.RoomRepo.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Repositories\RoomRepo.cs:line 22
+   --- End of inner exception stack trace ---
+   at Hotels_RoomsAPI.Repositories.RoomRepo.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Repositories\RoomRepo.cs:line 27
+   at Hotels_RoomsAPI.Services.RoomService.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Services\RoomService.cs:line 16
+   at Hotels_RoomsAPI.Controllers.RoomController.AddRoom(Room room) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Controllers\RoomController.cs:line 24
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-05 23:44:03.849 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143 - 500 - text/plain;+charset=utf-8 500.9450ms
+2023-08-05 23:51:09.169 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 23:51:19.600 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 23:51:20.150 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-05 23:51:20.198 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-05 23:51:20.203 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-05 23:51:20.204 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-05 23:51:20.261 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-05 23:51:20.285 +05:30 [INF] Applying migration '20230805182109_MU'.
+2023-08-05 23:51:20.512 +05:30 [INF] Executed DbCommand (169ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Rooms]') AND [c].[name] = N'RoomPricePerDay');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Rooms] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Rooms] ALTER COLUMN [RoomPricePerDay] real NOT NULL;
+2023-08-05 23:51:20.518 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230805182109_MU', N'6.0.20');
+2023-08-05 23:54:43.235 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 23:54:43.374 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 23:54:43.380 +05:30 [INF] Hosting environment: Development
+2023-08-05 23:54:43.383 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 23:54:44.574 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 23:54:45.723 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 23:54:45.740 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 11.8071ms
+2023-08-05 23:54:45.740 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 1177.1719ms
+2023-08-05 23:54:45.776 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 23:54:45.862 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 85.5954ms
+2023-08-05 23:54:46.145 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 23:54:46.531 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 385.5007ms
+2023-08-05 23:54:58.084 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - -
+2023-08-05 23:54:58.106 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:54:58.112 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - - - 204 - - 28.4738ms
+2023-08-05 23:54:58.116 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143
+2023-08-05 23:54:58.118 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:54:58.136 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:54:58.224 +05:30 [INF] Route matched with {action = "AddRoom", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Room]] AddRoom(Hotels_RoomsAPI.Models.Room) on controller Hotels_RoomsAPI.Controllers.RoomController (Hotels&RoomsAPI).
+2023-08-05 23:55:00.101 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 23:55:01.550 +05:30 [ERR] Failed executing DbCommand (219ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Rooms] ([ACAvailability], [HotelId], [NumberOfPersons], [RoomAvailability], [RoomNumber], [RoomPricePerDay])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [RoomId]
+FROM [Rooms]
+WHERE @@ROWCOUNT = 1 AND [RoomId] = scope_identity();
+2023-08-05 23:55:01.723 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Hotels_RoomsAPI.Context.HotelsContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c9c2305a-c552-4df7-9900-1aaef62c07b6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c9c2305a-c552-4df7-9900-1aaef62c07b6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-08-05 23:55:02.182 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI) in 3943.8594ms
+2023-08-05 23:55:02.189 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:55:02.199 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Message
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c9c2305a-c552-4df7-9900-1aaef62c07b6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Hotels_RoomsAPI.Repositories.RoomRepo.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Repositories\RoomRepo.cs:line 22
+   --- End of inner exception stack trace ---
+   at Hotels_RoomsAPI.Repositories.RoomRepo.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Repositories\RoomRepo.cs:line 27
+   at Hotels_RoomsAPI.Services.RoomService.Add(Room item) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Services\RoomService.cs:line 16
+   at Hotels_RoomsAPI.Controllers.RoomController.AddRoom(Room room) in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\Controllers\RoomController.cs:line 24
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-05 23:55:02.278 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143 - 500 - text/plain;+charset=utf-8 4162.5456ms
+2023-08-05 23:56:06.888 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 23:56:06.980 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 23:56:06.984 +05:30 [INF] Hosting environment: Development
+2023-08-05 23:56:06.986 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 23:56:08.534 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 23:56:10.170 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 23:56:10.191 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 16.4681ms
+2023-08-05 23:56:10.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 1675.8102ms
+2023-08-05 23:56:10.226 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 23:56:10.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.7656ms
+2023-08-05 23:56:10.493 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 23:56:10.773 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 280.0411ms
+2023-08-05 23:57:16.091 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - -
+2023-08-05 23:57:16.124 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:57:16.128 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - - - 204 - - 36.2412ms
+2023-08-05 23:57:16.138 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143
+2023-08-05 23:57:16.140 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:57:16.153 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:57:16.227 +05:30 [INF] Route matched with {action = "AddRoom", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Room]] AddRoom(Hotels_RoomsAPI.Models.Room) on controller Hotels_RoomsAPI.Controllers.RoomController (Hotels&RoomsAPI).
+2023-08-05 23:58:00.540 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 23:58:14.003 +05:30 [ERR] Failed executing DbCommand (190ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Rooms] ([ACAvailability], [HotelId], [NumberOfPersons], [RoomAvailability], [RoomNumber], [RoomPricePerDay])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [RoomId]
+FROM [Rooms]
+WHERE @@ROWCOUNT = 1 AND [RoomId] = scope_identity();
+2023-08-05 23:58:14.180 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Hotels_RoomsAPI.Context.HotelsContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ad2a9ac9-fbd2-4991-a8fb-8d5393fe892c
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Rooms_Hotels_HotelId". The conflict occurred in database "TourHotels", table "dbo.Hotels", column 'HotelId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ad2a9ac9-fbd2-4991-a8fb-8d5393fe892c
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-08-05 23:59:25.945 +05:30 [INF] Now listening on: http://localhost:5007
+2023-08-05 23:59:26.079 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-05 23:59:26.083 +05:30 [INF] Hosting environment: Development
+2023-08-05 23:59:26.086 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Hotels&RoomsAPI\
+2023-08-05 23:59:28.462 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/index.html - -
+2023-08-05 23:59:30.841 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_vs/browserLink - -
+2023-08-05 23:59:30.841 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - -
+2023-08-05 23:59:30.863 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 17.1048ms
+2023-08-05 23:59:30.869 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/index.html - - - 200 - text/html;charset=utf-8 2427.4116ms
+2023-08-05 23:59:31.089 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 247.8803ms
+2023-08-05 23:59:31.241 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - -
+2023-08-05 23:59:31.758 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5007/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 516.6952ms
+2023-08-05 23:59:44.485 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - -
+2023-08-05 23:59:44.500 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:59:44.505 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5007/api/Room/AddRoom - - - 204 - - 19.8243ms
+2023-08-05 23:59:44.508 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143
+2023-08-05 23:59:44.514 +05:30 [INF] CORS policy execution successful.
+2023-08-05 23:59:44.528 +05:30 [INF] Executing endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:59:44.598 +05:30 [INF] Route matched with {action = "AddRoom", controller = "Room"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Hotels_RoomsAPI.Models.Room]] AddRoom(Hotels_RoomsAPI.Models.Room) on controller Hotels_RoomsAPI.Controllers.RoomController (Hotels&RoomsAPI).
+2023-08-05 23:59:46.236 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'HotelsContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-05 23:59:47.581 +05:30 [INF] Executed DbCommand (223ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Rooms] ([ACAvailability], [HotelId], [NumberOfPersons], [RoomAvailability], [RoomNumber], [RoomPricePerDay])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [RoomId]
+FROM [Rooms]
+WHERE @@ROWCOUNT = 1 AND [RoomId] = scope_identity();
+2023-08-05 23:59:47.742 +05:30 [INF] Executing OkObjectResult, writing value of type 'Hotels_RoomsAPI.Models.Room'.
+2023-08-05 23:59:47.769 +05:30 [INF] Executed action Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI) in 3162.4003ms
+2023-08-05 23:59:47.775 +05:30 [INF] Executed endpoint 'Hotels_RoomsAPI.Controllers.RoomController.AddRoom (Hotels&RoomsAPI)'
+2023-08-05 23:59:47.795 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5007/api/Room/AddRoom application/json 143 - 200 - application/json;+charset=utf-8 3287.0587ms

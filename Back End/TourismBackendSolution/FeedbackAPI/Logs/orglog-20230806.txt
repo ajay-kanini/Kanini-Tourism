@@ -1,0 +1,13 @@
+2023-08-06 00:35:36.105 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 00:35:36.522 +05:30 [INF] Now listening on: http://localhost:5114
+2023-08-06 00:35:36.530 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 00:35:36.532 +05:30 [INF] Hosting environment: Development
+2023-08-06 00:35:36.534 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\FeedbackAPI\
+2023-08-06 00:35:45.304 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/index.html - -
+2023-08-06 00:35:49.979 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_vs/browserLink - -
+2023-08-06 00:35:49.980 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 00:35:50.027 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/index.html - - - 200 - text/html;charset=utf-8 4748.4791ms
+2023-08-06 00:35:50.085 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 104.9054ms
+2023-08-06 00:35:50.312 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 332.9647ms
+2023-08-06 00:35:50.469 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - -
+2023-08-06 00:35:50.828 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5114/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 359.6272ms

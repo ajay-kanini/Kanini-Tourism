@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Numerics;
 
 namespace HospitalManagement.Controllers
 {
@@ -160,6 +161,27 @@ namespace HospitalManagement.Controllers
                 var client = await _service.GetClient(key);
                 if (client != null)
                     return Ok(client);
+                else
+                    return BadRequest("Unable to fetch");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or perform any other necessary actions
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [ProducesResponseType(typeof(HotelAgent), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<HotelAgent>> UpdateDoctorStatus(HotelAgent agent)
+        {
+            try
+            {
+                var agents = await _service.UpdateAgents(agent);  
+                if (agents != null)
+                    return Created("Doctor Updated", agents);
                 else
                     return BadRequest("Unable to fetch");
             }

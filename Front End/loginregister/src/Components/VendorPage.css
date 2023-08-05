@@ -1,0 +1,60 @@
+/* Define styles for the main container */
+.mainDiv {
+    padding: 20px;
+  }
+  
+  /* Style for the hotel cards container */
+  .hotelCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Style for each individual hotel card */
+  .hotelCard {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the hotel image */
+  /* Style for the hotel image */
+.hotelImage {
+    max-height: 200px; /* Set the maximum height of the image */
+    overflow: hidden; /* Hide any image overflow */
+  }
+  
+  /* Style for the hotel image within the image container */
+  .hotelImage img {
+    width: 100%; /* Set the width to occupy the container's full width */
+    height: auto; /* Let the height adjust to maintain aspect ratio */
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+  }
+  
+  
+  /* Style for the hotel info section */
+  .hotelInfo {
+    padding: 10px;
+  }
+  
+  /* Style for the hotel name */
+  .hotelInfo h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Style for the star icons */
+  .starIcons {
+    margin-top: 5px;
+  }
+  
+  /* Style for the star icon */
+  .starIcons i {
+    color: gold;
+    margin-right: 2px;
+  }
+
+  

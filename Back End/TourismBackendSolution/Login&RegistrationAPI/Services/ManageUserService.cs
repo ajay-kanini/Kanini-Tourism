@@ -134,11 +134,11 @@ namespace HospitalManagement.Service
             return userDTO;
         }
 
-        public async Task<HotelAgent> UpdateAgents(HotelAgent doctor)
+        public async Task<HotelAgent> UpdateAgents(HotelAgent agent)
         {
             try
             {
-                var checkUser = await _agentRepo.Update(doctor);
+                var checkUser = await _agentRepo.Update(agent);
                 return checkUser ?? throw new Exception("Failed to update agent");
             }
             catch (Exception ex)

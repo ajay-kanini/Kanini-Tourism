@@ -7,6 +7,8 @@
         public Task<T> Delete(K id);
         public Task<T> Get(K id);
         public Task<ICollection<T>> GetAll();
-
+        public Task<ICollection<T>> GetByAgentId(K id);
+        public Task<ICollection<T>> GetByState(string stateName);
+        public Task<ICollection<T>> GetByCity(string cityName);
     }
 }

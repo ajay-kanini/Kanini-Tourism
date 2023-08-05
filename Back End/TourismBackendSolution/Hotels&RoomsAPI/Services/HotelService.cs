@@ -30,6 +30,27 @@ namespace Hotels_RoomsAPI.Services
             return await _repo.GetAll();
         }
 
+        public async Task<ICollection<Hotel>> GetByAgentId(int id)
+        {
+            var hotels = await _repo.GetAll();
+            var agentHotels = hotels.Where(h => h.AgentId == id).ToList();
+            return agentHotels;
+        }
+
+        public async Task<ICollection<Hotel>> GetByCity(string cityName)
+        {
+            var hotels = await _repo.GetAll();
+            var cityHotels = hotels.Where(u => u.City == cityName).ToList();
+            return cityHotels;
+        }
+
+        public async Task<ICollection<Hotel>> GetByState(string stateName)
+        {
+            var hotels = await _repo.GetAll();
+            var stateHotels = hotels.Where(u => u.State == stateName).ToList();
+            return stateHotels;
+        }
+
         public async Task<Hotel> Update(Hotel item)
         {
             return await _repo.Update(item);

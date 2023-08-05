@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+.room-register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.room-register {
+  display: flex;
+  justify-content: center;
+}
+
+.room-register-card {
+  height: 500px;
+  width: 800px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 10px;
+}
+
+.room-register-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.room-register-left-side {
+  width: 50%;
+  background-color: #000;
+  height: 100% !important;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+}
+
+.room-register-left-side img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.room-register-right-side {
+  width: 50%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.room-register-hello {
+  margin-top: 5px;
+  text-align: center;
+  color: #2a2739;
+}
+
+.room-register-hello h2 {
+  margin-top: 5px;
+}
+
+.room-register-input_text {
+  position: relative;
+  margin-top: 15px;
+}
+
+.room-register-input_text label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #2a2739;
+}
+
+.room-register-input_text input {
+  height: 45px;
+  width: 90%;
+  border: 1px solid #fe6b68; /* Changed border color */
+  outline: 0;
+  padding: 0 10px;
+  font-size: 13px;
+  border-radius: 15px;
+  margin-right: 16px;
+}
+
+.room-register-input_text input.room-register-warning {
+  border-color: #fe6b68; /* Set border color to #fe6b68 */
+}
+
+.room-register-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.room-register-radio-group label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #2a2739;
+}
+
+.room-register-radio {
+  display: flex;
+  align-items: center;
+}
+
+.room-register-radio input {
+  margin-right: 5px;
+}
+
+.room-register-btn {
+  margin-top: 15px;
+}
+
+.room-register-btn button {
+  height: 45px;
+  width: 100%;
+  border: none;
+  outline: 0;
+  background-color: #fe6b68;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 13px;
+  color: #fff;
+}
+
+.room-register-btn button:hover {
+  background-color: #f1221e;
+}
+
+.room-register-hr {
+  margin-top: 30px;
+  color: #fff;
+  border: 0;
+  border-top: 1px solid #fff;
+}
+
+@media (max-width: 750px) {
+  .room-register-card {
+    max-width: 350px;
+  }
+  .room-register-right-side {
+    width: 100%; /* Adjust right side width on mobile */
+    padding: 20px; /* Adjust padding on mobile */
+  }
+  .room-register-left-side {
+    display: none;
+  }
+}

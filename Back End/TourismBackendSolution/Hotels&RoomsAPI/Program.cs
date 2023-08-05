@@ -51,17 +51,17 @@ builder.Services.AddDbContext<HotelsContext>(opts =>
 });
 
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-               .AddJwtBearer(options =>
-               {
-                   options.TokenValidationParameters = new TokenValidationParameters
-                   {
-                       ValidateIssuerSigningKey = true,
-                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
-                       ValidateIssuer = false,
-                       ValidateAudience = false
-                   };
-               });
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//               .AddJwtBearer(options =>
+//               {
+//                   options.TokenValidationParameters = new TokenValidationParameters
+//                   {
+//                       ValidateIssuerSigningKey = true,
+//                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
+//                       ValidateIssuer = false,
+//                       ValidateAudience = false
+//                   };
+//               });
 builder.Services.AddCors(opts =>
 {
     opts.AddPolicy("MyCors", policy =>
@@ -95,6 +95,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.UseCors("MyCors");
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

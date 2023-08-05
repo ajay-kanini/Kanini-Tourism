@@ -61,9 +61,9 @@ namespace Hotels_RoomsAPI.Services
             }
             return rooms;
         }
-        public async Task<double> PriceCalculation(int numberOfDays, int[] roomId)
+        public async Task<float> PriceCalculation(int numberOfDays, int[] roomId)
         {
-            double totalRoomPrice = 0;
+            float totalRoomPrice = 0;
 
             foreach (var room in roomId)
             {
@@ -71,15 +71,15 @@ namespace Hotels_RoomsAPI.Services
 
                 if (foundRoom != null)
                 {
-                    double roomPrice = foundRoom.RoomPricePerDay * numberOfDays;
+                    float roomPrice = foundRoom.RoomPricePerDay * numberOfDays;
                     totalRoomPrice += roomPrice;
                 }
             }
 
-            double cgst = totalRoomPrice * 0.09;
-            double sgst = totalRoomPrice * 0.09;
+            float cgst = (float)(totalRoomPrice * 0.09);
+            float sgst = (float)(totalRoomPrice * 0.09);
 
-            double totalPrice = totalRoomPrice + cgst + sgst;
+            float totalPrice = totalRoomPrice + cgst + sgst;
             return totalPrice;
         }
 

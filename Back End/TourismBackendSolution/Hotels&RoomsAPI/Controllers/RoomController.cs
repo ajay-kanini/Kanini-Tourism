@@ -1,5 +1,6 @@
 ﻿using Hotels_RoomsAPI.Interfaces;
 using Hotels_RoomsAPI.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -8,6 +9,7 @@ namespace Hotels_RoomsAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [EnableCors("MyCors")]
     public class RoomController : ControllerBase
     {
         private readonly IRoomService<Room, int> _roomServie;
@@ -105,7 +107,7 @@ namespace Hotels_RoomsAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<double>> TotalPriceCalculation(int numberOfDays,int[] id)
+        public async Task<ActionResult<float>> TotalPriceCalculation(int numberOfDays,int[] id)
         {
             var rooms = await _roomServie.PriceCalculation(numberOfDays, id);
             if (rooms != 0)

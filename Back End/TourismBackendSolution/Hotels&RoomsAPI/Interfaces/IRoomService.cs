@@ -11,7 +11,7 @@
         public Task<T> BookOrCancelRoom(K id);
         public Task<ICollection<T>> BookOrCancelMultipleRooms(int[] id);
         public Task<ICollection<T>> GetMultipleRooms(int[] id);
-        public Task<double> PriceCalculation(int NumberOfDays, int[] roomId);
+        public Task<float> PriceCalculation(int NumberOfDays, int[] roomId);
         public Task<ICollection<T>> AutoEndRoomTime(int[] roomId, DateTime endDate);
     }
 }

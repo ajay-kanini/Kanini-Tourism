@@ -12,6 +12,7 @@ namespace Hotels_RoomsAPI.Models
         public string City { get; set; }
         public string State { get; set; }
         public string Address { get; set; }
-        public double ContactNumber { get; set; }
+        public string ContactNumber { get; set; }
+        public int AgentId { get; set; }
     }
 }
