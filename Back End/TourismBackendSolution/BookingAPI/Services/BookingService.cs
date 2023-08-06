@@ -15,6 +15,17 @@ namespace BookingAPI.Services
             return await _repo.Add(item);
         }
 
+        public async Task<bool> CheckUserExistence(int userId, int hotelId)
+        {
+            var bookings = await _repo.GetAll();
+            var checkUser = bookings.Where(u=>u.UserId == userId && u.HotelId== hotelId && u.StartDate > DateTime.Now).FirstOrDefault();
+            if(checkUser != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public async Task<Booking> Delete(int id)
         {
             return await _repo.Delete(id);
@@ -39,5 +50,7 @@ namespace BookingAPI.Services
         {
             return await _repo.Update(item);
         }
+
+
     }
 }

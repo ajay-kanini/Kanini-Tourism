@@ -8,5 +8,7 @@
         public Task<T> Get(K id);
         public Task<T> GetByUserId(K id);
         public Task<ICollection<T>> GetBookingByHotelId(K id);
+        public Task<ICollection<T>> GetAll();
+
     }
 }

@@ -383,3 +383,140 @@ FROM [HotelAgents] AS [h]
 2023-08-06 02:03:34.614 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 12.2124ms
 2023-08-06 02:03:34.615 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
 2023-08-06 02:03:34.617 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 24.5813ms
+2023-08-06 02:47:51.589 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 02:47:51.921 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 02:47:51.928 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 02:47:51.930 +05:30 [INF] Hosting environment: Development
+2023-08-06 02:47:51.932 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 02:47:55.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 02:47:57.008 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1722.0757ms
+2023-08-06 02:47:57.039 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 02:47:57.095 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 55.9992ms
+2023-08-06 02:47:57.207 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 02:47:57.423 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 216.0262ms
+2023-08-06 02:47:58.320 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 02:47:58.878 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 557.9617ms
+2023-08-06 10:41:32.361 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 10:41:32.740 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 10:41:32.746 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 10:41:32.748 +05:30 [INF] Hosting environment: Development
+2023-08-06 10:41:32.750 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 10:41:36.962 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 10:41:38.496 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1548.3122ms
+2023-08-06 10:41:38.525 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 10:41:38.535 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 9.5920ms
+2023-08-06 10:41:39.087 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 10:41:39.425 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 338.0562ms
+2023-08-06 11:03:20.917 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 11:03:21.374 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 11:03:21.425 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 11:03:21.431 +05:30 [INF] Hosting environment: Development
+2023-08-06 11:03:21.452 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 11:03:22.951 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 11:03:25.100 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 2156.9117ms
+2023-08-06 11:03:25.173 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 11:03:25.198 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 11:03:25.198 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 24.7128ms
+2023-08-06 11:03:25.290 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 92.0079ms
+2023-08-06 11:03:25.559 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 11:03:26.004 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 444.7256ms
+2023-08-06 11:08:06.109 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 11:08:07.566 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 11:08:07.575 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 11:08:07.618 +05:30 [INF] Hosting environment: Development
+2023-08-06 11:08:07.821 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 11:08:09.208 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 11:08:10.490 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1288.9395ms
+2023-08-06 11:08:10.537 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 11:08:10.537 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 11:08:10.548 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 10.7147ms
+2023-08-06 11:08:10.611 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 73.6759ms
+2023-08-06 11:08:10.750 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 11:08:11.032 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 282.0851ms
+2023-08-06 12:11:34.657 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 12:11:34.757 +05:30 [INF] CORS policy execution successful.
+2023-08-06 12:11:34.983 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:11:35.046 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 12:11:37.307 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 12:11:38.906 +05:30 [INF] Executed DbCommand (133ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 12:11:39.116 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 12:11:39.164 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 12:11:39.168 +05:30 [INF] CORS policy execution successful.
+2023-08-06 12:11:39.170 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 4110.4167ms
+2023-08-06 12:11:39.170 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:11:39.180 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:11:39.180 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 12:11:39.209 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 12:11:39.219 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 4565.7552ms
+2023-08-06 12:11:39.227 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 12:11:39.231 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 12:11:39.233 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 48.6202ms
+2023-08-06 12:11:39.235 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:11:39.237 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 73.0116ms
+2023-08-06 12:12:24.547 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 12:12:24.562 +05:30 [INF] CORS policy execution successful.
+2023-08-06 12:12:24.570 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:12:24.573 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 12:12:24.663 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 12:12:24.679 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 12:12:24.684 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 12:12:24.687 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 111.4168ms
+2023-08-06 12:12:24.690 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 12:12:24.690 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:12:24.692 +05:30 [INF] CORS policy execution successful.
+2023-08-06 12:12:24.693 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 146.1700ms
+2023-08-06 12:12:24.695 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:12:24.700 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 12:12:24.707 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 12:12:24.721 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 12:12:24.734 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 12:12:24.737 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 32.1559ms
+2023-08-06 12:12:24.739 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 12:12:24.742 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 51.3956ms
+2023-08-06 16:06:53.268 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 16:06:54.648 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 16:06:54.658 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 16:06:54.665 +05:30 [INF] Hosting environment: Development
+2023-08-06 16:06:54.667 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 16:06:56.527 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 16:06:58.954 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 16:06:58.964 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 16:06:58.974 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 18.7966ms
+2023-08-06 16:06:59.021 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 2512.3633ms
+2023-08-06 16:06:59.052 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 95.2734ms
+2023-08-06 16:06:59.187 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 16:06:59.521 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 335.4049ms
+2023-08-06 16:12:40.231 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 16:12:41.233 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 16:12:41.263 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 16:12:41.296 +05:30 [INF] Hosting environment: Development
+2023-08-06 16:12:41.305 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 16:12:42.782 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 16:12:45.289 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 16:12:45.298 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 7.6927ms
+2023-08-06 16:12:45.298 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 2523.7172ms
+2023-08-06 16:12:45.341 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 16:12:45.392 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.0859ms
+2023-08-06 16:12:45.486 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 16:12:45.663 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 176.6440ms
+2023-08-06 16:19:47.873 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 16:19:48.169 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 16:19:48.177 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 16:19:48.206 +05:30 [INF] Hosting environment: Development
+2023-08-06 16:19:48.208 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 16:19:50.421 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 16:19:52.476 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 16:19:52.488 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 9.8065ms
+2023-08-06 16:19:52.495 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 2080.1061ms
+2023-08-06 16:19:52.513 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 16:19:52.585 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.4330ms
+2023-08-06 16:19:52.895 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 16:19:53.297 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 402.2181ms

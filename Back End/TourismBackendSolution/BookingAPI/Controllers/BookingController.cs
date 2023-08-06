@@ -84,5 +84,16 @@ namespace BookingAPI.Controllers
             }
             return Ok(bookings);
         }
+
+        [HttpPost]
+        public async Task<ActionResult<bool>> UserCheck(int userId, int hotelId)
+        {
+            var bookings = await _service.CheckUserExistence(userId, hotelId);
+            if (bookings == false)
+            {
+                return BadRequest();
+            }
+            return Ok(bookings);
+        }
     }
 }

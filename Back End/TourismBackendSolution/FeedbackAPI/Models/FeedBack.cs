@@ -6,6 +6,7 @@ namespace FeedbackAPI.Models
     {
         public int FeedbackId { get; set; }
         public int UserId { get; set; }
+        public string? Mail { get; set; }    
         public int HotelId { get; set; }
         public string? FeedbackDescription { get; set;}
         

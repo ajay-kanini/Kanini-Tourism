@@ -10,22 +10,29 @@ import AdminPage from './Components/AdminPage';
 import VendorNavbar from './Components/VendorNavbar';
 import AddHotel from './Components/AddHotel';
 import AddRoom from './Components/AddRoom';
-import VendorPage from './Components/VendorPage';
+import UserHotelList from './Components/UserHotelList';
 import HotelInfoPage from './Components/HotelInfoPage';
+import Feedback from './Components/FeedBack';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
+      <Routes>
+      <Route path="/hotelDetails/:hotelId" element={<HotelInfoPage />} />
+        <Route path='/hotelList' element={<UserHotelList/>}/>
+      </Routes>
+      {/* <VendorNavbar/> */}
       {/* <Login/>
       <UserRegister/>
       <VendorRegister/> 
-       <AddHotel/>
-      <VendorNavbar/> 
-      <AddRoom/>  */}
-      {/* <VendorPage/> */}
-      {/* <HotelInfoPage/> */}
+      <AddHotel/>     
+      <AddRoom/>  
       <AdminPage/>
+      <Feedback/> */}
     </div>
+    </BrowserRouter>
   );
 }
 

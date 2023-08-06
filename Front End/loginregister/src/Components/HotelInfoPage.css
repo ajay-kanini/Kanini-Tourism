@@ -1,0 +1,46 @@
+/* HotelInfoPage.css */
+.mainDiv {
+    font-family: Arial, sans-serif;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .c-carousel {
+    margin: 20px auto;
+  }
+  
+  .carouselImage {
+    object-fit: cover;
+  }
+  
+  .hotelDetails {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px; 
+    margin-left: 10px;
+    text-align: left;  
+  }
+  
+  .hotelDetails h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .hotelDetails p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  
+  /* Align contents in a vertical list on the left side */
+  .hotelDetails > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  

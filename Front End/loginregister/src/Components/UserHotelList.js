@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import VendorNavbar from "./VendorNavbar";
 import LoginImage from '../Assets/loginPagePic.jpg';
-import './VendorPage.css';
+import './UserHotelList.css';
+import { Link } from "react-router-dom";
 
-function VendorPage() {
+function UserHotelList() {
   const [hotels, setHotels] = useState([]);
 
   useEffect(() => {
@@ -27,9 +28,9 @@ function VendorPage() {
       <div className="hotelCardContainer">
         {hotels.map(hotel => (
           <div key={hotel.hotelId} className="hotelCard">
-            <div className="hotelImage" >
-                <img src={LoginImage}/>
-            </div>
+            <Link to={`/hotelDetails/${hotel.hotelId}`} className="hotelImage">
+              <img src={LoginImage} alt="Hotel" />
+            </Link>
             <div className="hotelInfo">
               <h3>{hotel.hotelName}</h3>
               <div className="starIcons">
@@ -45,4 +46,4 @@ function VendorPage() {
   );
 }
 
-export default VendorPage;
+export default UserHotelList;

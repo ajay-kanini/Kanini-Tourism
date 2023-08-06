@@ -44,6 +44,12 @@ namespace BookingAPI.Repositories
             return booking;
         }
 
+        public async Task<ICollection<Booking>> GetAll()
+        {
+            var bookings = await _context.Bookings.ToListAsync();
+            return bookings;
+        }
+
         public async Task<ICollection<Booking>> GetBookingByHotelId(int id)
         {
             var bookings = await _context.Bookings.ToListAsync();
