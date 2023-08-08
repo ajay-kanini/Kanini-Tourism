@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import './VendorRegister.css'
 import LoginImage from '../Assets/loginPagePic.jpg'
 import VendorNavbar from './VendorNavbar';
+import { Height } from "@mui/icons-material";
 
 function AddHotel()
 {
+    const agentId = Number(localStorage.getItem("Id"));  
+
     const [hotel, setHotel] = useState({
         "hotelId": 0,
         "hotelName": "",
@@ -13,9 +16,9 @@ function AddHotel()
         "state": "",
         "address": "",
         "contactNumber": "",
-        "agentId" : 0
+        "agentId" : agentId
       });
-
+      
       var addHotel =  (event) => {
         event.preventDefault();
         fetch("http://localhost:5007/api/Hotel/AddHotel", {
@@ -77,12 +80,12 @@ function AddHotel()
                                 <div className="register-input_address">
                                     <textarea className="register-warning" placeholder="Enter Description" name="description" onChange={(event) => {
                         setHotel({ ...hotel, "hotelDescription": event.target.value });
-                      }}/>
+                      }} style={{height:"70px"}}/>
                                 </div>
                                 <div className="register-input_address">
                                     <textarea className="register-warning" placeholder="Enter Address" name="address" onChange={(event) => {
                         setHotel({ ...hotel, "address": event.target.value });
-                      }}/>
+                      }} style={{height:"70px"}}/>
                                 </div>
                                 <div className="register-btn">
                                     <button type="submit"  onClick={addHotel}>Add Hotel</button>

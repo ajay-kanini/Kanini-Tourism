@@ -28,40 +28,45 @@ builder.Services.AddSwaggerGen(c => {
         Description = "JWT Authorization header using the Bearer scheme."
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                 {
-                     {
-                           new OpenApiSecurityScheme
-                             {
-                                 Reference = new OpenApiReference
-                                 {
-                                     Type = ReferenceType.SecurityScheme,
-                                     Id = "Bearer"
-                                 }
-                             },
-                             new string[] {}
-
-                     }
-                 });
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
 });
 
+// Add BookingContext to the container for dependency injection
 builder.Services.AddDbContext<IBookingService>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
 });
+
+// Add repository and service dependencies
 builder.Services.AddScoped<IBookingRepo<Booking, int>, BookingRepo>();
 builder.Services.AddScoped<IBookingService<Booking, int>, BookingService>();
 
+// JWT Authentication Service
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-               .AddJwtBearer(options =>
-               {
-                   options.TokenValidationParameters = new TokenValidationParameters
-                   {
-                       ValidateIssuerSigningKey = true,
-                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
-                       ValidateIssuer = false,
-                       ValidateAudience = false
-                   };
-               });
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+
+// CORS Service Injection
 builder.Services.AddCors(opts =>
 {
     opts.AddPolicy("MyCors", policy =>
@@ -72,6 +77,7 @@ builder.Services.AddCors(opts =>
     });
 });
 
+// Serilog Injection
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
 builder.Host.UseSerilog();
 

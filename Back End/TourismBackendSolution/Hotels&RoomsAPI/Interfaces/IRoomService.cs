@@ -1,4 +1,6 @@
-﻿namespace Hotels_RoomsAPI.Interfaces
+﻿using Hotels_RoomsAPI.Models.DTO;
+
+namespace Hotels_RoomsAPI.Interfaces
 {
     public interface IRoomService<T, K>
     {
@@ -8,10 +10,7 @@
         public Task<ICollection<T>> GetByHotelId(K id);
         public Task<T> GetByRoomId(K id);
         public Task<ICollection<T>> GetAll();
-        public Task<T> BookOrCancelRoom(K id);
-        public Task<ICollection<T>> BookOrCancelMultipleRooms(int[] id);
-        public Task<ICollection<T>> GetMultipleRooms(int[] id);
-        public Task<float> PriceCalculation(int NumberOfDays, int[] roomId);
-        public Task<ICollection<T>> AutoEndRoomTime(int[] roomId, DateTime endDate);
+
+
     }
 }

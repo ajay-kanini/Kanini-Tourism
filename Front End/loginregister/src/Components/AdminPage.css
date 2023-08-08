@@ -19,7 +19,6 @@
   }
   
   
-  /* Apply media query for smaller screens to show two cards in a row */
   @media (max-width: 768px) {
     .card-new {
       flex-basis: calc(50% - 40px);
@@ -31,7 +30,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Add some padding to create space around the heading */
+    padding: 10px 20px; 
   }
   
   .navbar-heading {
@@ -42,7 +41,8 @@
     flex-grow: 1; 
     display: flex;
     justify-content: center; 
-    text-align: center; /* Center the heading text horizontally */
+    text-align: center; 
+    margin-right: 15%;
   }
     
   

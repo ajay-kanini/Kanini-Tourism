@@ -9,6 +9,6 @@ namespace BookingAPI.Context
         {
             
         }
-        public DbSet<Booking> Bookings { get; set; }    
+        public DbSet<Booking?> Bookings { get; set; }    
     }
 }

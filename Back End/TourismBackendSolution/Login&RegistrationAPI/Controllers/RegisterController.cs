@@ -32,13 +32,12 @@ namespace HospitalManagement.Controllers
             {
                 var agent = await _service.HotelAgentRegistration(agentDTO);
                 if (agent != null)
-                    return Created("Doctor Added", agent);
+                    return Created("Agent Added", agent);
                 else
                     return BadRequest("Unable to fetch");
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
@@ -59,7 +58,6 @@ namespace HospitalManagement.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
@@ -82,13 +80,12 @@ namespace HospitalManagement.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
 
         [HttpPost]
-        [ProducesResponseType(typeof(UserDTO), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(UserDTO), StatusCodes.Status200OK)] 
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<UserDTO>> Login(UserDTO userDTO)
@@ -97,16 +94,16 @@ namespace HospitalManagement.Controllers
             {
                 var agent = await _service.Login(userDTO);
                 if (agent != null)
-                    return Created("Agent Updated", agent);
+                    return Ok(agent); 
                 else
                     return BadRequest("Unable to fetch");
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
+
 
         [HttpGet]
         [ProducesResponseType(typeof(HotelAgent), StatusCodes.Status200OK)]
@@ -124,7 +121,6 @@ namespace HospitalManagement.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
@@ -145,7 +141,6 @@ namespace HospitalManagement.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
@@ -166,7 +161,6 @@ namespace HospitalManagement.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }
@@ -187,7 +181,27 @@ namespace HospitalManagement.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception or perform any other necessary actions
+
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(User), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<HotelAgent>> USerDetails(int id)
+        {
+            try
+            {
+                var agents = await _service.GetUser(id);
+                if (agents != null)
+                    return Created("Doctor Updated", agents);
+                else
+                    return BadRequest("Unable to fetch");
+            }
+            catch (Exception ex)
+            {
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred: " + ex.Message);
             }
         }

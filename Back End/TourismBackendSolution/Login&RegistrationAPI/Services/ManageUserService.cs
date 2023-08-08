@@ -239,5 +239,21 @@ namespace HospitalManagement.Service
                 throw new Exception("Get agent failed");
             }
         }
+
+        public async Task<User> GetUser(int key)
+        {
+            try
+            {
+                var client = await _userRepo.Get(key);
+                return client ?? throw new Exception("Failed to retrieve agents");
+            }
+
+            catch (Exception ex)
+            {
+                // Handle the exception or log the error
+                Debug.WriteLine($"Get agent failed: {ex.Message}");
+                throw new Exception("Get agent failed");
+            }
+        }
     }
  }

@@ -16,13 +16,14 @@
   
   .hotelDetails {
     margin-top: 30px;
-    background-color: #f9f9f9;
+    background-color: #f7f2f2;
     padding: 20px;
     border-radius: 8px;
     width: 100%;
     max-width: 800px; 
     margin-left: 10px;
     text-align: left;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .hotelDetails h2 {
@@ -44,3 +45,86 @@
     margin-bottom: 10px;
   }
   
+  h3 {
+    margin-top: 20px; /* Add margin to the top of the heading */
+  }
+  
+  /* Style for the container of feedback cards */
+  .getHotelFeedbacks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px; /* Add margin to the top of the container */
+    align-items: flex-start; /* Align items to flex-start */
+  }
+  
+  .feedbackItemHotels {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+/* HotelInfoPage.css */
+
+/* ... Your existing CSS ... */
+
+/* Parent container for hotelDetails and bookRooms */
+.hotelDetailsAndBookRooms {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+/* Book Rooms Section */
+.bookRooms {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Book Button */
+.bookButton {
+  padding: 16px 32px; /* Increased padding for a bigger button */
+  font-size: 18px; 
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+.bookRoomsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 100px; /* Added margin to move the buttons down */
+  margin-right: 150px; 
+}
+
+.animatedBox {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Book Now Button */
+.bookNowButton {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}

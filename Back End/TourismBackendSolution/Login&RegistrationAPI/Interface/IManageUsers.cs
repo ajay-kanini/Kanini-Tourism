@@ -13,6 +13,7 @@ namespace HospitalManagement.Interface
         public Task<ICollection<HotelAgent>> GetAllAgents();
         public Task<HotelAgent> GetAgent(int key);
         public Task<Clients> GetClient(int key);
+        public Task<User> GetUser(int key);
         public Task<User> ForgetPassword(UserDTO userDTO); 
     }
 }

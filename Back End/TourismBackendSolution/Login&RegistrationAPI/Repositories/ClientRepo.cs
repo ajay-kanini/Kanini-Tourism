@@ -60,7 +60,6 @@ namespace HospitalManagement.Service
             }
             catch (Exception ex)
             {
-                // Handle the exception or log the error
                 Console.WriteLine($"Failed to update client: {ex.Message}");
                 Debug.WriteLine($"Failed to update client: {ex.Message}");
             }
@@ -124,7 +123,6 @@ namespace HospitalManagement.Service
             }
             catch (Exception ex)
             {
-                // Handle the exception or log the error
                 Console.WriteLine($"Failed to update client: {ex.Message}");
                 Debug.WriteLine($"Failed to update client: {ex.Message}");
             }

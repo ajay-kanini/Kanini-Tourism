@@ -48,7 +48,7 @@ function AdminPage() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#home" >Home</Nav.Link>
             </Nav>
             <h1 className="navbar-heading">Vendor Details</h1>
         </Navbar.Collapse>

@@ -33,7 +33,8 @@ function VendorRegister() {
         })
           .then(async (data) => {
             if (data.status == 201) {
-              alert('ok')
+              var myData = await data.json();
+                          
             }
             else
             {

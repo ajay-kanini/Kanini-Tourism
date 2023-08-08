@@ -1,22 +1,23 @@
 import React, { useState } from "react";
-import './AddRoom.css'; // Import the new CSS file
+import './AddRoom.css'; 
 import LoginImage from '../Assets/loginPagePic.jpg';
 import VendorNavbar from './VendorNavbar';
+import { useParams } from "react-router-dom";
+
 
 function AddRoom() {
+
+  const { hotelId } = useParams();
+  
   const [room, setRoom] = useState({
-    "roomId": 0,
-    "roomNumber": "",
-    "roomPricePerDay": 0,
-    "acAvailability": true,
-    "roomAvailability": true,
-    "numberOfPersons": 5,
-    "hotelId": 1
+  "roomId": 0,
+  "roomPricePerDay": 0,
+  "acAvailability": true,
+  "numberOfPersons": 5,
+  "roomAvailability": true,
+  "hotelId": hotelId
   });
 
-  const handleRoomNumberChange = (event) => {
-    setRoom({ ...room, "roomNumber": event.target.value });
-  };
 
   const handleRoomPricePerDayChange = (event) => {
     setRoom({ ...room, "roomPricePerDay": parseFloat(event.target.value) });
@@ -67,17 +68,7 @@ function AddRoom() {
                       <h2>Welcome !!!</h2>
                     </div>
                     <form>
-                      <div className="room-register-input_text">
-                        <label htmlFor="roomNumber">Room Number:</label>
-                        <input
-                          type="text"
-                          id="roomNumber"
-                          name="roomNumber"
-                          onChange={handleRoomNumberChange}
-                          value={room.roomNumber}
-                          className="room-register-warning"
-                        />
-                      </div>
+
                       <div className="room-register-input_text">
                         <label htmlFor="roomPricePerDay">Room Price Per Day:</label>
                         <input
@@ -90,6 +81,7 @@ function AddRoom() {
                           className="room-register-warning"
                         />
                       </div>
+
                       <div className="room-register-input_text">
                         <label>Number of Persons/Room:</label>
                         <input
@@ -102,6 +94,7 @@ function AddRoom() {
                           className="room-register-warning"
                         />
                       </div>
+
                       <div className="room-register-radio-group">
                         <label>AC Availability:</label>
                         <div className="room-register-radio">
@@ -115,6 +108,7 @@ function AddRoom() {
                           />
                           <label htmlFor="acAvailabilityYes">Yes</label>
                         </div>
+
                         <div className="room-register-radio">
                           <input
                             type="radio"
@@ -127,8 +121,9 @@ function AddRoom() {
                           <label htmlFor="acAvailabilityNo">No</label>
                         </div>
                       </div>
+
                       <div className="room-register-btn">
-                        <button type="submit" onClick={addRoom}>Add Hotel</button>
+                        <button type="submit" onClick={addRoom}>Add Room</button>
                       </div>
                     </form>
                     <hr className="room-register-hr" />

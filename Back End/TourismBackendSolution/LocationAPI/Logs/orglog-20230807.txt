@@ -1,0 +1,471 @@
+2023-08-07 00:03:27.821 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 00:03:27.917 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 00:03:27.921 +05:30 [INF] Hosting environment: Development
+2023-08-07 00:03:27.923 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 00:03:29.775 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 00:03:31.660 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1897.0250ms
+2023-08-07 00:03:31.749 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 00:03:31.768 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-07 00:03:31.775 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 26.4346ms
+2023-08-07 00:03:32.423 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 655.5588ms
+2023-08-07 00:03:32.672 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 00:03:33.063 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 390.9044ms
+2023-08-07 00:13:44.178 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - -
+2023-08-07 00:13:44.294 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-07 00:13:44.403 +05:30 [INF] Route matched with {action = "GetAllStates", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllStates() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:13:46.091 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:13:48.076 +05:30 [INF] Executed DbCommand (169ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[id] AS [Id], [s].[name] AS [Name]
+FROM [State] AS [s]
+WHERE LTRIM(RTRIM(LOWER([s].[country_name]))) = N'india'
+2023-08-07 00:13:48.187 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LocationAPI.Models.DTO.LocationDTO, LocationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-07 00:13:48.231 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI) in 3815.6701ms
+2023-08-07 00:13:48.238 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-07 00:13:48.264 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - - - 200 - application/json;+charset=utf-8 4090.4649ms
+2023-08-07 00:15:23.884 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - -
+2023-08-07 00:15:23.892 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:15:23.897 +05:30 [INF] Route matched with {action = "GetAllCities", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllCities() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:15:23.955 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:15:26.948 +05:30 [INF] Executed DbCommand (2,978ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[id] AS [Id], [c].[name] AS [Name]
+FROM [City] AS [c]
+WHERE LOWER([c].[country_name]) = N'india'
+2023-08-07 00:15:27.106 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LocationAPI.Models.DTO.LocationDTO, LocationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-07 00:15:27.112 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI) in 3210.7431ms
+2023-08-07 00:15:27.114 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:15:27.116 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - - - 200 - application/json;+charset=utf-8 3232.6219ms
+2023-08-07 00:21:25.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName?name=Tamil%20Nadu - -
+2023-08-07 00:21:25.539 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:21:25.560 +05:30 [INF] Route matched with {action = "GetStateByName", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LocationAPI.Models.State]] GetStateByName(System.String) on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:21:25.675 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:21:25.941 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[@__Trim_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[id], [s].[country_code], [s].[country_id], [s].[country_name], [s].[latitude], [s].[longitude], [s].[name], [s].[state_code], [s].[type]
+FROM [State] AS [s]
+WHERE (LOWER([s].[country_name]) = N'india') AND (LTRIM(RTRIM(LOWER([s].[name]))) = @__Trim_0)
+2023-08-07 00:21:26.036 +05:30 [INF] Executing OkObjectResult, writing value of type 'LocationAPI.Models.State'.
+2023-08-07 00:21:26.062 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI) in 498.0472ms
+2023-08-07 00:21:26.065 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:21:26.067 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName?name=Tamil%20Nadu - - - 200 - application/json;+charset=utf-8 531.9989ms
+2023-08-07 00:21:43.791 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName?name=TamilNadu - -
+2023-08-07 00:21:43.793 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:21:43.795 +05:30 [INF] Route matched with {action = "GetStateByName", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LocationAPI.Models.State]] GetStateByName(System.String) on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:21:43.801 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:21:43.826 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__Trim_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[id], [s].[country_code], [s].[country_id], [s].[country_name], [s].[latitude], [s].[longitude], [s].[name], [s].[state_code], [s].[type]
+FROM [State] AS [s]
+WHERE (LOWER([s].[country_name]) = N'india') AND (LTRIM(RTRIM(LOWER([s].[name]))) = @__Trim_0)
+2023-08-07 00:21:43.830 +05:30 [INF] Executing OkObjectResult, writing value of type 'null'.
+2023-08-07 00:21:43.834 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI) in 34.9ms
+2023-08-07 00:21:43.837 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:21:43.839 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName?name=TamilNadu - - - 204 0 - 48.1673ms
+2023-08-07 00:21:46.925 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName?name=TamilNadu - -
+2023-08-07 00:21:46.926 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:21:46.929 +05:30 [INF] Route matched with {action = "GetStateByName", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LocationAPI.Models.State]] GetStateByName(System.String) on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:21:46.933 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:21:46.947 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__Trim_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[id], [s].[country_code], [s].[country_id], [s].[country_name], [s].[latitude], [s].[longitude], [s].[name], [s].[state_code], [s].[type]
+FROM [State] AS [s]
+WHERE (LOWER([s].[country_name]) = N'india') AND (LTRIM(RTRIM(LOWER([s].[name]))) = @__Trim_0)
+2023-08-07 00:21:46.950 +05:30 [INF] Executing OkObjectResult, writing value of type 'null'.
+2023-08-07 00:21:46.953 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI) in 20.7976ms
+2023-08-07 00:21:46.955 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:21:46.956 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName?name=TamilNadu - - - 204 0 - 31.2929ms
+2023-08-07 00:25:07.802 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName - -
+2023-08-07 00:25:07.811 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:25:07.813 +05:30 [INF] Route matched with {action = "GetStateByName", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LocationAPI.Models.State]] GetStateByName(System.String) on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:25:07.828 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-07 00:25:07.862 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI) in 45.7463ms
+2023-08-07 00:25:07.866 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:25:07.868 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName - - - 400 - application/problem+json;+charset=utf-8 66.0905ms
+2023-08-07 00:25:10.222 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName - -
+2023-08-07 00:25:10.224 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:25:10.225 +05:30 [INF] Route matched with {action = "GetStateByName", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LocationAPI.Models.State]] GetStateByName(System.String) on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:25:10.228 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-07 00:25:10.231 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI) in 2.4783ms
+2023-08-07 00:25:10.232 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetStateByName (LocationAPI)'
+2023-08-07 00:25:10.234 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetStateByName/GetstateByName - - - 400 - application/problem+json;+charset=utf-8 11.3274ms
+2023-08-07 00:36:41.090 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:36:41.095 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:36:41.138 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:36:41.138 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:36:41.142 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 51.7760ms
+2023-08-07 00:36:41.142 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 48.8328ms
+2023-08-07 00:36:41.157 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:36:41.161 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:36:41.162 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:36:41.164 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:36:41.164 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 7.4873ms
+2023-08-07 00:36:41.169 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 7.7202ms
+2023-08-07 00:37:23.977 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:37:23.992 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:37:23.998 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 22.1472ms
+2023-08-07 00:37:24.005 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:37:24.009 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:37:24.012 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:37:24.014 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:37:24.016 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 10.8523ms
+2023-08-07 00:37:24.018 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 9.0035ms
+2023-08-07 00:37:24.020 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:37:24.023 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:37:24.025 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 5.1874ms
+2023-08-07 00:38:29.536 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:38:29.542 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:29.550 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:38:29.550 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 14.1308ms
+2023-08-07 00:38:29.558 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:29.562 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:38:29.563 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 13.0653ms
+2023-08-07 00:38:29.565 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:29.566 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:38:29.569 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 6.2438ms
+2023-08-07 00:38:29.570 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:29.573 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 6.1447ms
+2023-08-07 00:38:35.951 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:38:35.951 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:38:35.954 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:35.955 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:35.957 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 6.4253ms
+2023-08-07 00:38:35.959 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 8.1841ms
+2023-08-07 00:38:35.961 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:38:35.962 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:38:35.964 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:35.965 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:38:35.967 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 6.6819ms
+2023-08-07 00:38:35.969 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 7.2183ms
+2023-08-07 00:39:17.210 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:39:17.210 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:39:17.217 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:39:17.218 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:39:17.219 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 9.1781ms
+2023-08-07 00:39:17.221 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 10.3123ms
+2023-08-07 00:41:25.749 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 00:41:25.922 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 00:41:25.927 +05:30 [INF] Hosting environment: Development
+2023-08-07 00:41:25.928 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 00:41:27.988 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 00:41:29.617 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-07 00:41:29.617 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 00:41:29.635 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 14.4128ms
+2023-08-07 00:41:29.655 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1681.4472ms
+2023-08-07 00:41:29.701 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.7990ms
+2023-08-07 00:41:29.842 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 00:41:30.158 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 315.9310ms
+2023-08-07 00:41:42.404 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - -
+2023-08-07 00:41:42.427 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-07 00:41:42.502 +05:30 [INF] Route matched with {action = "GetAllStates", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllStates() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:41:44.438 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:41:46.580 +05:30 [INF] Executed DbCommand (171ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[name] AS [Name]
+FROM [State] AS [s]
+WHERE LTRIM(RTRIM(LOWER([s].[country_name]))) = N'india'
+2023-08-07 00:41:46.722 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LocationAPI.Models.DTO.LocationDTO, LocationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-07 00:41:46.752 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI) in 4238.1246ms
+2023-08-07 00:41:46.757 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-07 00:41:46.776 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - - - 200 - application/json;+charset=utf-8 4372.1653ms
+2023-08-07 00:43:22.469 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 00:43:22.626 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 00:43:22.631 +05:30 [INF] Hosting environment: Development
+2023-08-07 00:43:22.633 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 00:43:23.640 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 00:43:24.596 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 00:43:24.600 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-07 00:43:24.608 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 10.6195ms
+2023-08-07 00:43:24.634 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1007.8622ms
+2023-08-07 00:43:24.666 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 66.7926ms
+2023-08-07 00:43:24.748 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 00:43:24.949 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 201.0322ms
+2023-08-07 00:43:30.988 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - -
+2023-08-07 00:43:31.015 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-07 00:43:31.088 +05:30 [INF] Route matched with {action = "GetAllStates", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllStates() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:43:32.745 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:43:34.587 +05:30 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[name] AS [Name]
+FROM [State] AS [s]
+WHERE LTRIM(RTRIM(LOWER([s].[country_name]))) = N'india'
+2023-08-07 00:43:34.717 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LocationAPI.Models.DTO.LocationDTO, LocationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-07 00:43:34.752 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI) in 3650.623ms
+2023-08-07 00:43:34.758 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllStates (LocationAPI)'
+2023-08-07 00:43:34.780 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates/GetAllState - - - 200 - application/json;+charset=utf-8 3791.3797ms
+2023-08-07 00:44:39.796 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - -
+2023-08-07 00:44:39.808 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:44:39.824 +05:30 [INF] Route matched with {action = "GetAllCities", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllCities() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:44:39.865 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:45:14.959 +05:30 [ERR] Failed executing DbCommand (35,081ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[name] AS [Name]
+FROM [City] AS [c]
+WHERE LOWER([c].[country_name]) = N'india'
+2023-08-07 00:45:15.059 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'LocationAPI.Models.TourLocationContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ef86801b-a5cf-49ca-8c41-f7d1dba3c24b
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ef86801b-a5cf-49ca-8c41-f7d1dba3c24b
+Error Number:-2,State:0,Class:11
+2023-08-07 00:45:15.363 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI) in 35533.1633ms
+2023-08-07 00:45:15.367 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:45:15.377 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Message
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at LocationAPI.Repositories.CityRepo.GetAll() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Repositories\CityRepo.cs:line 41
+   at LocationAPI.Services.CityService.GetAllLocation() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Services\CityService.cs:line 27
+   at LocationAPI.Controllers.LocationController.GetAllCities() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Controllers\LocationController.cs:line 247
+ClientConnectionId:ef86801b-a5cf-49ca-8c41-f7d1dba3c24b
+Error Number:-2,State:0,Class:11
+   --- End of inner exception stack trace ---
+   at LocationAPI.Controllers.LocationController.GetAllCities() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Controllers\LocationController.cs:line 252
+   at lambda_method19(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-07 00:45:15.435 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - - - 500 - text/plain;+charset=utf-8 35640.2963ms
+2023-08-07 00:47:15.187 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 00:47:15.295 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 00:47:15.299 +05:30 [INF] Hosting environment: Development
+2023-08-07 00:47:15.300 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 00:47:17.296 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 00:47:18.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-07 00:47:18.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 00:47:18.849 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 16.2274ms
+2023-08-07 00:47:18.859 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1572.0740ms
+2023-08-07 00:47:18.881 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.4010ms
+2023-08-07 00:47:18.952 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 00:47:19.342 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 390.5302ms
+2023-08-07 00:47:34.761 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - -
+2023-08-07 00:47:34.806 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:47:34.863 +05:30 [INF] Route matched with {action = "GetAllCities", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllCities() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:47:36.375 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:47:52.360 +05:30 [ERR] An error occurred using the connection to database 'TourLocation' on server 'AJ\SQLEXPRESS'.
+2023-08-07 00:47:52.465 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'LocationAPI.Models.TourLocationContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SNI_PN11, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SNI_PN11, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+2023-08-07 00:47:52.841 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI) in 17965.6099ms
+2023-08-07 00:47:52.854 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:47:52.866 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Message
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SNI_PN11, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at LocationAPI.Repositories.CityRepo.GetAll() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Repositories\CityRepo.cs:line 41
+   at LocationAPI.Services.CityService.GetAllLocation() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Services\CityService.cs:line 27
+   at LocationAPI.Controllers.LocationController.GetAllCities() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Controllers\LocationController.cs:line 247
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at LocationAPI.Controllers.LocationController.GetAllCities() in C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\Controllers\LocationController.cs:line 252
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-07 00:47:52.967 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - - - 500 - text/plain;+charset=utf-8 18205.7586ms
+2023-08-07 00:48:08.973 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - -
+2023-08-07 00:48:08.979 +05:30 [INF] Executing endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:48:08.984 +05:30 [INF] Route matched with {action = "GetAllCities", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[LocationAPI.Models.DTO.LocationDTO]]] GetAllCities() on controller LocationAPI.Controllers.LocationController (LocationAPI).
+2023-08-07 00:48:09.005 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'TourLocationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-07 00:48:19.124 +05:30 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[name] AS [Name]
+FROM [City] AS [c]
+WHERE LOWER([c].[country_name]) = N'india'
+2023-08-07 00:48:19.371 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LocationAPI.Models.DTO.LocationDTO, LocationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-07 00:48:19.402 +05:30 [INF] Executed action LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI) in 10413.4448ms
+2023-08-07 00:48:19.405 +05:30 [INF] Executed endpoint 'LocationAPI.Controllers.LocationController.GetAllCities (LocationAPI)'
+2023-08-07 00:48:19.408 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities/GetAllCity - - - 200 - application/json;+charset=utf-8 10434.8097ms
+2023-08-07 00:51:12.920 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:51:12.920 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:51:12.968 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:12.968 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:13.025 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 63.4420ms
+2023-08-07 00:51:13.025 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 63.4691ms
+2023-08-07 00:51:13.040 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:51:13.040 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:51:13.042 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:13.044 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:13.046 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 5.6103ms
+2023-08-07 00:51:13.047 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 6.9881ms
+2023-08-07 00:51:16.985 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:51:16.985 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:51:16.987 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:16.988 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:16.990 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 4.3946ms
+2023-08-07 00:51:16.991 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 5.6642ms
+2023-08-07 00:51:16.992 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - -
+2023-08-07 00:51:16.994 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - -
+2023-08-07 00:51:16.995 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:16.997 +05:30 [INF] No CORS policy found for the specified request.
+2023-08-07 00:51:16.999 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllStates - - - 404 0 - 7.0099ms
+2023-08-07 00:51:17.001 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/api/Location/GetAllCities - - - 404 0 - 7.3286ms
+2023-08-07 02:12:53.407 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 02:12:53.596 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 02:12:53.603 +05:30 [INF] Hosting environment: Development
+2023-08-07 02:12:53.605 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 02:12:55.452 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 02:12:56.615 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-07 02:12:56.624 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 02:12:56.654 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 28.6097ms
+2023-08-07 02:12:56.654 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1215.9810ms
+2023-08-07 02:12:56.728 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 115.5337ms
+2023-08-07 02:12:56.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 02:12:57.148 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 318.5325ms
+2023-08-07 02:36:57.939 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 02:36:58.530 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 02:36:58.621 +05:30 [INF] Hosting environment: Development
+2023-08-07 02:36:58.630 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 02:36:59.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 02:37:00.809 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-07 02:37:00.809 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 02:37:00.826 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1721.7182ms
+2023-08-07 02:37:00.829 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 19.5891ms
+2023-08-07 02:37:00.959 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 150.1242ms
+2023-08-07 02:37:01.122 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 02:37:02.008 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 885.5987ms
+2023-08-07 03:01:42.571 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 03:01:43.183 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 03:01:43.199 +05:30 [INF] Hosting environment: Development
+2023-08-07 03:01:43.219 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 03:01:43.827 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 03:01:45.225 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1407.5342ms
+2023-08-07 03:01:45.268 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 03:01:45.276 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 8.3233ms
+2023-08-07 03:01:45.325 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-07 03:01:45.483 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 158.4896ms
+2023-08-07 03:01:45.836 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 03:01:46.110 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 274.1359ms
+2023-08-07 10:08:33.689 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-07 10:08:33.838 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-07 10:08:33.841 +05:30 [INF] Hosting environment: Development
+2023-08-07 10:08:33.843 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-07 10:08:36.958 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-07 10:08:37.709 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 766.7745ms
+2023-08-07 10:08:37.772 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-07 10:08:37.818 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 45.9943ms
+2023-08-07 10:08:37.931 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-07 10:08:38.274 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 343.4864ms

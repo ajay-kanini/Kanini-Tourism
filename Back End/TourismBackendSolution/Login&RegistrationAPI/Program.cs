@@ -16,6 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+// Authentication Using Swagger UI
 builder.Services.AddSwaggerGen(c => {
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
@@ -27,44 +29,52 @@ builder.Services.AddSwaggerGen(c => {
         Description = "JWT Authorization header using the Bearer scheme."
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                 {
-                     {
-                           new OpenApiSecurityScheme
-                             {
-                                 Reference = new OpenApiReference
-                                 {
-                                     Type = ReferenceType.SecurityScheme,
-                                     Id = "Bearer"
-                                 }
-                             },
-                             new string[] {}
-
-                     }
-                 });
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
 });
 
+// User Defined Service Injections
+
+// DbContext Injection
 builder.Services.AddDbContext<RegistrationContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
 });
+
+// Repositories
 builder.Services.AddScoped<IRepo<HotelAgent, int>, HotelAgentRepo>();
 builder.Services.AddScoped<IRepo<Clients, int>, ClientRepo>();
 builder.Services.AddScoped<IRepo<User, int>, UserRepo>();
+
+// Services
 builder.Services.AddScoped<IGenerateToken, GenerateTokenService>();
 builder.Services.AddScoped<IManageUsers, ManageUserService>();
 
-
+// JWT Authentication Service
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-               .AddJwtBearer(options =>
-               {
-                   options.TokenValidationParameters = new TokenValidationParameters
-                   {
-                       ValidateIssuerSigningKey = true,
-                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
-                       ValidateIssuer = false,
-                       ValidateAudience = false
-                   };
-               });
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+
+// CORS Service Injection
 builder.Services.AddCors(opts =>
 {
     opts.AddPolicy("MyCors", policy =>
@@ -75,6 +85,7 @@ builder.Services.AddCors(opts =>
     });
 });
 
+// Serilog Injection
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
 builder.Host.UseSerilog();
 
@@ -88,6 +99,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("MyCors");
+app.UseSerilogRequestLogging();
+
 app.UseAuthentication();
 app.UseAuthorization();
 

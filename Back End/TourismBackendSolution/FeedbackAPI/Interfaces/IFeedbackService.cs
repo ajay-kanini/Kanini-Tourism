@@ -1,4 +1,5 @@
 ﻿using FeedbackAPI.Models;
+using FeedbackAPI.Models.DTO;
 
 namespace FeedbackAPI.Interfaces
 {
@@ -12,6 +13,6 @@ namespace FeedbackAPI.Interfaces
         public Task<ICollection<T>> GetByUserId(K id);
         public Task<ICollection<T>> GetAll();
         public Task<bool> CheckUserExistence(K id);
-        public Task<double> CalculatePoints(K id);
+        public Task<RatingDTO> CalculatePoints(K id);
     }
 }

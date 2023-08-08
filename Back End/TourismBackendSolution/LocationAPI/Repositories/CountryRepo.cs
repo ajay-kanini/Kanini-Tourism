@@ -44,7 +44,7 @@ namespace LocationAPI.Repositories
 
         public async Task<ICollection<LocationDTO>> GetAll()
         {
-            var countries = await _context.Countries.Select(city => new LocationDTO { Id = city.Id, Name = city.Name }).ToListAsync();
+            var countries = await _context.Countries.Select(city => new LocationDTO { Name = city.Name }).ToListAsync();
             return countries;
         }
 

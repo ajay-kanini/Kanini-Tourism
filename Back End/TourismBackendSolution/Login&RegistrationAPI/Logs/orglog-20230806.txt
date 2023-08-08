@@ -520,3 +520,659 @@ FROM [HotelAgents] AS [h]
 2023-08-06 16:19:52.585 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.4330ms
 2023-08-06 16:19:52.895 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
 2023-08-06 16:19:53.297 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 402.2181ms
+2023-08-06 18:00:37.344 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 18:00:37.593 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 18:00:37.597 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 18:00:37.599 +05:30 [INF] Hosting environment: Development
+2023-08-06 18:00:37.600 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 18:00:40.185 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 18:00:41.662 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 1482.5594ms
+2023-08-06 18:00:41.838 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 18:00:42.568 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 18:00:42.636 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 798.3876ms
+2023-08-06 18:00:42.768 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 200.4351ms
+2023-08-06 18:00:43.574 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 18:00:43.887 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 312.9614ms
+2023-08-06 18:02:05.556 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:02:05.573 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:02:05.576 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 23.4421ms
+2023-08-06 18:02:05.591 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:02:05.597 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:02:05.858 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:02:05.921 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:02:06.310 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 381.4889ms
+2023-08-06 18:02:06.318 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:02:06.323 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.ReadBufferState.ReadFromStreamAsync(Stream utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-08-06 18:02:06.408 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 400 - text/plain;+charset=utf-8 816.2432ms
+2023-08-06 18:02:33.411 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:02:33.419 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:02:33.420 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 9.2935ms
+2023-08-06 18:02:33.421 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:02:33.424 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:02:33.426 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:02:33.430 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:02:34.649 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:02:35.704 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:02:36.067 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:02:36.281 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:02:36.304 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 2869.9414ms
+2023-08-06 18:02:36.306 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:02:36.313 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 0 - application/json;+charset=utf-8 2892.0026ms
+2023-08-06 18:03:09.257 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:03:09.261 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:03:09.267 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 11.0393ms
+2023-08-06 18:03:09.273 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:03:09.275 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:03:09.278 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:03:09.279 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:03:09.288 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:03:09.298 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:03:09.306 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:03:09.309 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:03:09.311 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 29.3617ms
+2023-08-06 18:03:09.313 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:03:09.315 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 201 - application/json;+charset=utf-8 42.1127ms
+2023-08-06 18:03:54.177 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:03:54.178 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:03:54.180 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.9817ms
+2023-08-06 18:03:54.181 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:03:54.183 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:03:54.184 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:03:54.185 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:03:54.225 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:03:54.232 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:03:54.236 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:03:54.239 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:03:54.240 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 52.3567ms
+2023-08-06 18:03:54.242 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:03:54.243 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 201 - application/json;+charset=utf-8 61.6366ms
+2023-08-06 18:05:23.585 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:05:23.588 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:05:23.593 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 8.1468ms
+2023-08-06 18:05:23.600 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:05:23.600 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:05:23.601 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:05:23.603 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:05:23.606 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:05:30.993 +05:30 [INF] Executed DbCommand (7,384ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:05:31.098 +05:30 [INF] Executed DbCommand (101ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:05:31.102 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:05:31.104 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 7499.0577ms
+2023-08-06 18:05:31.106 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:05:31.108 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 0 - application/json;+charset=utf-8 7509.3252ms
+2023-08-06 18:06:00.061 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:06:00.063 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:06:00.064 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.9347ms
+2023-08-06 18:06:00.066 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:06:00.067 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:06:00.068 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:06:00.070 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:06:00.073 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:06:00.080 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:06:00.088 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:06:00.090 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:06:00.092 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 19.2785ms
+2023-08-06 18:06:00.094 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:06:00.096 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 201 - application/json;+charset=utf-8 30.0155ms
+2023-08-06 18:07:20.115 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 62
+2023-08-06 18:07:20.116 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:07:20.117 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:07:20.118 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:07:20.121 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:07:20.131 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:07:20.140 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:07:20.143 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:07:20.145 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 24.7585ms
+2023-08-06 18:07:20.147 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:07:20.148 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 62 - 201 - application/json;+charset=utf-8 33.0234ms
+2023-08-06 18:07:42.137 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:07:42.138 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:07:42.139 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.3413ms
+2023-08-06 18:07:42.141 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:07:42.142 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:07:42.143 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:07:42.145 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:07:42.147 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:07:42.152 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:07:42.157 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:07:42.160 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:07:42.162 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 15.3856ms
+2023-08-06 18:07:42.164 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:07:42.166 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 201 - application/json;+charset=utf-8 24.9891ms
+2023-08-06 18:08:03.150 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:08:03.152 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:08:03.153 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 3.0897ms
+2023-08-06 18:08:03.158 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 86
+2023-08-06 18:08:03.160 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:08:03.161 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:08:03.162 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:08:03.165 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:08:03.171 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:08:03.177 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:08:03.461 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-08-06 18:08:03.463 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 298.5593ms
+2023-08-06 18:08:03.466 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:08:03.467 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 86 - 500 - text/plain;+charset=utf-8 308.9412ms
+2023-08-06 18:10:23.844 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:10:23.848 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:10:23.850 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 5.9375ms
+2023-08-06 18:10:23.852 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:10:23.855 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:10:23.857 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:10:23.858 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:10:23.861 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:10:23.870 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:10:23.875 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:10:23.878 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:10:23.879 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 18.8863ms
+2023-08-06 18:10:23.881 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:10:23.882 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 201 - application/json;+charset=utf-8 30.4811ms
+2023-08-06 18:11:03.727 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:11:03.729 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:11:03.730 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 3.7967ms
+2023-08-06 18:11:03.732 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88
+2023-08-06 18:11:03.737 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:11:03.738 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:11:03.740 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:11:03.743 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:11:03.757 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:11:03.764 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:11:03.768 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:11:03.770 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 27.5154ms
+2023-08-06 18:11:03.772 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:11:03.774 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 88 - 201 - application/json;+charset=utf-8 41.1859ms
+2023-08-06 18:13:06.277 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:13:06.281 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:13:06.283 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 6.3455ms
+2023-08-06 18:13:06.287 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:13:06.288 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:13:06.289 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:13:06.290 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:13:06.293 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:13:06.302 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:13:06.307 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:13:06.310 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:13:06.311 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 19.2479ms
+2023-08-06 18:13:06.314 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:13:06.315 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 28.1116ms
+2023-08-06 18:13:28.552 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:13:28.554 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:13:28.555 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.9554ms
+2023-08-06 18:13:28.560 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:13:28.562 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:13:28.563 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:13:28.564 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:13:28.566 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:13:28.571 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:13:28.575 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:13:28.578 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:13:28.579 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 14.0504ms
+2023-08-06 18:13:28.581 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:13:28.582 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 22.1209ms
+2023-08-06 18:14:55.158 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:14:55.163 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:14:55.164 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 6.1063ms
+2023-08-06 18:14:55.170 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:14:55.172 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:14:55.173 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:14:55.174 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:14:55.178 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:14:55.188 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:14:55.193 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:14:55.196 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:14:55.198 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 21.2509ms
+2023-08-06 18:14:55.200 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:14:55.202 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 32.5501ms
+2023-08-06 18:16:10.441 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:16:10.445 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:10.448 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 6.9378ms
+2023-08-06 18:16:10.450 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:16:10.451 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:10.453 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:10.454 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:16:10.458 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:16:10.463 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:16:10.467 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:16:10.469 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:16:10.471 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 14.0075ms
+2023-08-06 18:16:10.473 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:10.474 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 24.2137ms
+2023-08-06 18:16:20.552 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:16:20.553 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:20.554 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.5103ms
+2023-08-06 18:16:20.555 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:16:20.556 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:20.557 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:20.559 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:16:20.562 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:16:20.567 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:16:20.572 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:16:20.575 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:16:20.577 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 15.6887ms
+2023-08-06 18:16:20.579 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:20.580 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 24.8018ms
+2023-08-06 18:16:30.579 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:16:30.580 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:30.581 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.6870ms
+2023-08-06 18:16:30.587 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:16:30.588 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:30.589 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:30.591 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:16:30.601 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:16:30.608 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:16:30.611 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:16:30.615 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:16:30.617 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 24.0511ms
+2023-08-06 18:16:30.619 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:30.621 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 33.9721ms
+2023-08-06 18:16:36.121 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:16:36.123 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:36.124 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 3.1355ms
+2023-08-06 18:16:36.127 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:16:36.128 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:16:36.129 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:36.130 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:16:36.134 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:16:36.149 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:16:36.156 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:16:36.159 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:16:36.161 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 27.8181ms
+2023-08-06 18:16:36.163 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:16:36.165 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 38.0988ms
+2023-08-06 18:17:31.315 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:17:31.320 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:17:31.322 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 5.9570ms
+2023-08-06 18:17:31.327 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:17:31.329 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:17:31.330 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:17:31.331 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:17:31.335 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:17:31.345 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:17:31.362 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:17:31.365 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:17:31.366 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 32.3262ms
+2023-08-06 18:17:31.368 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:17:31.369 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 41.8038ms
+2023-08-06 18:18:56.714 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:18:56.718 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:18:56.721 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 8.0100ms
+2023-08-06 18:18:56.735 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:18:56.738 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:18:56.741 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:18:56.742 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:18:56.745 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:18:56.755 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:18:56.760 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:18:56.765 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:18:56.766 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 21.6308ms
+2023-08-06 18:18:56.768 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:18:56.769 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 33.7987ms
+2023-08-06 18:19:14.258 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:19:14.259 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:19:14.260 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.6115ms
+2023-08-06 18:19:14.266 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:19:14.267 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:19:14.268 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:19:14.270 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:19:14.273 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:19:14.285 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:19:14.291 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:19:14.294 +05:30 [INF] Executing CreatedResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:19:14.296 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 23.4409ms
+2023-08-06 18:19:14.298 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:19:14.299 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 201 - application/json;+charset=utf-8 33.7793ms
+2023-08-06 18:22:27.970 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-06 18:22:29.127 +05:30 [INF] Now listening on: http://localhost:5294
+2023-08-06 18:22:29.161 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 18:22:29.177 +05:30 [INF] Hosting environment: Development
+2023-08-06 18:22:29.255 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\Login&RegistrationAPI\
+2023-08-06 18:22:30.697 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/index.html - -
+2023-08-06 18:22:32.952 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 18:22:32.962 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_framework/aspnetcore-browser-refresh.js - - - 200 12374 application/javascript;+charset=utf-8 8.1174ms
+2023-08-06 18:22:32.985 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/index.html - - - 200 - text/html;charset=utf-8 2295.5550ms
+2023-08-06 18:22:32.996 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/_vs/browserLink - -
+2023-08-06 18:22:33.049 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.5281ms
+2023-08-06 18:22:33.178 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - -
+2023-08-06 18:22:33.378 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 200.1839ms
+2023-08-06 18:24:01.433 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:24:01.447 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:24:01.449 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 16.6699ms
+2023-08-06 18:24:01.453 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:24:01.456 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:24:01.574 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:24:01.624 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:24:02.751 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:24:03.611 +05:30 [INF] Executed DbCommand (96ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:24:03.967 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:24:04.156 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:24:04.174 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 2540.0238ms
+2023-08-06 18:24:04.177 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:24:04.189 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 200 - application/json;+charset=utf-8 2736.5010ms
+2023-08-06 18:24:26.307 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:24:26.310 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:24:26.311 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 3.9133ms
+2023-08-06 18:24:26.313 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:24:26.315 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:24:26.317 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:24:26.319 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:24:26.347 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:24:26.357 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:24:26.365 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:24:26.369 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:24:26.370 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 48.6687ms
+2023-08-06 18:24:26.372 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:24:26.373 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 200 - application/json;+charset=utf-8 59.9313ms
+2023-08-06 18:24:58.353 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 0
+2023-08-06 18:24:58.354 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:24:58.357 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:24:58.359 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:24:58.371 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-06 18:24:58.384 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 22.8508ms
+2023-08-06 18:24:58.386 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:24:58.388 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 0 - 400 - application/problem+json;+charset=utf-8 35.0772ms
+2023-08-06 18:26:12.544 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:26:12.547 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:26:12.549 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 5.4730ms
+2023-08-06 18:26:12.552 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78
+2023-08-06 18:26:12.555 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:26:12.555 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:26:12.557 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:26:12.594 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:26:12.603 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:26:12.610 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:26:12.616 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:26:12.618 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 59.0843ms
+2023-08-06 18:26:12.619 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:26:12.620 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 78 - 200 - application/json;+charset=utf-8 68.2092ms
+2023-08-06 18:26:41.223 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 18:26:41.231 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:26:41.234 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:26:41.238 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:26:41.243 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:26:41.277 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 18:26:41.299 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 18:26:41.324 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 83.7478ms
+2023-08-06 18:26:41.326 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:26:41.327 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 18:26:41.328 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 106.5272ms
+2023-08-06 18:26:41.329 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:26:41.332 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:26:41.334 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:26:41.338 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:26:41.345 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 18:26:41.353 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 18:26:41.355 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 17.8033ms
+2023-08-06 18:26:41.357 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:26:41.359 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 31.8416ms
+2023-08-06 18:52:53.289 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 18:52:53.295 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:52:53.300 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:52:53.302 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:52:53.319 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:52:53.374 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 18:52:53.378 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 18:52:53.381 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 76.2683ms
+2023-08-06 18:52:53.384 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:52:53.385 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - -
+2023-08-06 18:52:53.389 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 102.8534ms
+2023-08-06 18:52:53.391 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:52:53.393 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:52:53.394 +05:30 [INF] Route matched with {action = "GetAgentDetails", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetAgentDetails() on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:52:53.398 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:52:53.403 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [h].[Id], [h].[AadharId], [h].[Address], [h].[DateOfBirth], [h].[Gender], [h].[Name], [h].[PhoneNumber], [h].[Status], [h].[UserId]
+FROM [HotelAgents] AS [h]
+2023-08-06 18:52:53.406 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HospitalManagement.Models.HotelAgent, Login&RegistrationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-06 18:52:53.408 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI) in 11.2727ms
+2023-08-06 18:52:53.410 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetAgentDetails (Login&RegistrationAPI)'
+2023-08-06 18:52:53.412 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetAgentDetails - - - 200 - application/json;+charset=utf-8 26.5817ms
+2023-08-06 18:53:16.785 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:53:16.787 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:53:16.794 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 8.8692ms
+2023-08-06 18:53:16.800 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83
+2023-08-06 18:53:16.802 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:53:16.803 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:53:16.804 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:53:16.811 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:53:16.823 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:53:16.833 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:53:16.871 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:53:16.873 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 65.8146ms
+2023-08-06 18:53:16.874 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:53:16.876 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83 - 200 - application/json;+charset=utf-8 75.9886ms
+2023-08-06 18:56:53.093 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 18:56:53.097 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:56:53.098 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 5.7562ms
+2023-08-06 18:56:53.102 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83
+2023-08-06 18:56:53.103 +05:30 [INF] CORS policy execution successful.
+2023-08-06 18:56:53.104 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:56:53.105 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 18:56:53.108 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 18:56:53.115 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 18:56:53.121 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 18:56:53.126 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 18:56:53.128 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 21.1279ms
+2023-08-06 18:56:53.130 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 18:56:53.132 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83 - 200 - application/json;+charset=utf-8 29.5106ms
+2023-08-06 19:00:43.496 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 19:00:43.498 +05:30 [INF] CORS policy execution successful.
+2023-08-06 19:00:43.498 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 1.9000ms
+2023-08-06 19:00:43.500 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83
+2023-08-06 19:00:43.503 +05:30 [INF] CORS policy execution successful.
+2023-08-06 19:00:43.510 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 19:00:43.514 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 19:00:43.518 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 19:00:43.527 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 19:00:43.532 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 19:00:43.534 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 19:00:43.537 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 20.9552ms
+2023-08-06 19:00:43.539 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 19:00:43.540 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83 - 200 - application/json;+charset=utf-8 39.8362ms
+2023-08-06 19:01:24.289 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 19:01:24.290 +05:30 [INF] CORS policy execution successful.
+2023-08-06 19:01:24.292 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 2.9523ms
+2023-08-06 19:01:24.294 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83
+2023-08-06 19:01:24.295 +05:30 [INF] CORS policy execution successful.
+2023-08-06 19:01:24.296 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 19:01:24.299 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 19:01:24.306 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 19:01:24.312 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 19:01:24.317 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 19:01:24.327 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 19:01:24.328 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 25.0532ms
+2023-08-06 19:01:24.330 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 19:01:24.332 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83 - 200 - application/json;+charset=utf-8 38.3673ms
+2023-08-06 19:06:27.000 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - -
+2023-08-06 19:06:27.003 +05:30 [INF] CORS policy execution successful.
+2023-08-06 19:06:27.004 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5294/api/Register/Login - - - 204 - - 4.8323ms
+2023-08-06 19:06:27.011 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83
+2023-08-06 19:06:27.015 +05:30 [INF] CORS policy execution successful.
+2023-08-06 19:06:27.019 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 19:06:27.021 +05:30 [INF] Route matched with {action = "Login", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.DTO.UserDTO]] Login(HospitalManagement.Models.DTO.UserDTO) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 19:06:27.024 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 19:06:27.029 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+2023-08-06 19:06:27.034 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Mail], [u].[PasswordHash], [u].[PasswordKey], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__key_0
+2023-08-06 19:06:27.037 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.DTO.UserDTO'.
+2023-08-06 19:06:27.038 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI) in 14.9947ms
+2023-08-06 19:06:27.040 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.Login (Login&RegistrationAPI)'
+2023-08-06 19:06:27.042 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5294/api/Register/Login application/json 83 - 200 - application/json;+charset=utf-8 30.9918ms
+2023-08-06 19:56:17.952 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5294/api/Register/GetOneClient?key=4 - -
+2023-08-06 19:56:17.967 +05:30 [INF] Executing endpoint 'HospitalManagement.Controllers.RegisterController.GetOneClient (Login&RegistrationAPI)'
+2023-08-06 19:56:18.015 +05:30 [INF] Route matched with {action = "GetOneClient", controller = "Register"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HospitalManagement.Models.HotelAgent]] GetOneClient(Int32) on controller HospitalManagement.Controllers.RegisterController (Login&RegistrationAPI).
+2023-08-06 19:56:18.088 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'RegistrationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-06 19:56:18.491 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__key_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[DateOfBirth], [c].[Gender], [c].[Name], [c].[PhoneNumber], [c].[UserId]
+FROM [Clients] AS [c]
+WHERE [c].[Id] = @__key_0
+2023-08-06 19:56:18.510 +05:30 [INF] Executing OkObjectResult, writing value of type 'HospitalManagement.Models.Clients'.
+2023-08-06 19:56:18.522 +05:30 [INF] Executed action HospitalManagement.Controllers.RegisterController.GetOneClient (Login&RegistrationAPI) in 504.0157ms
+2023-08-06 19:56:18.524 +05:30 [INF] Executed endpoint 'HospitalManagement.Controllers.RegisterController.GetOneClient (Login&RegistrationAPI)'
+2023-08-06 19:56:18.526 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5294/api/Register/GetOneClient?key=4 - - - 200 - application/json;+charset=utf-8 575.6984ms

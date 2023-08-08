@@ -92,3 +92,27 @@
 2023-08-06 16:19:53.552 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.2974ms
 2023-08-06 16:19:53.660 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
 2023-08-06 16:19:53.982 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 321.5630ms
+2023-08-06 18:00:39.143 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-06 18:00:39.220 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 18:00:39.222 +05:30 [INF] Hosting environment: Development
+2023-08-06 18:00:39.223 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-06 18:00:41.068 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-06 18:00:42.483 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-06 18:00:42.483 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 18:00:42.497 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 9.6979ms
+2023-08-06 18:00:42.591 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1530.7164ms
+2023-08-06 18:00:42.678 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 195.2041ms
+2023-08-06 18:00:42.812 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-06 18:00:43.332 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 520.1814ms
+2023-08-06 18:22:28.475 +05:30 [INF] Now listening on: http://localhost:5267
+2023-08-06 18:22:28.704 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-06 18:22:28.710 +05:30 [INF] Hosting environment: Development
+2023-08-06 18:22:28.712 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\LocationAPI\
+2023-08-06 18:22:30.570 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/index.html - -
+2023-08-06 18:22:31.752 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/index.html - - - 200 - text/html;charset=utf-8 1205.8815ms
+2023-08-06 18:22:31.933 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - -
+2023-08-06 18:22:31.966 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/_vs/browserLink - -
+2023-08-06 18:22:31.967 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 33.5473ms
+2023-08-06 18:22:32.075 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 108.9879ms
+2023-08-06 18:22:32.694 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - -
+2023-08-06 18:22:32.960 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5267/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 265.5509ms

@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import LoginImage from "../Assets/loginPagePic.jpg";
+import { useParams } from "react-router-dom";
 import './VendorRegister.css'
+
 function Feedback() {
+
+  const {hotelId} = useParams();
+
   const [checkUser, setCheckUser] = useState({
     "userId": 0,
     "hotelId": 0,
-  });
-
+  }); 
+ 
+  const id = Number(localStorage.getItem("Id"));
+  const mail = localStorage.getItem("mail");
   const [feedback, setFeedback] = useState({
-   "feedbackId": 0,
-    "userId": 1,
-    "hotelId": 1,
-    "feedbackDescription": "",
-    "points": 5,
+  "feedbackId": 0,
+  "userId": id,
+  "mail": mail,
+  "hotelId": hotelId,
+  "feedbackDescription": "",
+  "points": 5
   });
 
   const generateStarRating = (points) => {
@@ -52,32 +60,6 @@ function Feedback() {
         console.log(err.error);
       });
   };
-
-  var userCheck = () => {
-    fetch("http://localhost:5035/api/Booking/UserCheck", {
-      method: "POST",
-      headers: {
-        accept: "text/plain",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...checkUser, checkUser: {} }),
-    })
-      .then(async (data) => {
-        setCheckUser(data);
-        if (data.status === 200) {
-          alert("ok");
-        } else {
-          alert("not ok");
-        }
-      })
-      .catch((err) => {
-        console.log(err.error);
-      });
-  };
-
-  useEffect(() => {
-    //userCheck();
-  }, []);
 
   return (
     <div className="mainDiv">

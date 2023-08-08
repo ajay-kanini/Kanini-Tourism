@@ -33,8 +33,9 @@ function VendorRegister() {
           },
           "body": JSON.stringify({ ...user, "user": {} })
         })
-          .then(async (data) => {
-            if (data.status == 201) {
+          .then(async (response) => {
+            if (response.status == 201) {
+              var myData = await response.json();
               alert('ok')
             }
             else

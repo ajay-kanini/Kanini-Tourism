@@ -8,16 +8,19 @@ namespace Hotels_RoomsAPI.Models
     {
         [Key]
         public int RoomId { get; set; }
-        public string? RoomNumber { get; set; }
+
+        [Required(ErrorMessage = "HotelName is required.")]
         public float RoomPricePerDay { get; set; }
+
+        [Required(ErrorMessage = "HotelName is required.")]
         public bool ACAvailability { get; set; }
-        public bool RoomAvailability { get; set; }
 
         [Range(minimum: 1, maximum: 5)]
         public int NumberOfPersons { get; set; }
+        public bool roomAvailability { get; set; }  
         public int? HotelId { get; set; }
 
-        [ForeignKey("HotelId")]
+        [ForeignKey("HotelId")] 
 
         [JsonIgnore]
         public Hotel? Hotel { get; set; }

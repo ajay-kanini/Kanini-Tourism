@@ -1,9 +1,13 @@
 ﻿using Hotels_RoomsAPI.Interfaces;
 using Hotels_RoomsAPI.Models;
+using Hotels_RoomsAPI.Models.DTO;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Hotels_RoomsAPI.Controllers
 {
@@ -13,120 +17,114 @@ namespace Hotels_RoomsAPI.Controllers
     public class RoomController : ControllerBase
     {
         private readonly IRoomService<Room, int> _roomServie;
+        private readonly ILogger<RoomController> _logger;
 
-        public RoomController(IRoomService<Room, int> roomService)
+        public RoomController(IRoomService<Room, int> roomService, ILogger<RoomController> logger)
         {
             _roomServie = roomService;
+            _logger = logger;
         }
+
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Room>> AddRoom(Room room)
         {
-            var rooms = await _roomServie.Add(room);
-            if(rooms != null)
+            try
             {
+                var rooms = await _roomServie.Add(room);
                 return Ok(rooms);
             }
-            return BadRequest();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding room.");
+                return BadRequest("An error occurred while adding room.");
+            }
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Room>> GetRoomByRoomID(int id)
         {
-            var rooms = await _roomServie.GetByRoomId(id);
-            if (rooms != null)
+            try
             {
+                var rooms = await _roomServie.GetByRoomId(id);
                 return Ok(rooms);
             }
-            return BadRequest();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching room by RoomID.");
+                return BadRequest("An error occurred while fetching room by RoomID.");
+            }
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ICollection<Room>>> GetRoomByHotelID(int id)
         {
-            var rooms = await _roomServie.GetByHotelId(id);
-            if (rooms != null)
+            try
             {
+                var rooms = await _roomServie.GetByHotelId(id);
                 return Ok(rooms);
             }
-            return BadRequest();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching rooms by HotelID.");
+                return BadRequest("An error occurred while fetching rooms by HotelID.");
+            }
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ICollection<Room>>> GetAllRooms()
         {
-            var rooms = await _roomServie.GetAll();
-            if (rooms != null)
+            try
             {
+                var rooms = await _roomServie.GetAll();
                 return Ok(rooms);
             }
-            return BadRequest();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching all rooms.");
+                return BadRequest("An error occurred while fetching all rooms.");
+            }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Room>> DeleteRooms(int id)
         {
-            var rooms = await _roomServie.Delete(id);
-            if (rooms != null)
+            try
             {
+                var rooms = await _roomServie.Delete(id);
                 return Ok(rooms);
             }
-            return BadRequest();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting room.");
+                return BadRequest("An error occurred while deleting room.");
+            }
         }
 
         [HttpPut]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Room>> UpdateRooms(Room room)
         {
-            var rooms = await _roomServie.Update(room);
-            if (rooms != null)
+            try
             {
+                var rooms = await _roomServie.Update(room);
                 return Ok(rooms);
             }
-            return BadRequest();
-        }
-
-        [HttpPut]
-        public async Task<ActionResult<Room>> UpdateRoomStatus(int id)
-        {
-            var room = await _roomServie.BookOrCancelRoom(id);
-            if(room != null)
+            catch (Exception ex)
             {
-                return Ok(room);
+                _logger.LogError(ex, "Error occurred while updating room.");
+                return BadRequest("An error occurred while updating room.");
             }
-            return BadRequest();
         }
-        
-        [HttpPost]
-        public async Task<ActionResult<ICollection<Room>>> MultipleRoomsBooking(int[] id)
-        {
-            var rooms = await _roomServie.BookOrCancelMultipleRooms(id);
-            if (rooms != null)
-            {
-                return Ok(rooms);
-            }
-            return BadRequest();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<float>> TotalPriceCalculation(int numberOfDays,int[] id)
-        {
-            var rooms = await _roomServie.PriceCalculation(numberOfDays, id);
-            if (rooms != 0)
-            {
-                return Ok(rooms);
-            }
-            return BadRequest();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<ICollection<Room>>> AutoEndDate(int[] id, DateTime endDate)
-        {
-            var rooms = await _roomServie.AutoEndRoomTime(id, endDate);
-            if(rooms != null)
-            {
-                return Ok(rooms.ToList());
-            }
-            return BadRequest();
-        }
-
     }
 }

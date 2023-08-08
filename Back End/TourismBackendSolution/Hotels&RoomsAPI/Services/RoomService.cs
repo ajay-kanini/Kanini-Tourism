@@ -1,123 +1,100 @@
 ﻿using Hotels_RoomsAPI.Interfaces;
 using Hotels_RoomsAPI.Models;
+using Hotels_RoomsAPI.Models.DTO;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Hotels_RoomsAPI.Services
 {
     public class RoomService : IRoomService<Room, int>
     {
         private readonly IRoomRepo<Room, int> _repo;
+        private readonly ILogger<RoomService> _logger;
 
-        public RoomService(IRoomRepo<Room, int> repo)
+        public RoomService(IRoomRepo<Room, int> repo, ILogger<RoomService> logger)
         {
             _repo = repo;
+            _logger = logger;
         }
+
         public async Task<Room> Add(Room item)
         {
-            return await _repo.Add(item);
+            try
+            {
+                return await _repo.Add(item);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding room.");
+                throw new Exception("An error occurred while adding room.", ex);
+            }
         }
 
         public async Task<Room> Delete(int id)
         {
-            return await _repo.Delete(id);
+            try
+            {
+                return await _repo.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting room.");
+                throw new Exception("An error occurred while deleting room.", ex);
+            }
         }
 
         public async Task<ICollection<Room>> GetByHotelId(int id)
         {
-            return await _repo.GetByHotelId(id);
+            try
+            {
+                return await _repo.GetByHotelId(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching rooms by hotel ID.");
+                throw new Exception("An error occurred while fetching rooms by hotel ID.", ex);
+            }
         }
+
         public async Task<Room> GetByRoomId(int id)
         {
-            return await _repo.GetByRoomId(id);
+            try
+            {
+                return await _repo.GetByRoomId(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching room by room ID.");
+                throw new Exception("An error occurred while fetching room by room ID.", ex);
+            }
         }
 
         public async Task<ICollection<Room>> GetAll()
         {
-            return await _repo.GetAll();
+            try
+            {
+                return await _repo.GetAll();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching all rooms.");
+                throw new Exception("An error occurred while fetching all rooms.", ex);
+            }
         }
 
         public async Task<Room> Update(Room item)
         {
-            return await _repo.Update(item);
-        }
-
-        public async Task<Room> BookOrCancelRoom(int id)
-        {
-            var room = await _repo.GetByRoomId(id);
-            room.RoomAvailability = room.RoomAvailability == true ? false : true;
-            await _repo.Update(room);   
-            return room;
-        }
-
-        public async Task<ICollection<Room>> BookOrCancelMultipleRooms(int[] id)
-        {
-            var rooms = new List<Room>(); 
-            foreach (var item in id)
+            try
             {
-                var room = await BookOrCancelRoom(item);
-                if (room != null)
-                {
-                    rooms.Add(room);
-                }
+                return await _repo.Update(item);
             }
-            return rooms;
-        }
-        public async Task<float> PriceCalculation(int numberOfDays, int[] roomId)
-        {
-            float totalRoomPrice = 0;
-
-            foreach (var room in roomId)
+            catch (Exception ex)
             {
-                var foundRoom = await _repo.GetByRoomId(room);
-
-                if (foundRoom != null)
-                {
-                    float roomPrice = foundRoom.RoomPricePerDay * numberOfDays;
-                    totalRoomPrice += roomPrice;
-                }
+                _logger.LogError(ex, "Error occurred while updating room.");
+                throw new Exception("An error occurred while updating room.", ex);
             }
-
-            float cgst = (float)(totalRoomPrice * 0.09);
-            float sgst = (float)(totalRoomPrice * 0.09);
-
-            float totalPrice = totalRoomPrice + cgst + sgst;
-            return totalPrice;
-        }
-
-        public async Task<ICollection<Room>> GetMultipleRooms(int[] id)
-        {
-            var rooms = new List<Room>();
-            foreach (var item in id)
-            {
-                var room = await _repo.GetByRoomId(item);
-                if (room != null)
-                {
-                    rooms.Add(room);
-                }
-            }
-            return rooms;
-        }
-
-        public async Task<ICollection<Room>> AutoEndRoomTime(int[] roomId, DateTime endDate)
-        {
-            DateTime dt = DateTime.Now;
-            var rooms = new List<Room>();
-            foreach (var item in roomId)
-            {
-                var room = await _repo.GetByRoomId(item);
-                if (room != null)
-                {
-                    rooms.Add(room);
-                }
-            }
-            foreach (var room in rooms) 
-            {
-                if(room.RoomAvailability == false && dt >= endDate)
-                {
-                    room.RoomAvailability = true;
-                }
-                await _repo.Update(room);
-            }
-            return rooms;
         }
     }
 }

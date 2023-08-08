@@ -2,69 +2,116 @@
 using Hotels_RoomsAPI.Interfaces;
 using Hotels_RoomsAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Hotels_RoomsAPI.Repositories
 {
     public class RoomRepo : IRoomRepo<Room, int>
     {
         private readonly HotelsContext _context;
+        private readonly ILogger<RoomRepo> _logger;
 
-        public RoomRepo(HotelsContext context)
+        public RoomRepo(HotelsContext context, ILogger<RoomRepo> logger)
         {
             _context = context;
+            _logger = logger;
         }
+
         public async Task<Room> Add(Room item)
         {
             try
             {
-                item.RoomAvailability = true;
+                item.roomAvailability = true;
                 _context.Rooms.Add(item);
                 await _context.SaveChangesAsync();
                 return item;
             }
             catch (Exception ex)
             {
-                throw new Exception("Message", ex);
+                _logger.LogError(ex, "Error occurred while adding room.");
+                throw new Exception("An error occurred while adding room.", ex);
             }
         }
 
         public async Task<Room> Delete(int id)
         {
-            var room = await GetByRoomId(id);
-            _context.Rooms.Remove(room);
-            await _context.SaveChangesAsync();
-            return room;
+            try
+            {
+                var room = await GetByRoomId(id);
+                _context.Rooms.Remove(room);
+                await _context.SaveChangesAsync();
+                return room;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting room.");
+                throw new Exception("An error occurred while deleting room.", ex);
+            }
         }
 
         public async Task<ICollection<Room>> GetAll()
         {
-            var rooms = await _context.Rooms.ToListAsync();
-            return rooms;
+            try
+            {
+                var rooms = await _context.Rooms.ToListAsync();
+                return rooms;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching all rooms.");
+                throw new Exception("An error occurred while fetching all rooms.", ex);
+            }
         }
 
         public async Task<ICollection<Room>> GetByHotelId(int id)
         {
-            var rooms = await GetAll();
-            var hotelRooms = rooms.Where(u => u.HotelId == id).ToList();
-            return hotelRooms;
+            try
+            {
+                var rooms = await GetAll();
+                var hotelRooms = rooms.Where(u => u.HotelId == id).ToList();
+                return hotelRooms;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching rooms by hotel ID.");
+                throw new Exception("An error occurred while fetching rooms by hotel ID.", ex);
+            }
         }
 
         public async Task<Room> GetByRoomId(int id)
         {
-            var hotel = await _context.Rooms.FirstOrDefaultAsync(u => u.RoomId == id);
-            return hotel;
+            try
+            {
+                var room = await _context.Rooms.FirstOrDefaultAsync(u => u.RoomId == id);
+                return room;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching room by room ID.");
+                throw new Exception("An error occurred while fetching room by room ID.", ex);
+            }
         }
 
         public async Task<Room> Update(Room item)
         {
-            var room = await GetByRoomId(item.RoomId);
-            room.RoomPricePerDay = item.RoomPricePerDay;
-            room.ACAvailability = item.ACAvailability ;
-            room.NumberOfPersons = item.NumberOfPersons;    
-            room.HotelId = item.HotelId;
-            room.RoomNumber = item.RoomNumber; 
-           _context.SaveChanges();
-            return room;
+            try
+            {
+                var room = await GetByRoomId(item.RoomId);
+                room.RoomPricePerDay = item.RoomPricePerDay;
+                room.ACAvailability = item.ACAvailability;
+                room.NumberOfPersons = item.NumberOfPersons;
+                await _context.SaveChangesAsync();
+                return room;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while updating room.");
+                throw new Exception("An error occurred while updating room.", ex);
+            }
         }
     }
 }

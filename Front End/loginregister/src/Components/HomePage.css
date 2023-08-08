@@ -1,0 +1,52 @@
+/* HomePage-specific CSS */
+
+/* Styles for the stateCards */
+.homePage-stateCards {
+    margin-top: 20px;
+  }
+  
+  .homePage-section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .homePage-card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .homePage-card {
+    flex-basis: calc(33.33% - 10px);
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .homePage-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .homePage-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .homePage-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .c-carousel {
+    margin: 20px auto;
+  }
+  
+  .carouselImage {
+    object-fit: cover;
+  }  

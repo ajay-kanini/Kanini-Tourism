@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-
+import {Link, useNavigate} from "react-router-dom"
 function UserNavbar()
 {
+    const navigate = useNavigate();
+    const homePage= () =>{
+       navigate("/");
+    }
+    const bookingPage= () =>{
+        navigate("/userBooking");
+     }
     return(
         <div className="vendorNavbar">
           <div className="navBar">
@@ -11,9 +18,8 @@ function UserNavbar()
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    {/* <Nav.Link href="#home">Hotels</Nav.Link>
-                    <Nav.Link href="#home">Rooms</Nav.Link> */}
+                    <Nav.Link onClick={homePage}>Home</Nav.Link>
+                    <Nav.Link onClick={bookingPage}>Your Bookings</Nav.Link> 
                     </Nav>
                     <h1 className="navbar-heading">Hotel Details</h1>
                 </Navbar.Collapse>
