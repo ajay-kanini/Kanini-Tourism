@@ -25,7 +25,6 @@ import UserBooking from './Components/UserBooking';
 import UserNavbar from './Components/UserNavbar';
 import { useNavigate } from 'react-router-dom';
 import  Message  from './Components/Message';
-import ImageGallery from './Components/ImageGallery';
 
 function Client({ role, children }) {
   if (localStorage.getItem('role') != null && localStorage.getItem('role') === 'Client') {
@@ -48,12 +47,7 @@ function Admin({ role, children }) {
   return <Navigate to="/" />;
 }
 
-function Vendor({ role, children }) {
-  if (localStorage.getItem('role') != null && localStorage.getItem('role') === 'Vendor') {
-    return children;
-  }
-  return <Navigate to="/" />;
-}
+
 
 function App() {
   return (
@@ -63,20 +57,21 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/userNavbar" element={<UserNavbar />} />
-          <Route path='/imageGallery' element={<ImageGallery/>}/>
           <Route path="/message" element={<Message/>} />
           <Route path="/hotelInfo/:hotelId" element={<Client> <HotelInfoPage /> </Client>} />
           <Route path="/addHotel" element={<HotelAgent> <AddHotel /> </HotelAgent>} />
           <Route path="/addRoom/:hotelId" element={<HotelAgent> <AddRoom /> </HotelAgent>} />
           <Route path="/feedback/:hotelId" element={<Client> <FeedBack /> </Client>} />
-          <Route path="/vendorRegister" element={<Vendor> <VendorRegister /> </Vendor>} />
-          <Route path="/userRegister" element={<Client> <UserRegister /> </Client>} />
+          <Route path="/vendorRegister" element={<VendorRegister/>} />
+          <Route path="/userRegister" element={<UserRegister/>}/>
           <Route path="/adminPage" element={<Admin> <AdminPage /> </Admin>} />
-          <Route path="/vendorHotelPage" element={<Vendor> <VendorHotelPage /> </Vendor>} />
-          <Route path="/vendorRoomPage" element={<Vendor> <VendorRoomPage /> </Vendor>} />
+          <Route path="/vendorHotelPage" element={<HotelAgent> <VendorHotelPage /> </HotelAgent>} />
+          <Route path="/vendorRoomPage" element={<HotelAgent> <VendorRoomPage /> </HotelAgent>} />
           <Route path="/booking/:hotelId" element={<Client> <Booking /> </Client>} />
           <Route path="/fetchRooms/:hotelId" element={<HotelAgent> <FetchRooms /> </HotelAgent>} />
           <Route path="/userBooking" element={<Client> <UserBooking /> </Client>} />
+          <Route path="/hotelList" element={<Client> <UserHotelList /> </Client>} />
+        
         </Routes>
         <ToastContainer />
       </div>

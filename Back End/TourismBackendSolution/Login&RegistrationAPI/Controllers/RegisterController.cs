@@ -62,7 +62,7 @@ namespace HospitalManagement.Controllers
             }
         }
 
-        //[Authorize(Roles="Admin")]
+        [Authorize(Roles="Admin")]
 
         [HttpPut]
         [ProducesResponseType(typeof(HotelAgent), StatusCodes.Status201Created)]

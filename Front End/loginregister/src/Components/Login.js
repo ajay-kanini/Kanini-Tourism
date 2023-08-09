@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import './Login.css';
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import LoginImage from "../Assets/loginPagePic.jpg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import Logo from '../Assets/logo-removebg-preview.png'
 
 function Login() {
   const navigate = useNavigate();
@@ -17,11 +19,11 @@ function Login() {
 
   var login = (event) => {
     event.preventDefault();
+
     if (!user.mail || !user.password) {
       toast.error("Please enter both email and password.");
       return;
     }
-
     fetch("http://localhost:5294/api/Register/Login", {
       method: "POST",
       headers: {
@@ -44,7 +46,7 @@ function Login() {
           else if (myData.role === "Admin")
             navigate("/adminPage");
         } else {
-          alert("not ok");
+          toast.error("Login failed");
         }
       })
       .catch((err) => {
@@ -59,10 +61,27 @@ function Login() {
   const userRegister = () => {
     navigate("/userRegister");
   }
-
+  const homeNavigation= () =>{
+    navigate("/");
+  }   
   return (
+    <div className="mainDiv">
+      <div>
+      <div className="navBar">
+      <Navbar className="custom-navbar" expand="lg">
+        <img src={Logo} style={{margin:"10px"}}/>
+        <Navbar.Brand href="#">Book Your Hotel</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+            <Nav.Link onClick={homeNavigation} >Home</Nav.Link>
+            </Nav>
+            <h1 className="navbar-heading">Welcome to Heavens...</h1>
+        </Navbar.Collapse>
+      </Navbar>
+      </div>   
+    </div>
     <div className="login-container">
-      <ToastContainer />
       <div className="login-card">
         <div className="login-form">
           <div className="login-left-side">
@@ -83,9 +102,6 @@ function Login() {
                   setUser({ ...user, "password": event.target.value })
                 }} />
               </div>
-              <div className="login-recovery">
-                <p>Forget Password?</p>
-              </div>
               <div className="login-btn">
                 <button type="submit" onClick={login}>Sign in</button>
               </div>
@@ -103,6 +119,7 @@ function Login() {
             <hr />
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

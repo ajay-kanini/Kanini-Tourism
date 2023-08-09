@@ -86,7 +86,7 @@ namespace Hotels_RoomsAPI.Repositories
         {
             try
             {
-                var room = await _context.Rooms.FirstOrDefaultAsync(u => u.RoomId == id);
+                var room = await _context.Rooms.FirstOrDefaultAsync(u => u.RoomId == id) ?? throw new Exception("Room is null");
                 return room;
             }
             catch (Exception ex)

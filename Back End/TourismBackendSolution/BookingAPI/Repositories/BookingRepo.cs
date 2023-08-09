@@ -36,7 +36,7 @@ namespace BookingAPI.Repositories
             }
         }
 
-        public async Task<Booking> Delete(int id)
+        public async Task<Booking?> Delete(int id)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace BookingAPI.Repositories
         {
             try
             {
-                var booking = await _context.Bookings.FirstOrDefaultAsync(u => u.BookingId == id);
+                var booking = await _context.Bookings.FirstOrDefaultAsync(u => u.BookingId == id) ?? throw new Exception("Booking is null");
                 return booking;
             }
             catch (Exception ex)

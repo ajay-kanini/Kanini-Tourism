@@ -70,7 +70,7 @@ function UserHotelList() {
           {filterHotels().map(hotel => (
             <div key={hotel.hotelId} className="hotelCard">
               <Link to={`/hotelInfo/${hotel.hotelId}`} className="hotelImage">
-                <img src={LoginImage} alt="Hotel" />
+                <img src={`http://127.0.0.1:10000/devstoreaccount1/hotels/hotels/${hotel.image}`} alt="Hotel" />
               </Link>
               <div className="hotelInfo">
                 <h3>{hotel.hotelName}</h3>

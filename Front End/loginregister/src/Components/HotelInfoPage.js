@@ -35,7 +35,6 @@ function HotelInfoPage() {
     fetch(`http://localhost:5007/api/Hotel/GetHotelById/${hotelId}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setHotel(data);
       })
       .catch(error => console.log(error));
@@ -45,7 +44,6 @@ function HotelInfoPage() {
     fetch(`http://localhost:5114/api/Feedback/GetFeedbackByHotelId?id=${hotelId}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setFeedback(data);
       })
       .catch(error => console.log(error));
@@ -76,15 +74,12 @@ function HotelInfoPage() {
       <div className="c-carousel" style={{ marginTop: "10px" }}>
         <CCarousel controls interval={2000} transition="crossfade">
           <CCarouselItem>
-            <CImage className="carouselImage" src={LoginImage} alt="slide 1" style={{ height: "500px", width: "100%" }} />
-          </CCarouselItem>
-          <CCarouselItem>
-            <CImage className="carouselImage" src={LoginImage2} alt="slide 2" style={{ height: "500px", width: "100%" }} />
-          </CCarouselItem>
-          <CCarouselItem>
-            <CImage className="carouselImage" src={LoginImage} alt="slide 3" style={{ height: "500px", width: "100%" }} />
+            <CImage className="carouselImage" src={`http://127.0.0.1:10000/devstoreaccount1/hotels/hotels/${hotel.image}`} alt="slide 1" style={{ height: "650px", width: "100%",objectFit:'fill' }} />
           </CCarouselItem>
         </CCarousel>
+      </div>
+      <div className="hotelImage">
+
       </div>
       <div className="hotelDetailsAndBookRooms">
         <div className="hotelDetails">

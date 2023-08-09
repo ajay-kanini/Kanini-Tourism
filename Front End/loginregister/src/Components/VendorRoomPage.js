@@ -44,7 +44,7 @@ function VendorRoomPage() {
         {hotels.map(hotel => (
           <div key={hotel.hotelId} className="hotelCard">
             <div className="hotelImage">
-              <img src={LoginImage} alt="Hotel" onClick={() => rooDetails(hotel.hotelId)} />
+              <img src={`http://127.0.0.1:10000/devstoreaccount1/hotels/hotels/${hotel.image}`} alt="Hotel" onClick={() => rooDetails(hotel.hotelId)} />
             </div>
             <div className="hotelInfo">
               <h3>{hotel.hotelName}</h3>
@@ -68,7 +68,7 @@ function VendorRoomPage() {
                 onMouseLeave={(e) => e.target.style.backgroundColor = '#007bff'}
               >  
                 Add Room
-              </button>
+              </button> 
             </div>
           </div>
         ))}

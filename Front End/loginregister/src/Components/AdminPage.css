@@ -6,7 +6,7 @@
   }
   
   .card-new {
-    background: linear-gradient(to right, #5383b0, #b33b59) !important;
+    background: linear-gradient(to right, #6689a9, #c7617b) !important;
     backdrop-filter: saturate(200%) blur(25px);
     height: 350px;
     padding: 10px;

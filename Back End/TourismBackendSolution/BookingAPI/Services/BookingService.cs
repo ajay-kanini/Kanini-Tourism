@@ -61,7 +61,7 @@ namespace BookingAPI.Services
             }
         }
 
-        public async Task<Booking> Delete(int id)
+        public async Task<Booking?> Delete(int id)
         {
             try
             {
@@ -143,7 +143,7 @@ namespace BookingAPI.Services
                 }
                 else
                 {
-                    Booking book = new Booking
+                    Booking book = new()
                     {
                         HotelId = bookingDTO.HotelId,
                         RoomId = bookingDTO.RoomId,

@@ -33,7 +33,7 @@ namespace BookingAPI.Models
             get
             {
                 TimeSpan duration = CheckOut - CheckIn;
-                return duration.Days + 1;
+                return duration.Days;
             }
         }
         public double TotalPrice { get; set; }

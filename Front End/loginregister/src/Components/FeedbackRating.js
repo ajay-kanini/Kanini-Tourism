@@ -14,7 +14,6 @@ const FeedbackRating = ({ hotelId }) => {
     fetch(`http://localhost:5114/api/Feedback/RatingCalculation?id=${hotelId}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setRating(data);
       })
       .catch((error) => console.log(error));

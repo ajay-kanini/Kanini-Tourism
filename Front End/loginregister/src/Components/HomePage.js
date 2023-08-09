@@ -8,6 +8,7 @@ import LoginImage3 from '../Assets/image1.jpg';
 import LoginImage4 from '../Assets/bed-beach.jpg';
 import LoginImage5 from '../Assets/glassclad-skyscrapers-central-mumbai-reflecting-sunset-hues-blue-hour.jpg';
 import LoginImage6 from '../Assets/pool-relaxation-sea-scene-nature.jpg';
+import Logo from '../Assets/logo-removebg-preview.png';
 import {Link, useNavigate} from 'react-router-dom';
 
 function HomePage() {
@@ -21,16 +22,17 @@ function HomePage() {
     <div className="homePage-mainDiv">
       <div className="homePage-navBar">
         <Navbar className="custom-navbar" expand="lg">
+        <img src={Logo} style={{margin:"10px"}}/>
           <Navbar.Brand href="#">Book Your Hotel</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link >Home</Nav.Link>
             </Nav>
             <Nav className="mr-auto">
               <Nav.Link onClick={loginNavigate}>Login</Nav.Link>
             </Nav>
-            <h1 className="navbar-heading">Vendor Details</h1>
+            <h1 className="navbar-heading">Welcome to Heavens...</h1>
           </Navbar.Collapse>
         </Navbar>
       </div>

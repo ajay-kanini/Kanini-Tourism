@@ -4,6 +4,8 @@ import VendorNavbar from './VendorNavbar';
 import { Button, Modal, Box } from "@mui/material";
 import { useParams } from "react-router-dom";
 import UserNavbar from "./UserNavbar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Booking() {
   const [rId, setRId] = useState();
@@ -60,10 +62,9 @@ function Booking() {
   const handleClose = () => setOpen(false);
 
   const fetchUserData = () => {
-    fetch(`http://localhost:5294/api/Register/GetOneClient/${userId}`)
+    fetch(`http://localhost:5294/api/Register/GetOneClient?key=${userId}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setUser(data);
       })
       .catch(error => console.log(error));
@@ -73,7 +74,6 @@ function Booking() {
     fetch(`http://localhost:5007/api/Room/GetRoomByHotelID/${hotelId}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setRoom(data);
       })
       .catch(error => console.log(error));
@@ -83,7 +83,6 @@ function Booking() {
     fetch(`http://localhost:5007/api/Hotel/GetHotelById/${hotelId}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setHotel(data);
       })
       .catch(error => console.log(error));
@@ -99,7 +98,6 @@ function Booking() {
     fetch(`http://localhost:5007/api/Room/GetRoomByRoomID/${rId}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setRoomDetails(data);
       })
       .catch(error => console.log(error));
@@ -107,6 +105,24 @@ function Booking() {
 
   const handleBookRoom = (event) => {
     event.preventDefault();
+
+    // Validate start date and end date
+    const currentDate = new Date();
+    const checkInDate = new Date(bookRoom.checkIn);
+    const checkOutDate = new Date(bookRoom.checkOut);
+    if (checkInDate < currentDate || checkOutDate < currentDate) {
+      toast.error('Check-in and Check-out dates should be after the current date.');
+      return;
+    }
+
+    // Validate credit card number
+    const creditCardNumber = document.getElementById('creditCard').value;
+    if (creditCardNumber.length < 16) {
+      toast.error('Credit card number should have at least 16 digits.');
+      return;
+    }
+
+    // Rest of the code to proceed with booking if validation passes
     const bookingData = {
       "bookingId": 0,
       "bookingStatus": "",
@@ -131,23 +147,21 @@ function Booking() {
     })
       .then(response => {
         if (response.ok) {
-          alert('Booking Successful');
+          toast.success('Booking Successful');
           return response.json();
         } else {
-          alert('Failed to book. An error occurred.');
+          toast.error('Oops room is already booked on that');
           throw new Error('Network response was not ok.');
         }
       })
-      .then(data => {
-        
+      .then(data => {        
         console.log(data);
       })
       .catch((err) => {
         console.log(err);
-        alert('Failed to book. An error occurred.');
+        toast.error('Failed to book. An error occurred.');
       });
   };
-  
 
   const calculateTotalPrice = () => {
     const checkInDate = new Date(bookRoom.checkIn);
@@ -203,6 +217,15 @@ function Booking() {
               onChange={(event) => {
                 setBookRoom({ ...bookRoom, "checkOut": event.target.value });
               }}
+              className="room-register-warning"
+            />
+          </div>
+          <div className="room-register-input_text">
+            <label htmlFor="creditCard">Credit Card Number:</label>
+            <input
+              type="number"
+              id="creditCard"
+              name="creditCard"                            
               className="room-register-warning"
             />
           </div>

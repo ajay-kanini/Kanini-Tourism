@@ -3,24 +3,28 @@ import './AddRoom.css';
 import LoginImage from '../Assets/loginPagePic.jpg';
 import VendorNavbar from './VendorNavbar';
 import { useParams } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function AddRoom() {
-
   const { hotelId } = useParams();
   
   const [room, setRoom] = useState({
-  "roomId": 0,
-  "roomPricePerDay": 0,
-  "acAvailability": true,
-  "numberOfPersons": 5,
-  "roomAvailability": true,
-  "hotelId": hotelId
+    "roomId": 0,
+    "roomPricePerDay": 0,
+    "acAvailability": true,
+    "numberOfPersons": 5,
+    "roomAvailability": true,
+    "hotelId": hotelId
   });
 
-
   const handleRoomPricePerDayChange = (event) => {
-    setRoom({ ...room, "roomPricePerDay": parseFloat(event.target.value) });
+    const newPrice = parseFloat(event.target.value);
+    if (newPrice >= 0) {
+      setRoom({ ...room, "roomPricePerDay": newPrice });
+    } else {
+      toast.error('Room price cannot be negative.');
+    }
   };
 
   const handleAcAvailabilityChange = (event) => {
@@ -29,6 +33,12 @@ function AddRoom() {
 
   const addRoom = (event) => {
     event.preventDefault();
+
+    if (room.roomPricePerDay === 0) {
+      toast.error('Room price cannot be null.');
+      return;
+    }
+
     fetch("http://localhost:5007/api/Room/AddRoom", {
       "method": "POST",
       headers: {
@@ -39,9 +49,9 @@ function AddRoom() {
     })
       .then(async (data) => {
         if (data.status === 200) {
-          alert('Room added successfully.');
+          toast.success('Room added successfully.');
         } else {
-          alert('Failed to add room.');
+          toast.error('Failed to add room.');
         }
       })
       .catch((err) => {
@@ -68,7 +78,6 @@ function AddRoom() {
                       <h2>Welcome !!!</h2>
                     </div>
                     <form>
-
                       <div className="room-register-input_text">
                         <label htmlFor="roomPricePerDay">Room Price Per Day:</label>
                         <input
@@ -76,7 +85,7 @@ function AddRoom() {
                           id="roomPricePerDay"
                           name="roomPricePerDay"
                           onChange={handleRoomPricePerDayChange}
-                          step="0.01"
+                          step="1"
                           value={room.roomPricePerDay}
                           className="room-register-warning"
                         />

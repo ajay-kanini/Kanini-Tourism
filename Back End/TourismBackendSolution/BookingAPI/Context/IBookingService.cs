@@ -1,4 +1,5 @@
-﻿using BookingAPI.Models;
+﻿#nullable disable
+using BookingAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookingAPI.Context
@@ -9,6 +10,6 @@ namespace BookingAPI.Context
         {
             
         }
-        public DbSet<Booking?> Bookings { get; set; }    
+        public DbSet<Booking> Bookings { get; set; }    
     }
 }

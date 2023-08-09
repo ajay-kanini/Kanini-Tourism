@@ -1,12 +1,14 @@
 ﻿using Hotels_RoomsAPI.Interfaces;
 using Hotels_RoomsAPI.Models;
 using Hotels_RoomsAPI.Models.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Threading.Tasks;
 
 namespace Hotels_RoomsAPI.Controllers
@@ -25,6 +27,7 @@ namespace Hotels_RoomsAPI.Controllers
             _logger = logger;
         }
 
+        [Authorize(Roles = "Hotel Agent")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

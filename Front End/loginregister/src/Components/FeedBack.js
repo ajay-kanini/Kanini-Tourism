@@ -3,11 +3,14 @@ import { Navbar, Nav } from "react-bootstrap";
 import LoginImage from "../Assets/loginPagePic.jpg";
 import { useParams } from "react-router-dom";
 import './VendorRegister.css'
-
+import {Link, useNavigate} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Logo from '../Assets/logo-removebg-preview.png';
 function Feedback() {
 
   const {hotelId} = useParams();
-
+  const navigate = useNavigate();
   const [checkUser, setCheckUser] = useState({
     "userId": 0,
     "hotelId": 0,
@@ -51,25 +54,33 @@ function Feedback() {
       .then(async (data) => {
         setFeedback(data);
         if (data.status === 200) {
-          alert("ok");
+          toast.success("Thank you...");
         } else {
-          alert("not ok");
+          toast.error("Feedback is not updated.");
         }
       })
       .catch((err) => {
         console.log(err.error);
       });
   };
-
+  const homeNavigation= () =>{
+    navigate("/");
+  }
+  const clearStorage= () =>{
+    localStorage.clear();
+    navigate("/login");
+  }
   return (
     <div className="mainDiv">
       <div className="navBar">
         <Navbar className="custom-navbar" expand="lg">
+        <img src={Logo} style={{margin:"10px"}}/>
           <Navbar.Brand href="#">Book Your Hotel</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link  onClick={homeNavigation} >Home</Nav.Link>
+              <Nav.Link onClick={clearStorage} >Log Out</Nav.Link>
             </Nav>
             <h1 className="navbar-heading">FeedBack</h1>
           </Navbar.Collapse>

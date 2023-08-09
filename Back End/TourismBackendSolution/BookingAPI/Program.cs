@@ -1,3 +1,4 @@
+#nullable disable
 using BookingAPI.Context;
 using BookingAPI.Interfaces;
 using BookingAPI.Models;

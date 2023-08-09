@@ -32,12 +32,12 @@ function VendorHotelPage() {
   };
   
   const agentDetails = () => {
+    
     fetch(`http://localhost:5294/api/Register/GetOneAgent?key=${id}`)
     .then(async (data) => {
       if (data.status == 200) {
         var myData = await data.json();
-        setAgents(await myData);   
-        console.log(data);
+        setAgents(myData);   
       } 
       if (myData.status == "Not Approved") {
         toast.error("oops you are not approved")
@@ -56,7 +56,7 @@ function VendorHotelPage() {
         {hotels.map(hotel => (
           <div key={hotel.hotelId} className="hotelCard">
             <div className="hotelImage">
-              <img src={LoginImage} alt="Hotel" />
+              <img src={`http://127.0.0.1:10000/devstoreaccount1/hotels/hotels/${hotel.image}`} alt="Hotel" />
             </div>
             <div className="hotelInfo">
               <h3>{hotel.hotelName}</h3>

@@ -11,7 +11,7 @@
   }
   
   .carouselImage {
-    object-fit: cover;
+    object-fit: fill;
   }
   
   .hotelDetails {

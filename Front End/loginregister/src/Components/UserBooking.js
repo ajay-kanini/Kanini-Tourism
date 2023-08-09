@@ -39,6 +39,8 @@ function UserBooking() {
       User Name: ${bookingItem.userName}
       Hotel Name: ${bookingItem.hotelName}
       Room ID: ${bookingItem.roomId}
+      CheckIn : ${bookingItem.checkIn}
+      checkOut : ${bookingItem.checkOut}
       Number of Days: ${bookingItem.numberOfDays}
       Total Price: ${bookingItem.totalPrice}
     `;

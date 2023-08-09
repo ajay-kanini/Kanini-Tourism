@@ -9,14 +9,13 @@ function FetchRooms() {
  
   useEffect(() => {
     fetchRoomData();
-  },[hotelId]);
+  }, [hotelId]);
 
   const fetchRoomData = () => {
     console.log(hotelId);
     fetch(`http://localhost:5007/api/Room/GetRoomByHotelID/${hotelId}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         if (Array.isArray(data)) {
           setRoom(data);
         }
@@ -30,14 +29,18 @@ function FetchRooms() {
         <VendorNavbar />
       </div>
       <div className="roomDatas">
-        {room.map((roomData, index) => (
-          <div key={roomData.roomId} className="roomCard">
-            <h3>Room {index + 1}</h3>
-            <p>Price per Day: {roomData.roomPricePerDay}</p>
-            <p>AC Availability: {roomData.acAvailability ? "Available" : "Not Available"}</p>
-            <p>Maximum Head Count: {roomData.numberOfPersons}</p>
-          </div>
-        ))}
+        {room.length === 0 ? (
+          <p>No rooms available</p>
+        ) : (
+          room.map((roomData, index) => (
+            <div key={roomData.roomId} className="roomCard">
+              <h3>Room {index + 1}</h3>
+              <p>Price per Day: {roomData.roomPricePerDay}</p>
+              <p>AC Availability: {roomData.acAvailability ? "Available" : "Not Available"}</p>
+              <p>Maximum Head Count: {roomData.numberOfPersons}</p>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

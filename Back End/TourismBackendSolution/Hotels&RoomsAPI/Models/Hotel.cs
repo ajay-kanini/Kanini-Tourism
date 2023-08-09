@@ -32,7 +32,6 @@ namespace Hotels_RoomsAPI.Models
 
         [Range(1, int.MaxValue, ErrorMessage = "AgentId must be greater than 0.")]
         public int? AgentId { get; set; }
-
-        public string[]? Picture { get; set; }
+        public string? image { get; set; }
     }
 }

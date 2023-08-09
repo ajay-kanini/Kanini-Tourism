@@ -2,8 +2,14 @@ import React from "react";
 import './VendorRegister.css';
 import { useState, useEffect } from 'react';
 import LoginImage from "../Assets/loginPagePic.jpg"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {Link, useNavigate} from 'react-router-dom';
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import Logo from '../Assets/logo-removebg-preview.png'
 
 function VendorRegister() {
+    const navigate = useNavigate(); 
     const [user, setUser] = useState({
         "id": 0,
         "name": "",
@@ -34,19 +40,37 @@ function VendorRegister() {
           .then(async (data) => {
             if (data.status == 201) {
               var myData = await data.json();
-                          
-            }
-            else
-            {
-                alert('not ok')
-            }
+               toast.success("Registration successful");             
+               navigate("/hotelList");
+              }
+              else if(response.status == 400)
+              {
+                  toast.error('Registration unsuccessful, Please check or change your mail')
+              }
           })
           .catch((err) => {
             console.log(err.error);
           });
       };
-      
+      const homeNavigation= () =>{
+        navigate("/");
+      }
     return (
+      <div>
+        <div className="navBar">
+      <Navbar className="custom-navbar" expand="lg">
+        <img src={Logo} style={{margin:"10px"}}/>
+        <Navbar.Brand href="#">Book Your Hotel</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+            <Nav.Link onClick={homeNavigation} >Home</Nav.Link>
+            </Nav>
+            <h1 className="navbar-heading">Vendor Details</h1>
+        </Navbar.Collapse>
+      </Navbar>
+      </div>
+      
         <div className="register-container">        
             <div className="register">
                 <div className="register-card">
@@ -97,6 +121,7 @@ function VendorRegister() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

@@ -1,0 +1,332 @@
+2023-08-09 00:16:42.329 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5035/api/Booking/BookRooms - -
+2023-08-09 00:16:42.408 +05:30 [INF] CORS policy execution successful.
+2023-08-09 00:16:42.412 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5035/api/Booking/BookRooms - - - 204 - - 84.3396ms
+2023-08-09 00:16:42.414 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Booking/BookRooms application/json 202
+2023-08-09 00:16:42.417 +05:30 [INF] CORS policy execution successful.
+2023-08-09 00:16:42.562 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.BookRooms (BookingAPI)'
+2023-08-09 00:16:42.614 +05:30 [INF] Route matched with {action = "BookRooms", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] BookRooms(BookingAPI.Models.DTO.BookingDTO) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 00:16:43.554 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 00:16:44.732 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+2023-08-09 00:16:45.025 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Bookings] ([BookingStatus], [CheckIn], [CheckOut], [HotelId], [HotelName], [RoomId], [TotalPrice], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [BookingId]
+FROM [Bookings]
+WHERE @@ROWCOUNT = 1 AND [BookingId] = scope_identity();
+2023-08-09 00:16:45.094 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2023-08-09 00:16:45.109 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.BookRooms (BookingAPI) in 2487.082ms
+2023-08-09 00:16:45.112 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.BookRooms (BookingAPI)'
+2023-08-09 00:16:45.122 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Booking/BookRooms application/json 202 - 200 - application/json;+charset=utf-8 2707.9306ms
+2023-08-09 00:16:52.475 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - -
+2023-08-09 00:16:52.477 +05:30 [INF] CORS policy execution successful.
+2023-08-09 00:16:52.479 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 00:16:52.490 +05:30 [INF] Route matched with {action = "GetByUserID", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[BookingAPI.Models.Booking]]] GetByUserID(Int32) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 00:16:52.507 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 00:16:52.652 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+ORDER BY [b].[CheckOut] DESC
+2023-08-09 00:16:52.656 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookingAPI.Models.Booking, BookingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-09 00:16:52.668 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI) in 175.6036ms
+2023-08-09 00:16:52.671 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - -
+2023-08-09 00:16:52.671 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 00:16:52.672 +05:30 [INF] CORS policy execution successful.
+2023-08-09 00:16:52.674 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - - - 200 - application/json;+charset=utf-8 198.8284ms
+2023-08-09 00:16:52.676 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 00:16:52.678 +05:30 [INF] Route matched with {action = "GetByUserID", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[BookingAPI.Models.Booking]]] GetByUserID(Int32) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 00:16:52.720 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 00:16:52.730 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+ORDER BY [b].[CheckOut] DESC
+2023-08-09 00:16:52.733 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookingAPI.Models.Booking, BookingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-09 00:16:52.735 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI) in 54.1436ms
+2023-08-09 00:16:52.737 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 00:16:52.739 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - - - 200 - application/json;+charset=utf-8 67.8738ms
+2023-08-09 00:38:20.094 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 00:38:20.303 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 00:38:20.307 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 00:38:20.308 +05:30 [INF] Hosting environment: Development
+2023-08-09 00:38:20.309 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 00:38:36.370 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 00:38:36.494 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 00:38:36.499 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 00:38:36.500 +05:30 [INF] Hosting environment: Development
+2023-08-09 00:38:36.502 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 06:07:38.203 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 06:07:38.592 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 06:07:38.597 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 06:07:38.600 +05:30 [INF] Hosting environment: Development
+2023-08-09 06:07:38.601 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 06:07:45.034 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger - -
+2023-08-09 06:07:46.052 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger - - - 301 0 - 1036.0071ms
+2023-08-09 06:07:46.208 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 06:07:48.437 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 2229.3831ms
+2023-08-09 06:07:48.461 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - -
+2023-08-09 06:07:48.472 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - -
+2023-08-09 06:07:48.485 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - -
+2023-08-09 06:07:48.746 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-08-09 06:07:48.746 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-08-09 06:07:48.791 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 305.6519ms
+2023-08-09 06:07:48.804 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-08-09 06:07:48.809 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - - - 200 144929 text/css 347.9765ms
+2023-08-09 06:07:48.826 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 354.2120ms
+2023-08-09 06:07:48.839 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 06:07:48.863 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 24.8985ms
+2023-08-09 06:07:48.881 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 06:07:48.960 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 78.9614ms
+2023-08-09 06:07:49.854 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 06:07:50.252 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 397.4305ms
+2023-08-09 06:16:50.556 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 06:16:51.076 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 06:16:51.083 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 06:16:51.086 +05:30 [INF] Hosting environment: Development
+2023-08-09 06:16:51.088 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 06:16:52.878 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 06:16:54.808 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 06:16:54.818 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 1959.0776ms
+2023-08-09 06:16:54.866 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 58.0294ms
+2023-08-09 06:16:54.901 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 06:16:55.006 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.2780ms
+2023-08-09 06:16:56.989 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 06:16:57.248 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 259.2657ms
+2023-08-09 06:26:28.710 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 06:26:29.097 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 06:26:29.105 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 06:26:29.107 +05:30 [INF] Hosting environment: Development
+2023-08-09 06:26:29.109 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 06:26:34.804 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 06:26:37.096 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 06:26:37.122 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 2394.8856ms
+2023-08-09 06:26:37.122 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 9.3922ms
+2023-08-09 06:26:37.136 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 06:26:37.201 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.7423ms
+2023-08-09 06:26:37.312 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 06:26:37.581 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 269.3332ms
+2023-08-09 06:30:37.185 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 06:30:37.569 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 06:30:37.576 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 06:30:37.580 +05:30 [INF] Hosting environment: Development
+2023-08-09 06:30:37.581 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 06:30:41.681 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 06:30:43.553 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 06:30:43.553 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 06:30:43.608 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 52.9240ms
+2023-08-09 06:30:43.675 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 2015.9146ms
+2023-08-09 06:30:43.921 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 367.7135ms
+2023-08-09 06:30:44.080 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 06:30:44.692 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 611.3296ms
+2023-08-09 06:34:52.733 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 06:34:53.343 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 06:34:53.353 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 06:34:53.356 +05:30 [INF] Hosting environment: Development
+2023-08-09 06:34:53.359 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 06:34:57.412 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 06:34:58.791 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 1391.7853ms
+2023-08-09 06:34:58.832 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 06:34:58.843 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 10.4449ms
+2023-08-09 06:34:58.849 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 06:34:59.016 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 166.7319ms
+2023-08-09 06:34:59.203 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 06:34:59.494 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 290.4365ms
+2023-08-09 06:53:39.520 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 06:53:40.898 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 06:53:40.910 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 06:53:40.918 +05:30 [INF] Hosting environment: Development
+2023-08-09 06:53:40.920 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 06:53:44.636 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 06:53:46.246 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 06:53:46.255 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 1629.0584ms
+2023-08-09 06:53:46.257 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 11.0832ms
+2023-08-09 06:53:46.320 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 06:53:46.407 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.5097ms
+2023-08-09 06:53:46.961 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 06:53:48.322 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1361.1102ms
+2023-08-09 07:22:11.822 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 07:22:21.289 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 07:22:21.885 +05:30 [INF] Executed DbCommand (171ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [TourBooking];
+2023-08-09 07:22:21.950 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [TourBooking] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-08-09 07:22:21.970 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-09 07:22:22.090 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-08-09 07:22:22.093 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-08-09 07:22:22.118 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-08-09 07:22:22.131 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-08-09 07:22:22.150 +05:30 [INF] Applying migration '20230809015211_Initial'.
+2023-08-09 07:22:22.173 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Bookings] (
+    [BookingId] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [UserName] nvarchar(max) NULL,
+    [HotelId] int NOT NULL,
+    [HotelName] nvarchar(max) NULL,
+    [RoomId] int NOT NULL,
+    [CheckIn] datetime2 NOT NULL,
+    [CheckOut] datetime2 NOT NULL,
+    [BookingStatus] nvarchar(max) NULL,
+    [TotalPrice] float NOT NULL,
+    CONSTRAINT [PK_Bookings] PRIMARY KEY ([BookingId])
+);
+2023-08-09 07:22:22.178 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230809015211_Initial', N'6.0.20');
+2023-08-09 07:24:04.417 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 07:24:04.824 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 07:24:04.831 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 07:24:04.834 +05:30 [INF] Hosting environment: Development
+2023-08-09 07:24:04.836 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 07:24:05.548 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 07:24:06.396 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 07:24:06.411 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 07:24:06.426 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 28.3778ms
+2023-08-09 07:24:06.452 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 912.7662ms
+2023-08-09 07:24:06.505 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 94.0897ms
+2023-08-09 07:24:06.602 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 07:24:06.885 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 283.7234ms
+2023-08-09 07:28:46.610 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 07:28:47.078 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 07:28:47.087 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 07:28:47.090 +05:30 [INF] Hosting environment: Development
+2023-08-09 07:28:47.092 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 07:28:51.242 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 07:28:53.195 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 1971.2337ms
+2023-08-09 07:28:53.273 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 07:28:53.284 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 11.0550ms
+2023-08-09 07:28:53.315 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 07:28:53.447 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 131.7567ms
+2023-08-09 07:28:53.888 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 07:28:54.238 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 349.8880ms
+2023-08-09 07:34:55.480 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 07:34:55.899 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 07:34:55.908 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 07:34:55.911 +05:30 [INF] Hosting environment: Development
+2023-08-09 07:34:55.913 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 07:34:57.896 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 07:34:59.657 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 1775.9243ms
+2023-08-09 07:34:59.722 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 07:34:59.760 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 38.1148ms
+2023-08-09 07:34:59.840 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 07:34:59.956 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 116.1021ms
+2023-08-09 07:35:00.445 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 07:35:00.817 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 371.1991ms
+2023-08-09 07:44:11.245 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5035/api/Booking/BookRooms - -
+2023-08-09 07:44:11.312 +05:30 [INF] CORS policy execution successful.
+2023-08-09 07:44:11.320 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5035/api/Booking/BookRooms - - - 204 - - 75.1393ms
+2023-08-09 07:44:11.322 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Booking/BookRooms application/json 197
+2023-08-09 07:44:11.326 +05:30 [INF] CORS policy execution successful.
+2023-08-09 07:44:11.513 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.BookRooms (BookingAPI)'
+2023-08-09 07:44:11.577 +05:30 [INF] Route matched with {action = "BookRooms", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] BookRooms(BookingAPI.Models.DTO.BookingDTO) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 07:44:13.144 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 07:44:14.426 +05:30 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+2023-08-09 07:44:14.909 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Bookings] ([BookingStatus], [CheckIn], [CheckOut], [HotelId], [HotelName], [RoomId], [TotalPrice], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [BookingId]
+FROM [Bookings]
+WHERE @@ROWCOUNT = 1 AND [BookingId] = scope_identity();
+2023-08-09 07:44:15.045 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2023-08-09 07:44:15.073 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.BookRooms (BookingAPI) in 3483.5569ms
+2023-08-09 07:44:15.079 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.BookRooms (BookingAPI)'
+2023-08-09 07:44:15.094 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Booking/BookRooms application/json 197 - 200 - application/json;+charset=utf-8 3771.5504ms
+2023-08-09 07:59:39.300 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - -
+2023-08-09 07:59:39.342 +05:30 [INF] CORS policy execution successful.
+2023-08-09 07:59:39.408 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 07:59:39.506 +05:30 [INF] Route matched with {action = "GetByUserID", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[BookingAPI.Models.Booking]]] GetByUserID(Int32) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 07:59:39.699 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 07:59:40.476 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+ORDER BY [b].[CheckOut] DESC
+2023-08-09 07:59:40.539 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookingAPI.Models.Booking, BookingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-09 07:59:40.596 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI) in 1085.0934ms
+2023-08-09 07:59:40.601 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - -
+2023-08-09 07:59:40.601 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 07:59:40.604 +05:30 [INF] CORS policy execution successful.
+2023-08-09 07:59:40.606 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - - - 200 - application/json;+charset=utf-8 1315.6647ms
+2023-08-09 07:59:40.614 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 07:59:40.618 +05:30 [INF] Route matched with {action = "GetByUserID", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[BookingAPI.Models.Booking]]] GetByUserID(Int32) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 07:59:40.711 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 07:59:40.727 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+ORDER BY [b].[CheckOut] DESC
+2023-08-09 07:59:40.733 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookingAPI.Models.Booking, BookingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-09 07:59:40.736 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI) in 113.3028ms
+2023-08-09 07:59:40.739 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 07:59:40.741 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - - - 200 - application/json;+charset=utf-8 140.5171ms
+2023-08-09 09:22:27.694 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 09:22:28.123 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 09:22:28.132 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 09:22:28.135 +05:30 [INF] Hosting environment: Development
+2023-08-09 09:22:28.137 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 09:22:31.719 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 09:22:33.312 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 1599.8235ms
+2023-08-09 09:22:33.333 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_vs/browserLink - -
+2023-08-09 09:22:33.367 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 09:22:33.419 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 52.3536ms
+2023-08-09 09:22:34.085 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 751.9992ms
+2023-08-09 09:22:34.556 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 09:22:35.152 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 596.3560ms
+2023-08-09 10:02:14.296 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 10:02:14.818 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 10:02:14.825 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 10:02:14.828 +05:30 [INF] Hosting environment: Development
+2023-08-09 10:02:14.830 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
+2023-08-09 10:02:17.292 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - -
+2023-08-09 10:02:18.361 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - - - 200 - text/html;charset=utf-8 1078.2379ms
+2023-08-09 10:02:18.415 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - -
+2023-08-09 10:02:18.433 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/_framework/aspnetcore-browser-refresh.js - - - 200 12352 application/javascript;+charset=utf-8 17.5146ms
+2023-08-09 10:02:19.372 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - -
+2023-08-09 10:02:19.938 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 566.4481ms
+2023-08-09 10:35:40.752 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - -
+2023-08-09 10:35:40.829 +05:30 [INF] CORS policy execution successful.
+2023-08-09 10:35:41.034 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 10:35:41.106 +05:30 [INF] Route matched with {action = "GetByUserID", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[BookingAPI.Models.Booking]]] GetByUserID(Int32) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 10:35:42.472 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 10:35:43.884 +05:30 [INF] Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+ORDER BY [b].[CheckOut] DESC
+2023-08-09 10:35:44.084 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookingAPI.Models.Booking, BookingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-09 10:35:44.153 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - -
+2023-08-09 10:35:44.157 +05:30 [INF] CORS policy execution successful.
+2023-08-09 10:35:44.159 +05:30 [INF] Executing endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 10:35:44.167 +05:30 [INF] Route matched with {action = "GetByUserID", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.ICollection`1[BookingAPI.Models.Booking]]] GetByUserID(Int32) on controller BookingAPI.Controllers.BookingController (BookingAPI).
+2023-08-09 10:35:44.168 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI) in 3041.3532ms
+2023-08-09 10:35:44.186 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 10:35:44.190 +05:30 [INF] Entity Framework Core 6.0.20 initialized 'IBookingService' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.20' with options: None
+2023-08-09 10:35:44.238 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[BookingStatus], [b].[CheckIn], [b].[CheckOut], [b].[HotelId], [b].[HotelName], [b].[RoomId], [b].[TotalPrice], [b].[UserId], [b].[UserName]
+FROM [Bookings] AS [b]
+ORDER BY [b].[CheckOut] DESC
+2023-08-09 10:35:44.244 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BookingAPI.Models.Booking, BookingAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-09 10:35:44.244 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - - - 200 - application/json;+charset=utf-8 3496.1961ms
+2023-08-09 10:35:44.247 +05:30 [INF] Executed action BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI) in 76.6781ms
+2023-08-09 10:35:44.251 +05:30 [INF] Executed endpoint 'BookingAPI.Controllers.BookingController.GetByUserID (BookingAPI)'
+2023-08-09 10:35:44.253 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Booking/GetByUserID/4 - - - 200 - application/json;+charset=utf-8 100.4392ms
+2023-08-09 11:09:26.896 +05:30 [INF] User profile is available. Using 'C:\Users\Ajay Gokul\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-09 11:09:27.303 +05:30 [INF] Now listening on: http://localhost:5035
+2023-08-09 11:09:27.310 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-09 11:09:27.313 +05:30 [INF] Hosting environment: Development
+2023-08-09 11:09:27.315 +05:30 [INF] Content root path: C:\Users\Ajay Gokul\Documents\Kanini\Full Stack Assessment 2\Back End\TourismBackendSolution\BookingAPI\
